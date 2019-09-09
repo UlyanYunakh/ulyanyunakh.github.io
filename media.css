@@ -123,7 +123,7 @@
 		align-items: center;
 	}
 	.auto-background {
-		margin-top: 150px;
+		margin-top: 125px;
 		width: 100%;
 		padding: 150px 50px 50px;
 	}
@@ -136,12 +136,10 @@
 	}
 	.auto-request {
 		width: 100%;
-		margin: 60px 0 20px;
 	}
 	#btn-request {
 		width: 100%;    
 		min-width: 290px;
-		border-radius: 30px;
 		font-size: 18px;
 	}
 }
@@ -154,7 +152,7 @@
 		height: 300px;
 	}
 	.how-works {
-		margin: 40px 0; 
+		margin: 20px 0 40px; 
 	}
 	#feedback .row {
 		padding-top: 20px;
@@ -211,6 +209,9 @@
 	h1{
 		font-size: 40px;
 	}
+	.main-text {
+		padding-top: 25px;
+	}
 	#questions-title {
 		font-size: 35px;
 	}
@@ -220,7 +221,9 @@
 	.table td, .table th {
 		padding: 0.75rem 2px;
 	}
-	
+	#table-form {
+		margin-top: 15px;
+	}
 }
 @media (max-width: 425px){
 	h1 {
@@ -235,8 +238,12 @@
 	.auto-request {
 		font-size: 18px;	
 	}
-	.form-control, label, .why-us-p {
+	.form-control, label, .why-us-p, .advantage-list {
 		font-size: 15px;
+	}
+	.advantage-list li {
+		padding: 10px 10px;
+		width: 225px;
 	}
 }
 @media (max-width: 375px){
@@ -253,10 +260,10 @@
 		margin-bottom: 20px;
 	}
 	.table {
-		margin-bottom: 40px;
+		margin-bottom: 70px;
 	}
 	#cost h1 {
-		margin: 35px 0 20px;
+		margin: 70px 0 0;
 	}
 	.how-works h1 {
 		font-size: 30px;
