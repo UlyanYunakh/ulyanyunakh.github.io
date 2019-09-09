@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, width=device-width">
+		<title>BarCar</title>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="media.css">		
+	</head>
+	<body>
+		<header style="background: rgb(237,237,237);">
+			<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ededed;">
+				<a class="navbar-brand" href="#">
+					<img src="images/logo.png" alt="" style="margin-right: 20px;">
+					<strong>BarCar</strong>
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav" style="background: rgb(237,237,237);">
+						<li class="nav-item">
+							<a class="nav-link" href="#cost">Расчитать стоимость</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#feedback">Бесплатная консультация</a>
+						</li>
+						<li class="nav-item" style="text-align: right;">
+							<a class="nav-link" href="#" style="font-size: 24px;">
+								<strong>+375 33 627 54 21</strong>
+							</a>
+							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">пн-сб 10:00 - 20:00</a>
+						</li>
+					</ul>
+				</div>
+			</nav>	
+		</header>
+		<div class="container-fluid" style="overflow: hidden;">
+			<div class="main">
+				<div class="main-img">
+					<div class="main-img-border">
+						<div class="main-img-rotate">
+							<img src="images/photo.jpg" height="100%"  alt="">
+						</div>
+					</div>
+				</div>
+				<div class="main-text">
+					<h1 style="color: #ecce19; text-align: left;">Комфортный трансфер</h1>
+					<h1 style="text-align: left;">В Барселоне</h1>
+					<p class="main-p">Доставим вас с фомфортом из аэропорта<br>до места назначения и обратно</p>
+					<ul class="advantage-list">
+						<li>Русскоговорящие водители</li>
+						<li>Большой<br> выбор авто</li>
+						<li>Встретим<br> с табличкой</li>
+					</ul>
+					<div class="btn-position">
+						<a href="#cost" class="btn">Расчитать стоимость</a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="container">
+			<h1>Наш автопарк</h1>
+			<div class="auto-list">
+				<div class="auto-background">
+					<img src="images/car.png" alt="">
+					<div class="auto">
+						<h2>Volkswagen Multivan</h2>
+						<p>Оснащен детскими сидениями и небольшое описание</p>
+					</div>
+				</div>
+				<div class="auto-background">
+					<img src="images/car.png" alt="">
+					<div class="auto">
+						<h2>Volkswagen Multivan</h2>
+						<p>Оснащен детскими сидениями и небольшое описание</p>
+					</div>
+				</div>
+			</div>
+			<div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+				<p class="auto-request">Так же вы можете заказать авто по вашим предпочтениям.<br>
+				Cтоимость поездки не изменится</p>
+				<button type="button" class="btn" style="margin: auto;" id="btn-request">Заказать авто премиум-класса</button>
+			</div>
+		</div>
+		<div class="container" id="cost">
+			<h1>Стоимость поездки</h1>
+			<form style="margin: 30px 0;">
+				<div class="form-row">
+					<div class="form-group col-md-3">
+						<label for="inputFrom">Укажите место отправления</label>
+						<input type="from" class="form-control" id="inputFrom" placeholder="Например: Сан-Пауло">
+					</div>
+					<div class="form-group col-md-4">
+						<label for="inputTo">Укажите место прибытия</label>
+						<input type="to" class="form-control" id="inputTo" placeholder="Например: Сан-Пауло">
+					</div>
+					<div class="form-group col-md-3">
+						<label for="inputNumber">Укажите количество человек</label>
+						<input type="number" class="form-control" id="inputNumber" placeholder="Например: Сан-Пауло">
+					</div>
+					<div class="form-group col-md-2">
+						<label for="submitBtn" style="color: white; margin: 0;">Узнать</label>
+						<button type="submit" class="btn" id="submitBtn">Узнать</button>
+					</div>
+				</div>
+			</form>
+			<table class="table table-hover">
+			  <thead>
+				<tr>
+				  <th scope="col">Место отправления</th>
+				  <th scope="col">Место прибытия</th>
+				  <th scope="col">До 4-х человек</th>
+				  <th scope="col">До 8-х человек</th>
+				</tr>
+			  </thead>
+			  <tbody id="table-content">
+			  </tbody>
+			</table>
+			<script>
+			var data = [
+				{ "from":"Сан-Пауло", "to":"Барселона", "four":"Да", "eight":"Нет" },
+				{ "from":"Барселона", "to":"Сан-Пауло", "four":"Нет", "eight":"Да" },
+				{ "from":"Сан-Пауло", "to":"Барселона", "four":"Да", "eight":"Нет" },
+				{ "from":"Барселона", "to":"Сан-Пауло", "four":"Нет", "eight":"Да" }
+			];
+			var table = document.getElementById('table-content');
+			data.forEach(function(object) {
+				var tr = document.createElement('tr');
+				tr.innerHTML = '<td>' + object.from + '</td>' +
+					'<td>' + object.to + '</td>' +
+					'<td>' + object.four + '</td>' +
+					'<td>' + object.eight + '</td>';
+				table.appendChild(tr);
+			});
+			</script>
+		</div>
+		<div class="container" style="overflow: hidden;">
+			<h1>Почему трансфер лучше такси</h1>
+			<p class="why-us-p">
+				Вы не просто получаете место в машине, а поезду с комфортом.<br>
+				Водители нашего сервиса не только доставляют вас из одной точки в другую,<br>
+				но и выполняют ряд дополнительных функций:
+			</p>
+			<div class="container" style="padding: 0 0 20px;">
+				<div class="why-us">
+					<div class="why-us-list">
+						<div class="why-us-list-item">
+							<img src="images/w1.png" alt="">
+							<p>Выбор <span style="color: #efd53e;">безопасного</span> маршрута</p>
+						</div>
+						<div class="why-us-list-item">
+							<img src="images/w2.png" alt="">
+							<p><span style="color: #efd53e;">Встреча</span> водителем с табличкой</p>
+						</div>
+						<div class="why-us-list-item">
+							<img src="images/w3.png" alt="">
+							<p>Помощь <span style="color: #efd53e;">с заселением</span></p>
+						</div>
+						<div class="why-us-list-item">
+							<img src="images/w4.png" alt="">
+							<p>Помощь <span style="color: #efd53e;">с багажем</span></p>
+						</div>
+						<div class="why-us-list-item">
+							<img src="images/w5.png" alt="">
+							<p>Полезные <span style="color: #efd53e;">рекомендации</span> по
+							нахождению в Барселоне</p>
+						</div>
+					</div>
+					<div class="why-us-img">
+						<div class="why-us-img-border">
+							<div class="why-us-img-rotate">
+								<img src="images/door.jpg" height="100%"  alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="how-works">
+				<h1>Как это работает</h1>
+				<div class="row">
+					<div class="col-md-4">
+						<p>1</p>
+						<div class="line"></div>
+						<div class="cicle"></div>
+						<p>Вы выбираете маршрут<br> в Барселоне</p>
+					</div>
+					<div class="col-md-4">
+						<p>2</p>
+						<div class="line"></div>
+						<div class="cicle"></div>
+						<p>Оставляете заявку<br> на сайте</p>
+					</div>
+					<div class="col-md-4">
+						<p>3</p>
+						<div class="cicle"></div>
+						<p>Наш водитель встречает<br> вас и довозит до нужного<br> места</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="feedback">
+			<h1 id="questions-title">Остались вопросы?<br>Бесплатная консультация</h1>
+			<div class="row">
+				<div class="col-md-5">
+					<form>
+						<div class="form-group">
+							<label for="inputName">Введите своё имя</label>
+							<input type="name" class="form-control" id="inputName" placeholder="Например: Сергей">
+						</div>
+						<div class="form-group">
+								<label for="inputPhone">Введите контактный номер телефона</label>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text"><p style="margin: 0; position:relative; top: 1px; left: 2px;">+</p></div>
+									</div>
+								<input type="phone" class="form-control" id="inputPhone" placeholder="375 33 627 54 21">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputMassege">Ваше сообщение</label>
+							<textarea class="form-control" id="inputMassege" rows="5"
+							placeholder="Например: Подскажите, хочу оправится из Сан-Пауло в центр, сколько будет стоить и можно ли ехать на черном авто?"></textarea>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn" id="submitBtn2">Отправить сообщение</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-6 offset-md-1">
+					<div class="container">
+						<img src="images/phone.png" alt="">
+						<div style="display: flex; flex-direction: column; margin-left: 10px;">
+							<p style="color: #c6c6c6; font-family: 'Circe Bold'; font-size: 18px; margin: 0; position: relative; top: 5px;">Телефон</p>
+							<p id="phone">+375 33 620-20-23</p>
+						</div>
+					</div>
+					<div class="container">
+						<img src="images/watch.png" alt="">
+						<div style="display: flex; flex-direction: column; margin-left: 10px;">
+							<p style="color: #c6c6c6; font-family: 'Circe Bold'; font-size: 18px; margin: 0; position: relative; top: 5px;">Режим работы</p>
+							<p style="font-family: 'Circe Bold'; font-size: 18px; margin: 0;">пн-сб 10:00-20:00</p>
+						</div>
+					</div>
+					<h2 class="feedback-h2">Или пишите нам в удобный мессенджер</h2>
+					<a href="#" class="container" style="display: flex; align-items: center; text-decoration: none; color: black;">
+						<img src="images/telegram.png" alt="">
+						<p class="feedback-p">@BarCar</p>
+					</a>
+					<a href="#" class="container" style="display: flex; align-items: center; text-decoration: none; color: black;">
+						<img src="images/vk.png" alt="">
+						<p class="feedback-p">/vk</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+			<div class="row">
+				<div class="col-md-4 left-footer-block">
+					ООО "Юрстатус"<br>УНП:193120088
+				</div>
+				<div class="col-md-4 center-footer-block">
+					<img src="images/logo.png" width="100px">
+					<h2>BarCar - трансфер</h2>
+					<p style="font-family: 'Circe Regular'; font-size: 12px; margin: 0;">(с)2018-2019 Все права защищены</p>
+				</div>
+				<div class="col-md-4 right-footer-block">
+					<p>Сделано в</p>
+					<div class="container">
+						<img src="images/logo2.png" alt="">
+						<p>Dynamicov.</p>
+					</div>
+				</div>
+			</div>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>

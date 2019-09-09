@@ -1,0 +1,273 @@
+@media (max-width: 900px){
+	.auto-background img {
+		top: -100px;
+		width: 300px;
+	}
+	.auto-background {
+		margin-top: 150px;
+	}
+}
+@media (max-width: 700px){
+	.auto-background img {
+		top: -90px;
+		width: 280px;
+	}
+	.auto-background {
+		margin-top: 130px;
+	}
+}
+@media (max-width: 767px){
+	.line {
+		display: none;
+	}
+}
+@media (max-width: 1110px){
+	.main-img {
+		left:auto;
+		right: -160px;
+	}
+}
+@media (max-width: 1029px){
+	.why-us  {
+		flex-direction: column;
+	}
+	.why-us-img {
+		order: -1;
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 898px){
+	#cost form .form-row .col-md-3, #cost form .form-row .col-md-4, #cost form .form-row .col-md-2 {
+	padding: 0 2px;
+}
+}
+@media (max-width: 991px){
+	.main-text {
+		padding-top: 40px;
+		padding-bottom: 160px;
+	}
+}
+@media (max-width: 900px){
+	.main-img {
+		opacity:0.2;
+	}
+}
+@media (max-width: 799px){
+	.center-footer-block h2 {
+		font-size: 25px;
+	}
+}
+@media (max-width: 768px){
+	h1 {
+		font-size: 45px;
+	}
+	.main-p {
+		font-size: 25px;
+	}
+	h2 {
+		font-size: 30px;
+	}
+	.auto {
+		font-size: 20px;
+	}
+	.auto-request {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	.why-us-p {
+		font-size: 20px;
+		margin-bottom: 40px;
+	}
+	.how-works .row .col-md-4 p:last-child  {
+		font-size: 20px; 
+	}
+	.how-works {
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+}
+@media (max-width: 767px){
+	footer {
+		margin: 40px 0 0;
+		background: linear-gradient(to top, rgb(237,237,237), white);
+	}
+	.left-footer-block {
+		order: 1;
+	}
+	footer .container .row {
+		flex-direction: column;
+		align-items: center;
+	}
+	footer .container .row .col-md-4 {
+		margin: 15px 0;
+	}
+	.left-footer-block {
+		text-align: center;
+	}
+	.right-footer-block {
+		align-items: center;
+	}
+	.right-footer-block .container {
+		justify-content: center;
+	}
+	.right-footer-block p {
+		margin-right: 20px;
+	}
+}
+@media (max-width: 637px){
+	.background {
+		padding-bottom: 80px;
+	}
+	.auto-list {
+		flex-direction: column;
+		align-items: center;
+	}
+	.auto-background {
+		margin-top: 150px;
+		width: 100%;
+		padding: 150px 50px 50px;
+	}
+	.auto-background img {
+		top: -100px;
+		width: 300px;
+	}
+	.auto {
+		width: 100%;
+	}
+	.auto-request {
+		width: 100%;
+		margin: 60px 0 20px;
+	}
+	#btn-request {
+		width: 100%;    
+		min-width: 290px;
+		border-radius: 30px;
+		font-size: 18px;
+	}
+}
+@media (max-width: 560px){
+	#questions-title {
+		font-size: 50px;
+	}
+	.why-us-img {
+		width: 300px;
+		height: 300px;
+	}
+	.how-works {
+		margin: 40px 0; 
+	}
+	#feedback .row {
+		padding-top: 20px;
+	}
+}
+@media (max-width: 507px){
+	.advantage-list {
+		display: block;
+	}
+	.advantage-list li {
+		max-width: 100%;
+		width: 250px;
+		text-align: center;
+		padding: 20px 20px;
+		border-right: 0;
+		border-bottom: 2px solid #feda00;
+		margin:0;
+	}
+	.advantage-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.advantage-list li:last-child {
+		border-bottom: 0;
+	}
+	.btn-position {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.background-img {
+		padding: 320px;
+	}
+	.auto-background img {
+		top: -90px;
+		width: 280px;
+	}
+	.auto {
+		width: 90%;
+	}
+	.auto-request {
+		font-size: 25px;
+	}
+	.main-img {
+		width: 400px;
+		height: 400px;
+	}
+	.main-text {
+		padding-bottom: 70px;
+	}
+}
+@media (max-width: 474px){
+	h1{
+		font-size: 40px;
+	}
+	#questions-title {
+		font-size: 35px;
+	}
+	table {
+		font-size: 13px;
+	}
+	.table td, .table th {
+		padding: 0.75rem 2px;
+	}
+	
+}
+@media (max-width: 425px){
+	h1 {
+		font-size: 40px;
+	}
+	.main-p, .auto, .why-us-list-item, .feedback-p {
+		font-size: 20px;
+	}
+	h2, .feedback-h2 {
+		font-size: 25px;
+	}
+	.auto-request {
+		font-size: 18px;	
+	}
+	.form-control, label, .why-us-p {
+		font-size: 15px;
+	}
+}
+@media (max-width: 375px){
+	h1 {
+		font-size: 35px;
+	}
+	.main-p, .auto, .why-us-list-item {
+		font-size: 18px;
+	}
+	h2, .feedback-h2 {
+		font-size: 20px;
+	}
+	.why-us-p {
+		margin-bottom: 20px;
+	}
+	.table {
+		margin-bottom: 40px;
+	}
+	#cost h1 {
+		margin: 35px 0 20px;
+	}
+	.how-works h1 {
+		font-size: 30px;
+	}
+}
+@media (max-width: 343px){
+	#phone {
+		font-size: 20px;
+	}
+	.why-us-img {
+		width: 250px;
+		height: 250px;
+	}
+}
