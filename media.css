@@ -114,9 +114,6 @@
 	}
 }
 @media (max-width: 637px){
-	.background {
-		padding-bottom: 80px;
-	}
 	.auto-list {
 		flex-direction: column;
 		align-items: center;
@@ -158,9 +155,6 @@
 	}
 }
 @media (max-width: 507px){
-	.advantage-list {
-		display: block;
-	}
 	.advantage-list li {
 		max-width: 100%;
 		width: 250px;
@@ -182,9 +176,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	}
-	.background-img {
-		padding: 320px;
 	}
 	.auto-background img {
 		top: -90px;
@@ -243,6 +234,10 @@
 	.advantage-list li {
 		padding: 10px 10px;
 		width: 225px;
+	}
+	.main-img {
+		width: 350px;
+		height: 350px;
 	}
 }
 @media (max-width: 375px){
