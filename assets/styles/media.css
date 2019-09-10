@@ -33,6 +33,10 @@
 	.auto-background {
 		margin-top: 150px;
 	}
+	.auto-background {
+		padding-top: 100px;
+		padding-bottom: 2rem;
+	}
 }
 @media (max-width: 898px){
 	#cost form .form-row .col-md-3, #cost form .form-row .col-md-4, #cost form .form-row .col-md-2 {
@@ -133,10 +137,20 @@
 	.auto-request {
 		width: 100%;
 	}
-	#btn-request {
-		width: 100%;    
+	#btn-request {   
 		min-width: 290px;
 		font-size: 18px;
+	}
+	.main-img {
+		width: 400px;
+		height: 400px;
+	}
+	.main-text {
+		padding-bottom: 60px;
+	}
+	.auto-background {
+		padding-top: 100px;
+		padding-bottom: 1rem;
 	}
 }
 @media (max-width: 560px){
@@ -186,10 +200,6 @@
 	}
 	.auto-request {
 		font-size: 25px;
-	}
-	.main-img {
-		width: 400px;
-		height: 400px;
 	}
 	.main-text {
 		padding-bottom: 70px;
@@ -257,7 +267,7 @@
 		margin-bottom: 70px;
 	}
 	#cost h1 {
-		margin: 70px 0 0;
+		margin: 40px 0 0;
 	}
 	.how-works h1 {
 		font-size: 30px;
