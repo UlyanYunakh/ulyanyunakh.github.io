@@ -139,7 +139,7 @@ h1 {
 	border-color: #feda00;
 	box-shadow: 0 0 0 0.2rem rgba(254,218,0,.25);
 }
-.btn[type=submit] {
+#submitBtnFormTwo, #submitBtnFormOne {
 	width: 100%;
 }
 .auto-list {
