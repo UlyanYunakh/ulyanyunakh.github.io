@@ -426,7 +426,8 @@ footer .container .row {
 	text-align:center;
 }
 .why-us-list-item p {
-	margin: 0 20px;
+	margin: 0 0 0 20px;
+	max-width: 340px;
 }
 .feedback-h2 {
 	font-family: 'Circe Extra Bold';
@@ -443,4 +444,13 @@ footer .container .row {
 }
 .why-us-list-item img{
 	width: 60px;
+}
+.why-us-list-item-img {
+	width: 60px;
+	height: 60px;
+	margin: 2px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
 }
