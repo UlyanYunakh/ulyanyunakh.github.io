@@ -139,7 +139,7 @@ h1 {
 	border-color: #feda00;
 	box-shadow: 0 0 0 0.2rem rgba(254,218,0,.25);
 }
-#submitBtnFormTwo, #submitBtnFormOne {
+.btn[type="submit"] {
 	width: 100%;
 }
 .auto-list {
@@ -368,6 +368,8 @@ table {
 	font-family: 'Circe Bold'; 
 	font-size: 24px;
 	margin: 0;
+	color: black;
+	text-decoration: none;
 }
 .left-footer-block {
 	font-family: 'Circe Regular';
