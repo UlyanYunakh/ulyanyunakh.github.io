@@ -219,8 +219,7 @@
 		font-size: 20px;
 	}
 	.why-us-list-item img {
-		height: 55px;
-		width: 55px;
+		width: 50px;
 	}
 }
 @media (max-width: 474px){
