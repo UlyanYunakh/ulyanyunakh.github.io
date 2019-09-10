@@ -154,9 +154,6 @@
 	}
 }
 @media (max-width: 560px){
-	#questions-title {
-		font-size: 50px;
-	}
 	.why-us-img {
 		width: 300px;
 		height: 300px;
@@ -205,15 +202,26 @@
 		padding-bottom: 70px;
 	}
 }
-@media (max-width: 474px){
+@media (max-width: 500px){
 	h1{
-		font-size: 40px;
-	}
-	.main-text {
-		padding-top: 25px;
+		font-size: 35px;
 	}
 	#questions-title {
 		font-size: 35px;
+	}
+	.main-p, .auto, .auto-request, .form-control, label, .why-us-p, .advantage-list {
+		font-size: 16px;
+	}
+	h2, .feedback-h2 {
+		font-size: 25px;
+	}
+	.auto-request,.feedback-p, .why-us-list-item {
+		font-size: 20px;
+	}
+}
+@media (max-width: 474px){
+	.main-text {
+		padding-top: 25px;
 	}
 	table {
 		font-size: 13px;
@@ -226,21 +234,6 @@
 	}
 }
 @media (max-width: 425px){
-	h1 {
-		font-size: 40px;
-	}
-	.main-p, .auto, .why-us-list-item, .feedback-p {
-		font-size: 20px;
-	}
-	h2, .feedback-h2 {
-		font-size: 25px;
-	}
-	.auto-request {
-		font-size: 18px;	
-	}
-	.form-control, label, .why-us-p, .advantage-list {
-		font-size: 15px;
-	}
 	.advantage-list li {
 		padding: 10px 10px;
 		width: 225px;
@@ -251,15 +244,6 @@
 	}
 }
 @media (max-width: 375px){
-	h1 {
-		font-size: 35px;
-	}
-	.main-p, .auto, .why-us-list-item {
-		font-size: 18px;
-	}
-	h2, .feedback-h2 {
-		font-size: 20px;
-	}
 	.why-us-p {
 		margin-bottom: 20px;
 	}
@@ -268,9 +252,6 @@
 	}
 	#cost h1 {
 		margin: 40px 0 0;
-	}
-	.how-works h1 {
-		font-size: 30px;
 	}
 }
 @media (max-width: 343px){
