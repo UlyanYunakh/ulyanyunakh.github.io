@@ -4,15 +4,6 @@
 		right: -160px;
 	}
 }
-@media (max-width: 1029px){
-	.why-us  {
-		flex-direction: column;
-	}
-	.why-us-img {
-		order: -1;
-		margin-bottom: 20px;
-	}
-}
 @media (max-width: 991px){
 	.main-text {
 		padding-top: 40px;
@@ -20,6 +11,13 @@
 	}
 	.nav-item {
 		padding-top: 15px;
+	}
+	.why-us  {
+		flex-direction: column;
+	}
+	.why-us-img {
+		order: -1;
+		margin-bottom: 20px;
 	}
 }
 @media (max-width: 900px){
