@@ -91,8 +91,8 @@ font-style: normal;
 	transform: rotate(-55deg);
 	position: absolute;
 	z-index: -1;
-	left: 25px;
-	top: 20px;
+	left: 80px;
+	top: -30px;
 }
 .main-img:before {
 	position: absolute;
