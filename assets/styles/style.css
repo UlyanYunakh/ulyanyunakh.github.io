@@ -25,6 +25,9 @@ url('../fonts/Circe-Bold.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
 }
+header {
+	background: rgb(237,237,237);
+}
 .navbar {
 	max-width: 1110px;
 	margin: auto;
@@ -37,6 +40,7 @@ font-style: normal;
 .navbar-nav {
 	display: flex;
 	align-items: center;
+	background: rgb(237,237,237);
 }
 .navbar-light .navbar-nav .nav-link {
 	color: black;
@@ -53,18 +57,18 @@ font-style: normal;
 }
 .main-text {
 	margin: 0 auto;
-	padding: 100px 0 80px;
+	padding: 130px 0 80px;
 }
 .main-img {
-	width: 550px;
-	height: 550px;
+	width: 630px;
+	height: 630px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 40px;
 	position: absolute;
-	left: 850px;
-	top: -70px;
+	left: 820px;
+	top: -90px;
 }
 .main-img-border {
 	width: inherit;
@@ -89,10 +93,11 @@ font-style: normal;
 	-webkit-transform: rotate(-55deg);
 	-ms-transform: rotate(-55deg); 
 	transform: rotate(-55deg);
-	position: absolute;
 	z-index: -1;
-	left: 80px;
-	top: -30px;
+}
+.main-img-rotate img {
+	position: absolute;
+	top: 120px;
 }
 .main-img:before {
 	position: absolute;
@@ -106,17 +111,22 @@ font-style: normal;
 	-ms-transform: rotate(45deg); 
 	transform: rotate(45deg);
 }
+.main-p {
+	font-family: 'Circe Regular'; 
+	margin: 35px 0; 
+	font-size: 30px;
+}
 .advantage-list {
 	font-family: 'Circe Regular';
 	font-size: 18px;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 	list-style: none;
 	display: flex;
 	padding-inline-start: 0;
 }
 .advantage-list li {
-	max-width: 150px; 
-	padding-right: 20px;
+	max-width: 180px; 
+	padding-right: 35px;
 	margin-right: 20px;
 	border-right: 2px solid #feda00;
 }
@@ -185,6 +195,9 @@ h2 {
 	background: #ededed;
 	border-radius: 30px;
 }
+#cost h1 {
+	margin: 60px 0 60px;
+}
 label {
 	color: #c6c6c6;
 	font-family: 'Circe Bold';
@@ -211,6 +224,9 @@ label:after {
 	border-color: #feda00;
 	box-shadow: 0 0 0 0.2rem rgba(254,218,0,.25);
 }
+#table-form {
+	margin: 30px 0;
+}
 table {
 	border: 1px solid #dee2e6;
 }
@@ -223,15 +239,9 @@ table {
 .table-hover tbody tr:hover {
 	background-color: rgba(254,218,0,.5);
 }
-.col-md-8 .container {
-	display: flex;
-	align-items: center;
-	margin: 20px;
-}
 .why-us {
 	display: flex;
 	align-items: center;
-	flex-wrap: wrap;
 	justify-content: space-between;
 }
 .why-us-list {
@@ -246,6 +256,28 @@ table {
 	font-size: 24px;
 	margin: 20px;
 }
+.why-us-p {
+	font-family: 'Circe Regular';
+	margin: 30px 0 80px; 
+	font-size: 24px;
+	text-align:center;
+}
+.why-us-list-item img{
+	width: 60px;
+}
+.why-us-list-item-img {
+	width: 60px;
+	height: 60px;
+	margin: 2px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+.why-us-list-item p {
+	margin: 0 0 0 40px;
+	max-width: 340px;
+}
 .why-us-img {
 	width: 500px;
 	height: 500px;
@@ -254,6 +286,7 @@ table {
 	align-items: center;
 	border-radius: 40px;
 	position: relative;
+	margin-right: 5px;
 }
 .why-us-img-border {
 	position: relative;
@@ -290,6 +323,9 @@ table {
 	-webkit-transform: rotate(-5deg);
 	-ms-transform: rotate(-5deg); 
 	transform: rotate(-5deg);
+}
+#how-works-h1 {
+	margin-bottom: 20px;
 }
 .cicle {
 	position: absolute;
@@ -339,6 +375,16 @@ table {
 #feedback .row .col-md-5 form .form-group {
 	margin-bottom: 1.25rem;
 }
+.feedback-h2 {
+	font-family: 'Circe Extra Bold';
+	font-size: 27px;
+	margin-left: 15px;
+}
+.feedback-p {
+	font-family: 'Circe Bold'; 
+	font-size: 24px; 
+	margin: 0 10px;
+}
 .form-control {
 	padding: 1.5rem .75rem; 
 	border-radius: 0.75rem;
@@ -353,16 +399,19 @@ table {
 .btn, .input-group-text {
 	border-radius:0.75rem;
 }
-.col-md-6 .container {
-	width: auto;
-}
 .form-row {
 	align-items: flex-end;
+}
+.col-md-6 .container-fluid {
+	display: flex;
+	align-items: center;
+	margin: 20px 0;
+	width: auto;
 }
 .col-md-6 .container {
 	display: flex;
 	align-items: center;
-	margin: 20px;
+	margin: 20px 5px;
 }
 #phone {
 	font-family: 'Circe Bold'; 
@@ -412,45 +461,4 @@ footer {
 }
 footer .container .row {
 	align-items: center;
-}
-.main-p {
-	font-family: 'Circe Regular'; margin: 25px 0; font-size: 30px;
-}
-#cost h1 {
-	margin: 60px 0 60px;
-}
-.why-us-p {
-	font-family: 'Circe Regular';
-	margin: 30px 0 90px; 
-	font-size: 24px;
-	text-align:center;
-}
-.why-us-list-item p {
-	margin: 0 0 0 20px;
-	max-width: 340px;
-}
-.feedback-h2 {
-	font-family: 'Circe Extra Bold';
-	font-size: 27px;
-	margin-left: 20px;
-}
-.feedback-p {
-	font-family: 'Circe Bold'; 
-	font-size: 24px; 
-	margin: 0 10px;
-}
-#table-form {
-	margin: 30px 0;
-}
-.why-us-list-item img{
-	width: 60px;
-}
-.why-us-list-item-img {
-	width: 60px;
-	height: 60px;
-	margin: 2px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
 }

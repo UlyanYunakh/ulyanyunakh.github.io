@@ -1,13 +1,13 @@
-@media (max-width: 1110px){
+@media (max-width: 1366px){
 	.main-img {
-		left:auto;
-		right: -160px;
+		left: auto;
+		right: -300px;
 	}
 }
 @media (max-width: 991px){
 	.main-text {
 		padding-top: 40px;
-		padding-bottom: 160px;
+		padding-bottom: 80px;
 	}
 	.nav-item {
 		padding-top: 15px;
@@ -19,11 +19,15 @@
 		order: -1;
 		margin-bottom: 20px;
 	}
-}
-@media (max-width: 900px){
+	
 	.main-img {
-		opacity:0.2;
+		width: 500px;
+		height: 500px;
+		right: -200px;
 	}
+}
+
+@media (max-width: 900px){
 	.auto-background img {
 		top: -100px;
 		width: 300px;
@@ -52,6 +56,11 @@
 	}
 	.main-p {
 		font-size: 25px;
+	}
+	.main-img {
+		width: 400px;
+		height: 400px;
+		right: -150px;
 	}
 	h2 {
 		font-size: 30px;
@@ -105,6 +114,10 @@
 	.right-footer-block p {
 		margin-right: 20px;
 	}
+	.why-us-img {
+		width: 350px;
+		height: 350px;
+	}
 }
 @media (max-width: 700px){
 	.auto-background img {
@@ -139,10 +152,6 @@
 		min-width: 290px;
 		font-size: 18px;
 	}
-	.main-img {
-		width: 400px;
-		height: 400px;
-	}
 	.main-text {
 		padding-bottom: 60px;
 	}
@@ -150,20 +159,7 @@
 		padding-top: 100px;
 		padding-bottom: 1rem;
 	}
-}
-@media (max-width: 560px){
-	.why-us-img {
-		width: 300px;
-		height: 300px;
-	}
-	.how-works {
-		margin: 20px 0 40px; 
-	}
-	#feedback .row {
-		padding-top: 20px;
-	}
-}
-@media (max-width: 507px){
+	
 	.advantage-list li {
 		max-width: 100%;
 		width: 250px;
@@ -186,6 +182,23 @@
 		flex-direction: column;
 		align-items: center;
 	}
+	.main-img {
+		opacity:0.2;
+	}
+}
+@media (max-width: 560px){
+	.why-us-img {
+		width: 300px;
+		height: 300px;
+	}
+	.how-works {
+		margin: 20px 0 40px; 
+	}
+	#feedback .row {
+		padding-top: 20px;
+	}
+}
+@media (max-width: 507px){
 	.auto-background img {
 		top: -90px;
 		width: 280px;
@@ -219,6 +232,14 @@
 	.why-us-list-item img {
 		width: 50px;
 	}
+	.main-img {
+		width: 300px;
+		height: 300px;
+		right: -140px;
+	}
+	#how-works-h1 {
+		margin-bottom: 10px;
+	}
 }
 @media (max-width: 474px){
 	.main-text {
@@ -238,10 +259,6 @@
 	.advantage-list li {
 		padding: 10px 10px;
 		width: 225px;
-	}
-	.main-img {
-		width: 350px;
-		height: 350px;
 	}
 }
 @media (max-width: 375px){
