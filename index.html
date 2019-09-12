@@ -6,7 +6,19 @@
 		<title>BarCar</title>
 		<link href="vendor/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="assets/styles/style.css">
-		<link rel="stylesheet" href="assets/styles/media.css">			
+		<link rel="stylesheet" href="assets/styles/media.css">	
+		<script>
+			function modal(){
+				var m = document.getElementById('modal-background');
+				m.style.display="block";
+				document.body.style.overflow="hidden";
+			};
+			function modal_close(){
+				var m = document.getElementById('modal-background');
+				m.style.display="none";
+				document.body.style.overflow="auto";
+			};
+		</script>		
 	</head>
 	<body>
 		<header>
@@ -117,6 +129,30 @@
 			  <tbody id="table-content">
 			  </tbody>
 			</table>
+			<div id="modal-background">
+				<form id="modal-form">
+					<h2>Форма обратной связи</h2>
+					<div class="form-group">
+						<label for="inputName" style="color: black;">Введите своё имя</label>
+						<input type="name" class="form-control" id="inputName" placeholder="Например: Сергей">
+					</div>
+					<div class="form-group">
+						<label for="inputEmail" style="color: black;">Введите Email</label>
+						<input type="phone" class="form-control" id="inputEmail" placeholder="Например: barcar@barcar.com">
+					</div>
+					<div class="form-group">
+						<label for="inputMassege" style="color: black;">Ваше сообщение</label>
+						<textarea class="form-control" id="inputMassege" rows="5"
+						placeholder="Например: Подскажите, хочу оправится из Сан-Пауло в центр, сколько будет стоить и можно ли ехать на черном авто?"></textarea>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn" id="submit-massege-form" onclick="modal_close()">Отправить сообщение</button>
+					</div>
+					<div class="form-group">
+						<a class="btn" style="width: 100%; background-color: white; border: 1px solid #feda00; cursor: pointer;" onclick="modal_close()">Отмена</a>
+					</div>
+				</form>	
+			</div>
 		</div>
 		<div class="container" style="overflow: hidden;">
 			<h1>Почему трансфер лучше такси</h1>
@@ -260,7 +296,7 @@
 		<script src="vendor/jQuery MaskedInput/jquery.maskedinput.min.js"></script>
 		<script>
 			$(function(){
-			  $("#inputPhone").mask("+9(999) 999-99-99");
+				$("#inputPhone").mask("+9(999) 999-99-99");
 			});
 		</script>
 		<script>
@@ -273,10 +309,11 @@
 			var table = document.getElementById('table-content');
 			data.forEach(function(object) {
 				var tr = document.createElement('tr');
-				tr.innerHTML = '<td>' + object.from + '</td>' +
+				tr.setAttribute('onclick', 'modal()');
+				tr.innerHTML ='<td>' + object.from + '</td>' +
 					'<td>' + object.to + '</td>' +
 					'<td>' + object.four + '</td>' +
-					'<td>' + object.eight + '</td>';
+					'<td>' + object.eight + '</td>';;
 				table.appendChild(tr);
 			});
 			</script>
