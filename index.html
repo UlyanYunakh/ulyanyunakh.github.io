@@ -6,19 +6,7 @@
 		<title>BarCar</title>
 		<link href="vendor/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="assets/styles/style.css">
-		<link rel="stylesheet" href="assets/styles/media.css">	
-		<script>
-			function modal(){
-				var m = document.getElementById('modal-background');
-				m.style.display="block";
-				document.body.style.overflow="hidden";
-			};
-			function modal_close(){
-				var m = document.getElementById('modal-background');
-				m.style.display="none";
-				document.body.style.overflow="auto";
-			};
-		</script>		
+		<link rel="stylesheet" href="assets/styles/media.css">
 	</head>
 	<body>
 		<header>
@@ -39,16 +27,14 @@
 							<a class="nav-link" href="#feedback">Бесплатная консультация</a>
 						</li>
 						<li class="nav-item" style="text-align: right;">
-							<a class="nav-link" href="#" style="font-size: 24px;">
-								<strong>+375 33 627 54 21</strong>
-							</a>
+							<a class="nav-link" href="#" style="font-size: 24px;"><strong>+375 33 627 54 21</strong></a>
 							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">пн-сб 10:00 - 20:00</a>
 						</li>
 					</ul>
 				</div>
 			</nav>	
 		</header>
-		<div class="container-fluid" style="overflow: hidden;">
+		<section class="container-fluid" style="overflow: hidden;">
 			<div class="main">
 				<div class="main-img">
 					<div class="main-img-border">
@@ -57,7 +43,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="main-text">
+				<article class="main-text">
 					<h1 style="color: #ecce19; text-align: left;">Комфортный трансфер</h1>
 					<h1 style="text-align: left;">В Барселоне</h1>
 					<p class="main-p">Доставим вас с комфортом из аэропорта<br>до места назначения и обратно</p>
@@ -69,12 +55,12 @@
 					<div class="btn-position">
 						<a href="#cost" class="btn">Расчитать стоимость</a>
 					</div>
-				</div>
+				</article>
 			</div>
-		</div>
-		<div class="container">
+		</section>
+		<section class="container">
 			<h1>Наш автопарк</h1>
-			<div class="auto-list">
+			<article class="row justify-content-between">
 				<div class="auto-background">
 					<img src="assets/img/car.png" alt="">
 					<div class="auto">
@@ -89,14 +75,14 @@
 						<p>Оснащен детскими сидениями и небольшое описание</p>
 					</div>
 				</div>
-			</div>
-			<div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+			</article>
+			<article class="row">
 				<p class="auto-request">Так же вы можете заказать авто по вашим предпочтениям.<br>
 				Cтоимость поездки не изменится</p>
-				<button type="button" class="btn" style="margin: auto;" id="btn-request">Заказать авто премиум-класса</button>
-			</div>
-		</div>
-		<div class="container" id="cost">
+				<a href="#" class="btn" style="margin: auto;" id="btn-request">Заказать авто премиум-класса</a>
+			</article>
+		</section>
+		<section class="container" id="cost">
 			<h1>Стоимость поездки</h1>
 			<form id="table-form">
 				<div class="form-row">
@@ -153,17 +139,19 @@
 					</div>
 				</form>	
 			</div>
-		</div>
-		<div class="container" style="overflow: hidden;">
-			<h1>Почему трансфер лучше такси</h1>
-			<p class="why-us-p">
-				Вы не просто получаете место в машине, а поезду с комфортом.<br>
-				Водители нашего сервиса не только доставляют вас из одной точки в другую,<br>
-				но и выполняют ряд дополнительных функций:
-			</p>
+		</section>
+		<section class="container" style="overflow: hidden;">
+			<article>
+				<h1>Почему трансфер лучше такси</h1>
+				<p class="why-us-p">
+					Вы не просто получаете место в машине, а поезду с комфортом.<br>
+					Водители нашего сервиса не только доставляют вас из одной точки в другую,<br>
+					но и выполняют ряд дополнительных функций:
+				</p>
+			</article>
 			<div class="container" style="padding: 0 0 20px;">
-				<div class="why-us">
-					<div class="why-us-list">
+				<div class="row justify-content-between">
+					<article class="why-us-list">
 						<div class="why-us-list-item">
 							<img src="assets/img/w1.svg" alt="" width="60px">
 							<p>Выбор <span style="color: #efd53e;">безопасного</span> маршрута</p>
@@ -184,7 +172,7 @@
 							<img src="assets/img/w5.svg" alt="" width="60px">
 							<p>Полезные <span style="color: #efd53e;">рекомендации</span> по нахождению в Барселоне</p>
 						</div>
-					</div>
+					</article>
 					<div class="why-us-img">
 						<div class="why-us-img-border">
 							<div class="why-us-img-rotate">
@@ -194,11 +182,11 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container">
+		</section>
+		<section class="container">
 			<div class="how-works">
 				<h1 id="how-works-h1">Как это работает</h1>
-				<div class="row">
+				<article class="row">
 					<div class="col-md-4">
 						<p>1</p>
 						<div class="line"></div>
@@ -216,10 +204,10 @@
 						<div class="cicle"></div>
 						<p>Наш водитель встречает<br> вас и довозит до нужного<br> места</p>
 					</div>
-				</div>
+				</article>
 			</div>
-		</div>
-		<div class="container" id="feedback">
+		</section>
+		<section class="container" id="feedback">
 			<h1 id="questions-title">Остались вопросы?<br>Бесплатная консультация</h1>
 			<div class="row">
 				<div class="col-md-5">
@@ -268,7 +256,7 @@
 					</a>
 				</div>
 			</div>
-		</div>
+		</section>
 		<footer>
 			<div class="container">
 				<div class="row">
@@ -316,6 +304,18 @@
 					'<td>' + object.eight + '</td>';;
 				table.appendChild(tr);
 			});
-			</script>
+		</script>
+		<script>
+			function modal(){
+				var m = document.getElementById('modal-background');
+				m.style.display="block";
+				document.body.style.overflow="hidden";
+			};
+			function modal_close(){
+				var m = document.getElementById('modal-background');
+				m.style.display="none";
+				document.body.style.overflow="auto";
+			};
+		</script>		
 	</body>
 </html>
