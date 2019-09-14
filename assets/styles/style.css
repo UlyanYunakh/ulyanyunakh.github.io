@@ -28,28 +28,37 @@ font-style: normal;
 header {
 	background: rgb(237,237,237);
 }
-.navbar {
+.navbar-brand img {
+	margin-right: 20px;
+}
+.navbar-width {
 	max-width: 1110px;
 	margin: auto;
     padding-right: 15px;
     padding-left: 15px;
 }
-.navbar-collapse {
-	justify-content: flex-end;
+.navbar-text-style {
+	font-family: 'Circe Regular';
+	font-size: 18px;
 }
-.navbar-nav {
-	display: flex;
-	align-items: center;
-	background: rgb(237,237,237);
+.navbar-brand-text-style {
+	font-family: 'Circe Bold';
+	font-size: 24px;
+	color: black!important;
 }
-.navbar-light .navbar-nav .nav-link {
-	color: black;
-	padding: 0 20px;
+.nav-link strong {
+	font-size: 24px;
 }
-.container {
+.nav-link-color {
+	color: black!important;
+}
+.nav-link-padding {
+	padding: 0 20px!important;
+}
+.container-width {
 	max-width: 1110px;
 }
-.row {
+.row-padding {
 	padding: 0 15px;
 }	
 .main {
