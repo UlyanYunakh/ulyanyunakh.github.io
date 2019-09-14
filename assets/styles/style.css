@@ -150,7 +150,7 @@ h1 {
 	font-family: 'Circe Extra Bold';
 	font-size: 60px;
 }
-.btn-style {
+.btn-style, .btn-style:focus {
 	color: black;
 	padding: 0.8rem 2rem;
 	font-family: 'Circe Bold';
@@ -158,6 +158,7 @@ h1 {
 	border: rgb(254, 218, 0);
 	border-radius: 0.5rem;
 	background: #feda00;
+	box-shadow: none;
 }
 .btn-style:hover {
 	border-color: #feda00;
