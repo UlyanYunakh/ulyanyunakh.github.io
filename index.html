@@ -48,9 +48,9 @@
 					<h1 class="text-left">В Барселоне</h1>
 					<p class="main-p">Доставим вас с комфортом из аэропорта<br>до места назначения и обратно</p>
 					<ul class="list-group list-group-horizontal advantage-list ">
-						<li class="list-group-item list-border-color">Русскоговорящие<br> водители</li>
-						<li class="list-group-item list-border-color">Большой<br> выбор авто</li>
-						<li class="list-group-item list-border-color list-border-color-none">Встретим<br> с табличкой</li>
+						<li class="list-group-item list-border">Русскоговорящие<br> водители</li>
+						<li class="list-group-item list-border">Большой<br> выбор авто</li>
+						<li class="list-group-item list-border list-border-none">Встретим<br> с табличкой</li>
 					</ul>
 					<div class="btn-position">
 						<a href="#cost" class="btn btn-primary btn-style">Расчитать стоимость</a>
@@ -60,16 +60,16 @@
 		</section>
 		<section class="container container-width">
 			<h1>Наш автопарк</h1>
-			<article class="container">
+			<article class="container container-width">
 				<div class="row justify-content-between">
-					<div class="auto-background">
+					<div class="d-flex flex-column align-items-center auto-background">
 						<img src="assets/img/car.png" alt="">
 						<div class="auto">
 							<h2>Volkswagen Multivan</h2>
 							<p>Оснащен детскими сидениями и небольшое описание</p>
 						</div>
 					</div>
-					<div class="auto-background">
+					<div class="d-flex flex-column align-items-center auto-background">
 						<img src="assets/img/car.png" alt="">
 						<div class="auto">
 							<h2>Volkswagen Multivan</h2>
@@ -78,36 +78,36 @@
 					</div>
 				</div>
 			</article>
-			<article class="container">
+			<article class="container container-width">
 				<div class="row">
 					<p class="auto-request">Так же вы можете заказать авто по вашим предпочтениям.<br>
 					Cтоимость поездки не изменится</p>
-					<a href="#" class="btn btn-primary btn-style" style="margin: auto;" id="btn-request">Заказать авто премиум-класса</a>
+					<a href="#" class="btn btn-primary btn-style mx-auto" id="btn-request">Заказать авто премиум-класса</a>
 				</div>
 			</article>	
 		</section>
 		<section class="container container-width" id="cost">
 			<h1>Стоимость поездки</h1>
 			<form id="table-form">
-				<div class="form-row">
-					<div class="form-group col-md-3">
-						<label for="inputFrom">Укажите место отправления</label>
-						<input type="from" class="form-control" id="inputFrom" placeholder="Например: Сан-Пауло">
+				<div class="form-row align-items-end">
+					<div class="form-group col-md-3 px-1">
+						<label class="label-style" for="inputFrom">Укажите место отправления*</label>
+						<input type="from" class="form-control form-control-style" id="inputFrom" placeholder="Например: Сан-Пауло">
 					</div>
-					<div class="form-group col-md-4">
-						<label for="inputTo">Укажите место прибытия</label>
-						<input type="to" class="form-control" id="inputTo" placeholder="Например: Сан-Пауло">
+					<div class="form-group col-md-4 px-1">
+						<label class="label-style" for="inputTo">Укажите место прибытия*</label>
+						<input type="to" class="form-control form-control-style" id="inputTo" placeholder="Например: Сан-Пауло">
 					</div>
-					<div class="form-group col-md-3">
-						<label for="inputNumber">Укажите количество человек</label>
-						<input type="number" class="form-control" id="inputNumber" placeholder="Например: Сан-Пауло">
+					<div class="form-group col-md-3 px-1">
+						<label class="label-style" for="inputNumber">Укажите количество человек*</label>
+						<input type="number" class="form-control form-control-style" id="inputNumber" placeholder="Например: Сан-Пауло">
 					</div>
-					<div class="form-group col-md-2">
-						<button type="submit" class="btn" id="submit-table-form">Узнать</button>
+					<div class="form-group col-md-2 px-1">
+						<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-table-form">Узнать</button>
 					</div>
 				</div>
 			</form>
-			<table class="table table-hover">
+			<table class="table table-hover table-border">
 			  <thead>
 				<tr>
 				  <th scope="col">Место отправления</th>
@@ -119,32 +119,8 @@
 			  <tbody id="table-content">
 			  </tbody>
 			</table>
-			<div id="modal-background">
-				<form id="modal-form">
-					<h2>Форма обратной связи</h2>
-					<div class="form-group">
-						<label for="inputName" style="color: black;">Введите своё имя</label>
-						<input type="name" class="form-control" id="inputName" placeholder="Например: Сергей">
-					</div>
-					<div class="form-group">
-						<label for="inputEmail" style="color: black;">Введите Email</label>
-						<input type="phone" class="form-control" id="inputEmail" placeholder="Например: barcar@barcar.com">
-					</div>
-					<div class="form-group">
-						<label for="inputMassege" style="color: black;">Ваше сообщение</label>
-						<textarea class="form-control" id="inputMassege" rows="5"
-						placeholder="Например: Подскажите, хочу оправится из Сан-Пауло в центр, сколько будет стоить и можно ли ехать на черном авто?"></textarea>
-					</div>
-					<div class="form-group">
-						<button type="submit" class="btn" id="submit-massege-form" onclick="modal_close()">Отправить сообщение</button>
-					</div>
-					<div class="form-group">
-						<a class="btn" style="width: 100%; background-color: white; border: 1px solid #feda00; cursor: pointer;" onclick="modal_close()">Отмена</a>
-					</div>
-				</form>	
-			</div>
 		</section>
-		<section class="container container-width" style="overflow: hidden;">
+		<section class="container container-width">
 			<article>
 				<h1>Почему трансфер лучше такси</h1>
 				<p class="why-us-p">
@@ -153,28 +129,28 @@
 					но и выполняют ряд дополнительных функций:
 				</p>
 			</article>
-			<div class="container container-width" style="padding: 0 0 20px;">
+			<div class="container container-width pb-3">
 				<div class="row row-padding justify-content-between">
-					<article class="why-us-list">
-						<div class="why-us-list-item">
+					<article class="mw-75 d-flex flex-column">
+						<div class="row align-items-center why-us-list-item">
 							<img src="assets/img/w1.svg" alt="" width="60px">
-							<p>Выбор <span style="color: #efd53e;">безопасного</span> маршрута</p>
+							<p>Выбор <span>безопасного</span> маршрута</p>
 						</div>
-						<div class="why-us-list-item">
+						<div class="row align-items-center why-us-list-item">
 							<img src="assets/img/w2.svg" alt="" width="60px">
-							<p><span style="color: #efd53e;">Встреча</span> водителем с табличкой</p>
+							<p><span>Встреча</span> водителем с табличкой</p>
 						</div>
-						<div class="why-us-list-item">
+						<div class="row align-items-center why-us-list-item">
 							<img src="assets/img/w3.svg" alt="" width="60px">
-							<p>Помощь <span style="color: #efd53e;">с заселением</span></p>
+							<p>Помощь <span>с заселением</span></p>
 						</div>
-						<div class="why-us-list-item">
+						<div class="row align-items-center why-us-list-item">
 							<img src="assets/img/w4.svg" alt="" width="60px">
-							<p>Помощь <span style="color: #efd53e;">с багажем</span></p>
+							<p>Помощь <span>с багажем</span></p>
 						</div>
-						<div class="why-us-list-item">
+						<div class="row align-items-center why-us-list-item">
 							<img src="assets/img/w5.svg" alt="" width="60px">
-							<p>Полезные <span style="color: #efd53e;">рекомендации</span> по нахождению в Барселоне</p>
+							<p>Полезные <span>рекомендации</span> по нахождению в Барселоне</p>
 						</div>
 					</article>
 					<div class="why-us-img">
@@ -190,20 +166,20 @@
 		<section class="container container-width">
 			<div class="how-works">
 				<h1 id="how-works-h1">Как это работает</h1>
-				<article class="row row-padding">
-					<div class="col-md-4">
+				<article class="row">
+					<div class="col-md-4 col-padding position-relative">
 						<p>1</p>
 						<div class="line"></div>
 						<div class="cicle"></div>
 						<p>Вы выбираете маршрут<br> в Барселоне</p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 col-padding position-relative">
 						<p>2</p>
 						<div class="line"></div>
 						<div class="cicle"></div>
 						<p>Оставляете заявку<br> на сайте</p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 col-padding position-relative">
 						<p>3</p>
 						<div class="cicle"></div>
 						<p>Наш водитель встречает<br> вас и довозит до нужного<br> места</p>
@@ -216,65 +192,67 @@
 			<div class="row">
 				<div class="col-md-5">
 					<form id="massege-form">
-						<div class="form-group">
-							<label for="inputName">Введите своё имя</label>
-							<input type="name" class="form-control" id="inputName" placeholder="Например: Сергей">
+						<div class="form-group mb-3">
+							<label class="label-style" for="inputName">Введите своё имя*</label>
+							<input type="name" class="form-control form-control-style" id="inputName" placeholder="Например: Сергей">
 						</div>
-						<div class="form-group">
-							<label for="inputPhone">Введите контактный номер телефона</label>
-							<input type="phone" class="form-control" id="inputPhone" placeholder="+8(029) 620-20-23">
+						<div class="form-group mb-3">
+							<label class="label-style" for="inputPhone">Введите контактный номер телефона*</label>
+							<input type="phone" class="form-control form-control-style" id="inputPhone" placeholder="+8(029) 620-20-23">
 						</div>
-						<div class="form-group">
-							<label for="inputMassege">Ваше сообщение</label>
-							<textarea class="form-control" id="inputMassege" rows="5"
+						<div class="form-group mb-3">
+							<label class="label-style" for="inputMassege">Ваше сообщение*</label>
+							<textarea class="form-control form-control-style" id="inputMassege" rows="5"
 							placeholder="Например: Подскажите, хочу оправится из Сан-Пауло в центр, сколько будет стоить и можно ли ехать на черном авто?"></textarea>
 						</div>
-						<div class="form-group">
-							<button type="submit" class="btn" id="submit-massege-form">Отправить сообщение</button>
+						<div class="form-group mb-3">
+							<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-massege-form">Отправить сообщение</button>
 						</div>
 					</form>
 				</div>
-				<div class="col-md-6 offset-md-1">
-					<div class="container-fluid">
+				<div class="col-md-6 offset-md-1 mt-2">
+					<div class="container-fluid d-flex align-items-center my-3">
 						<img src="assets/img/phone.svg" alt="">
-						<div style="display: flex; flex-direction: column; margin-left: 10px;">
-							<p style="color: #c6c6c6; font-family: 'Circe Bold'; font-size: 18px; margin: 0; position: relative; top: 5px;">Телефон</p>
+						<div class="d-flex flex-column ml-3">
+							<p class="feedback-label">Телефон</p>
 							<a href="#" id="phone">+375 33 620-20-23</a>
 						</div>
 					</div>
-					<div class="container-fluid">
+					<div class="container-fluid d-flex align-items-center my-3">
 						<img src="assets/img/watch.svg" alt="">
-						<div style="display: flex; flex-direction: column; margin-left: 10px;">
-							<p style="color: #c6c6c6; font-family: 'Circe Bold'; font-size: 18px; margin: 0; position: relative; top: 5px;">Режим работы</p>
-							<p style="font-family: 'Circe Bold'; font-size: 18px; margin: 0;">пн-сб 10:00-20:00</p>
+						<div class="d-flex flex-column ml-3">
+							<p class="feedback-label">Режим работы</p>
+							<p class="feedback-p-work-time">пн-сб 10:00-20:00</p>
 						</div>
 					</div>
 					<h2 class="feedback-h2">Или пишите нам в удобный мессенджер</h2>
-					<a href="#" class="container container-width" style="display: flex; align-items: center; text-decoration: none; color: black;">
-						<img src="assets/img/telegram.svg" alt="">
-						<p class="feedback-p">@BarCar</p>
-					</a>
-					<a href="#" class="container container-width" style="display: flex; align-items: center; text-decoration: none; color: black;">
-						<img src="assets/img/vk.svg" alt="">
-						<p class="feedback-p">/vk</p>
-					</a>
+					<div class="container-fluid d-flex align-items-start flex-column mt-2">
+						<a href="#" class="row text-decoration-none align-items-center mt-3 ml-2" style=" color: black;">
+							<img src="assets/img/telegram.svg" alt="">
+							<p class="feedback-p">@BarCar</p>
+						</a>
+						<a href="#" class="row text-decoration-none align-items-center mt-3 ml-2" style="color: black;">
+							<img src="assets/img/vk.svg" alt="">
+							<p class="feedback-p">/vk</p>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
 		<footer>
 			<div class="container container-width">
-				<div class="row">
+				<div class="row align-items-center">
 					<div class="col-md-4 left-footer-block">
 						ООО "Юрстатус"<br>УНП:193120088
 					</div>
-					<div class="col-md-4 center-footer-block">
+					<div class="col-md-4 d-flex align-items-center flex-column center-footer-block">
 						<img src="assets/img/logo.svg" width="100px" alt="">
 						<h2>BarCar - трансфер</h2>
-						<p style="font-family: 'Circe Regular'; font-size: 12px; margin: 0;">(с)2018-2019 Все права защищены</p>
+						<p>(с)2018-2019 Все права защищены</p>
 					</div>
 					<div class="col-md-4 right-footer-block">
 						<p>Сделано в</p>
-						<div class="container container-width">
+						<div class="container container-width right-footer-block-content">
 							<img src="assets/img/logo2.svg" alt="">
 							<p>Dynamicov.</p>
 						</div>
@@ -302,6 +280,7 @@
 			data.forEach(function(object) {
 				var tr = document.createElement('tr');
 				tr.setAttribute('onclick', 'modal()');
+				tr.setAttribute('class', 'table-hover-style');
 				tr.innerHTML ='<td>' + object.from + '</td>' +
 					'<td>' + object.to + '</td>' +
 					'<td>' + object.four + '</td>' +

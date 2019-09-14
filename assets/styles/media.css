@@ -194,9 +194,6 @@
 	.how-works {
 		margin: 20px 0 40px; 
 	}
-	#feedback .row {
-		padding-top: 20px;
-	}
 }
 @media (max-width: 507px){
 	.auto-background img {
