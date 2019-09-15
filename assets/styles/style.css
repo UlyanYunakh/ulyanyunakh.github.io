@@ -1,31 +1,4 @@
-@font-face {
-font-family: 'Circe Extra Bold';
-src: url('../fonts/Circe-ExtraBold.eot');
-src: url('../fonts/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
-url('../fonts/Circe-ExtraBold.woff') format('woff'),
-url('../fonts/Circe-ExtraBold.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
-}
-@font-face {
-font-family: 'Circe Regular';
-src: url('../fonts/Circe-Regular.eot');
-src: url('../fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),
-url('../fonts/Circe-Regular.woff') format('woff'),
-url('../fonts/Circe-Regular.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
-}
-@font-face {
-font-family: 'Circe Bold';
-src: url('../fonts/Circe-Bold.eot');
-src: url('../fonts/Circe-Bold.eot?#iefix') format('embedded-opentype'),
-url('../fonts/Circe-Bold.woff') format('woff'),
-url('../fonts/Circe-Bold.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
-}
-/* -----------Header styles:----------- */
+/* -----------header styles:----------- */
 header {
 	background: rgb(237,237,237);
 }
@@ -59,7 +32,7 @@ header {
 .nav-link-padding {
 	padding: 0 20px!important;
 }
-/* -----------Main styles:----------- */
+/* -----------main section styles:----------- */
 .container-width {
 	max-width: 1110px;
 }
@@ -146,7 +119,7 @@ h1 {
 			-ms-transform: rotate(45deg); 
 			transform: rotate(45deg);
 		}
-/* -------Button style------- */
+/* -------button style:------- */
 .btn-style, .btn-style:focus {
 	color: black;
 	padding: 0.8rem 2rem;
@@ -168,7 +141,7 @@ h1 {
 	color: black!important;
 	background: white!important;
 }
-/* -----------Auto section styles:----------- */
+/* -----------auto section styles:----------- */
 .auto-background {
 	width: 49%;
 	min-width: 290px;
@@ -199,12 +172,12 @@ h2 {
 	font-family: 'Circe Bold';
 	font-size: 30px;
 	text-align: center;
-	margin: 20px 0 40px 0;
+	margin: 20px 15px 40px;
 	padding: 0.8rem 2rem;
 	background: #ededed;
 	border-radius: 30px;
 }
-/* -------------- */
+/* ---------travel cost section styles:----------- */
 #cost h1 {
 	margin: 60px 0 60px;
 }
@@ -238,7 +211,7 @@ h2 {
 	background-color: rgba(254,218,0,.5)!important;
 	cursor: pointer;
 }
-/* ------------------------------ */
+/* --------------why us section styles:---------------- */
 .why-us-p {
 	font-family: 'Circe Regular';
 	margin: 30px 0 70px; 
@@ -315,7 +288,7 @@ h2 {
 			-ms-transform: rotate(-5deg); 
 			transform: rotate(-5deg);
 		}
-/* ------------------------------ */
+/* --------------how it work section styles:---------------- */
 #how-works-h1 {
 	margin-bottom: 20px;
 }
@@ -360,7 +333,7 @@ h2 {
 	padding-right: 100%;
 	border: 1px solid #a5a5a5;
 }
-/* -------------------------------- */
+/* ---------------contact info section styles:----------------- */
 #questions-title {
 	margin-bottom: 50px;
 }
@@ -373,6 +346,7 @@ h2 {
 	font-family: 'Circe Bold'; 
 	font-size: 24px; 
 	margin: 0 10px;
+	color: black;
 }
 #phone {
 	font-family: 'Circe Bold'; 
@@ -394,7 +368,7 @@ h2 {
 	font-size: 18px; 
 	margin: 0;
 }
-/* ------------------------- */
+/* ------------footer styles:------------- */
 footer {
 	margin: 80px 0 50px 0;
 }
