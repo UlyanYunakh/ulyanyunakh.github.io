@@ -67,58 +67,59 @@ h1 {
 .list-border-none {
 	border-right: 0px;
 }
-		.main-img {
-			width: 630px;
-			height: 630px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 40px;
-			position: absolute;
-			left: 820px;
-			top: -90px;
-		}
-		.main-img-border {
-			width: inherit;
-			height: inherit;
-			overflow: hidden;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 40px;
-			-webkit-transform: rotate(55deg);
-			-ms-transform: rotate(55deg); 
-			transform: rotate(55deg);
-			position: relative;
-			z-index: -1;
-		}
-		.main-img-rotate {
-			width: inherit;
-			height: 140%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			-webkit-transform: rotate(-55deg);
-			-ms-transform: rotate(-55deg); 
-			transform: rotate(-55deg);
-			z-index: -1;
-		}
-		.main-img-rotate img {
-			position: absolute;
-			top: 120px;
-		}
-		.main-img:before {
-			position: absolute;
-			z-index: -1;
-			content: "";
-			width: inherit;
-			height: inherit;
-			border-radius: 40px;
-			background: #efd53e;
-			-webkit-transform: rotate(45eg);
-			-ms-transform: rotate(45deg); 
-			transform: rotate(45deg);
-		}
+/* -----------main img----------- */
+.main-img {
+	width: 630px;
+	height: 630px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 40px;
+	position: absolute;
+	left: 820px;
+	top: -90px;
+}
+.main-img-border {
+	width: inherit;
+	height: inherit;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 40px;
+	-webkit-transform: rotate(55deg);
+	-ms-transform: rotate(55deg); 
+	transform: rotate(55deg);
+	position: relative;
+	z-index: -1;
+}
+.main-img-rotate {
+	width: inherit;
+	height: 140%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-webkit-transform: rotate(-55deg);
+	-ms-transform: rotate(-55deg); 
+	transform: rotate(-55deg);
+	z-index: -1;
+}
+.main-img-rotate img {
+	position: absolute;
+	top: 120px;
+}
+.main-img:before {
+	position: absolute;
+	z-index: -1;
+	content: "";
+	width: inherit;
+	height: inherit;
+	border-radius: 40px;
+	background: #efd53e;
+	-webkit-transform: rotate(45eg);
+	-ms-transform: rotate(45deg); 
+	transform: rotate(45deg);
+}
 /* -------button style:------- */
 .btn-style, .btn-style:focus {
 	color: black;
@@ -242,52 +243,53 @@ h2 {
 	margin: 0 0 0 40px;
 	max-width: 340px;
 }
-		.why-us-img {
-			width: 500px;
-			height: 500px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 40px;
-			position: relative;
-			margin-right: 15px;
-		}
-		.why-us-img-border {
-			position: relative;
-			width: inherit;
-			height: inherit;
-			overflow: hidden;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 40px;
-			-webkit-transform: rotate(2deg);
-			-ms-transform: rotate(2deg); 
-			transform: rotate(2deg);
-		}
-		.why-us-img-rotate {
-			position: relative;
-			width: inherit;
-			height: 130%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			-webkit-transform: rotate(-2deg);
-			-ms-transform: rotate(-2deg); 
-			transform: rotate(-2deg);
-		}
-		.why-us-img:before {
-			position: absolute;
-			z-index: -1;
-			content: "";
-			width: inherit;
-			height: inherit;
-			border-radius: 40px;
-			background: #efd53e;
-			-webkit-transform: rotate(-5deg);
-			-ms-transform: rotate(-5deg); 
-			transform: rotate(-5deg);
-		}
+/* ----------why us img----------- */
+.why-us-img {
+	width: 500px;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 40px;
+	position: relative;
+	margin-right: 15px;
+}
+.why-us-img-border {
+	position: relative;
+	width: inherit;
+	height: inherit;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 40px;
+	-webkit-transform: rotate(2deg);
+	-ms-transform: rotate(2deg); 
+	transform: rotate(2deg);
+}
+.why-us-img-rotate {
+	position: relative;
+	width: inherit;
+	height: 130%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-webkit-transform: rotate(-2deg);
+	-ms-transform: rotate(-2deg); 
+	transform: rotate(-2deg);
+}
+.why-us-img:before {
+	position: absolute;
+	z-index: -1;
+	content: "";
+	width: inherit;
+	height: inherit;
+	border-radius: 40px;
+	background: #efd53e;
+	-webkit-transform: rotate(-5deg);
+	-ms-transform: rotate(-5deg); 
+	transform: rotate(-5deg);
+}
 /* --------------how it work section styles:---------------- */
 #how-works-h1 {
 	margin-bottom: 20px;
