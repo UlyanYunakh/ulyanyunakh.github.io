@@ -197,7 +197,10 @@
 		height: 300px;
 	}
 	.how-works {
-		margin: 20px 0 40px; 
+		margin: 20px 0; 
+	}
+	#questions-title {
+		padding-top: 50px;
 	}
 }
 
@@ -276,7 +279,8 @@
 		margin-bottom: 70px;
 	}
 	#cost h1 {
-		margin: 40px 0 0;
+		padding-top: 60px;
+		margin-bottom: 0;
 	}
 }
 
