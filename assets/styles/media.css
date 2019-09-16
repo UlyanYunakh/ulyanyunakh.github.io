@@ -4,6 +4,7 @@
 		right: -300px;
 	}
 }
+
 @media (max-width: 1024px){
 	.why-us  {
 		flex-direction: column;
@@ -22,6 +23,7 @@
 		margin-left: 20px;
 	}
 }
+
 @media (max-width: 991px){
 	.main-text {
 		padding-top: 40px;
@@ -36,6 +38,7 @@
 		right: -200px;
 	}
 }
+
 @media (max-width: 900px){
 	.auto-background img {
 		top: -100px;
@@ -47,11 +50,13 @@
 		padding-bottom: 2rem;
 	}
 }
+
 @media (max-width: 799px){
 	.center-footer-block h2 {
 		font-size: 25px;
 	}
 }
+
 @media (max-width: 768px){
 	h1 {
 		font-size: 45px;
@@ -86,6 +91,7 @@
 		padding-bottom: 20px;
 	}
 }
+
 @media (max-width: 767px){
 	.line {
 		display: none;
@@ -120,6 +126,7 @@
 		height: 350px;
 	}
 }
+
 @media (max-width: 700px){
 	.auto-background img {
 		top: -90px;
@@ -129,6 +136,7 @@
 		margin-top: 130px;
 	}
 }
+
 @media (max-width: 637px){
 	.auto-background {
 		margin-top: 125px;
@@ -182,6 +190,7 @@
 		opacity:0.2;
 	}
 }
+
 @media (max-width: 560px){
 	.why-us-img {
 		width: 300px;
@@ -191,6 +200,7 @@
 		margin: 20px 0 40px; 
 	}
 }
+
 @media (max-width: 507px){
 	.auto-background img {
 		top: -90px;
@@ -206,6 +216,7 @@
 		padding-bottom: 70px;
 	}
 }
+
 @media (max-width: 500px){
 	h1{
 		font-size: 35px;
@@ -234,6 +245,7 @@
 		margin-bottom: 10px;
 	}
 }
+
 @media (max-width: 474px){
 	.main-text {
 		padding-top: 25px;
@@ -248,12 +260,14 @@
 		margin-top: 15px;
 	}
 }
+
 @media (max-width: 425px){
 	.advantage-list li {
 		padding: 10px 10px;
 		width: 225px;
 	}
 }
+
 @media (max-width: 375px){
 	.why-us-p {
 		margin-bottom: 20px;
@@ -265,6 +279,7 @@
 		margin: 40px 0 0;
 	}
 }
+
 @media (max-width: 343px){
 	#phone {
 		font-size: 20px;

@@ -1,7 +1,5 @@
 /* -----------header styles:----------- */
-header {
-	background: rgb(237,237,237);
-}
+
 .navbar-brand img {
 	margin-right: 20px;
 }
@@ -32,7 +30,27 @@ header {
 .nav-link-padding {
 	padding: 0 20px!important;
 }
+.sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: padding 200ms;
+	background: rgb(237,237,237);
+}
+.fixed {
+	padding: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: rgb(237,237,237);
+}
+.navbar-sticky {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 /* -----------main section styles:----------- */
+
 .container-width {
 	max-width: 1110px;
 }
@@ -67,7 +85,9 @@ h1 {
 .list-border-none {
 	border-right: 0px;
 }
+
 /* -----------main img----------- */
+
 .main-img {
 	width: 630px;
 	height: 630px;
@@ -120,7 +140,9 @@ h1 {
 	-ms-transform: rotate(45deg); 
 	transform: rotate(45deg);
 }
+
 /* -------button style:------- */
+
 .btn-style, .btn-style:focus {
 	color: black;
 	padding: 0.8rem 2rem;
@@ -130,6 +152,10 @@ h1 {
 	border-radius: 0.75rem;
 	background: #feda00;
 	box-shadow: none;
+}
+.btn-style-close {
+	border: 2px solid rgb(237,237,237);
+	background: rgb(237,237,237);
 }
 .btn-style:hover {
 	border-color: #feda00;
@@ -142,7 +168,9 @@ h1 {
 	color: black!important;
 	background: white!important;
 }
+
 /* -----------auto section styles:----------- */
+
 .auto-background {
 	width: 49%;
 	min-width: 290px;
@@ -178,7 +206,9 @@ h2 {
 	background: #ededed;
 	border-radius: 30px;
 }
+
 /* ---------travel cost section styles:----------- */
+
 #cost h1 {
 	margin: 60px 0 60px;
 }
@@ -212,7 +242,13 @@ h2 {
 	background-color: rgba(254,218,0,.5)!important;
 	cursor: pointer;
 }
+.modal-title-style {
+	font-family: 'Circe Extra Bold';
+	font-size: 20px; 
+}
+
 /* --------------why us section styles:---------------- */
+
 .why-us-p {
 	font-family: 'Circe Regular';
 	margin: 30px 0 70px; 
@@ -243,7 +279,9 @@ h2 {
 	margin: 0 0 0 40px;
 	max-width: 340px;
 }
+
 /* ----------why us img----------- */
+
 .why-us-img {
 	width: 500px;
 	height: 500px;
@@ -290,7 +328,9 @@ h2 {
 	-ms-transform: rotate(-5deg); 
 	transform: rotate(-5deg);
 }
+
 /* --------------how it work section styles:---------------- */
+
 #how-works-h1 {
 	margin-bottom: 20px;
 }
@@ -335,7 +375,9 @@ h2 {
 	padding-right: 100%;
 	border: 1px solid #a5a5a5;
 }
+
 /* ---------------contact info section styles:----------------- */
+
 #questions-title {
 	margin-bottom: 50px;
 }
@@ -370,7 +412,9 @@ h2 {
 	font-size: 18px; 
 	margin: 0;
 }
+
 /* ------------footer styles:------------- */
+
 footer {
 	margin: 80px 0 50px 0;
 }

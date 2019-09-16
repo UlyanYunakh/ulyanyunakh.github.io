@@ -4,13 +4,13 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1, width=device-width">
 		<title>BarCar</title>
-		<link href="vendor/bootstrap.min.css" rel="stylesheet">
+		<link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="assets/styles/stylesheet.css">
 		<link rel="stylesheet" href="assets/styles/style.css">
 		<link rel="stylesheet" href="assets/styles/media.css">
 	</head>
 	<body>
-		<header>
+		<header class="sticky">
 			<nav class="navbar navbar-expand-lg navbar-light navbar-width">
 				<a class="navbar-brand navbar-brand-text-style" href="#">
 					<img src="assets/img/logo.svg" alt="">
@@ -47,13 +47,49 @@
 						<li class="list-group-item list-border list-border-none">Встретим<br> с табличкой</li>
 					</ul>
 					<div class="btn-position">
-						<a href="#cost" class="btn btn-primary btn-style">Расчитать стоимость</a>
+						<button class="btn btn-primary btn-style" data-toggle="modal" data-target="#Modal-price">Расчитать стоимость</button>
 					</div>
 				</article>
 				<div class="main-img">
 					<div class="main-img-border">
 						<div class="main-img-rotate">
 							<img src="assets/img/photo.jpg" height="100%" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="Modal-price" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title modal-title-style" id="exampleModalLabel">Расчет стоимости</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form id="table-form">
+									<div class="form align-items-end">
+										<div class="form-group px-1">
+											<label class="label-style" for="inputFrom">Укажите место отправления*</label>
+											<input type="from" class="form-control form-control-style" id="inputFrom" placeholder="Например: Сан-Пауло">
+										</div>
+										<div class="form-group px-1">
+											<label class="label-style" for="inputTo">Укажите место прибытия*</label>
+											<input type="to" class="form-control form-control-style" id="inputTo" placeholder="Например: Сан-Пауло">
+										</div>
+										<div class="form-group px-1">
+											<label class="label-style" for="inputNumber">Укажите количество человек*</label>
+											<input type="number" class="form-control form-control-style" id="inputNumber" placeholder="Например: Сан-Пауло">
+										</div>
+										<div class="form-group px-1">
+											<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-table-form">Узнать</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary btn-style btn-style-close btn-block" data-dismiss="modal">Отмена</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -117,6 +153,41 @@
 			  <tbody id="table-content">
 			  </tbody>
 			</table>
+			<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h5 class="modal-title modal-title-style" id="exampleModalLabel">Форма обратной связи</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body">
+					<form id="massege-form">
+						<div class="form-group mb-3">
+							<label class="label-style" for="inputName">Введите своё имя*</label>
+							<input type="name" class="form-control form-control-style" id="inputName" placeholder="Например: Сергей">
+						</div>
+						<div class="form-group mb-3">
+							<label class="label-style" for="inputPhone">Введите контактный номер телефона*</label>
+							<input type="phone" class="form-control form-control-style" id="inputPhone" placeholder="+8(029) 620-20-23">
+						</div>
+						<div class="form-group mb-3">
+							<label class="label-style" for="inputMassege">Ваше сообщение*</label>
+							<textarea class="form-control form-control-style" id="inputMassege" rows="5"
+							placeholder="Например: Подскажите, хочу оправится из Сан-Пауло в центр, сколько будет стоить и можно ли ехать на черном авто?"></textarea>
+						</div>
+						<div class="form-group mb-3">
+							<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-massege-form">Отправить сообщение</button>
+						</div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-secondary btn-style btn-style-close btn-block" data-dismiss="modal">Отмена</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
 		</section>
 		<section class="container container-width">
 			<article>
@@ -245,7 +316,7 @@
 					</div>
 					<div class="col-md-4 d-flex align-items-center flex-column center-footer-block">
 						<img src="assets/img/logo.svg" width="100px" alt="">
-						<h2>BarCar - трансфер</h2>
+						<h2 class="text-center">BarCar - трансфер</h2>
 						<p>(с)2018-2019 Все права защищены</p>
 					</div>
 					<div class="col-md-4 right-footer-block">
@@ -260,29 +331,8 @@
 		</footer>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="vendor/bootstrap.min.js"></script>
+		<script src="vendor/bootstrap/bootstrap.min.js"></script>
 		<script src="vendor/jQuery MaskedInput/jquery.maskedinput.min.js"></script>
-		<script>
-			$(function(){
-				$("#inputPhone").mask("+9(999) 999-99-99");
-			});
-			var data = [
-				{ "from":"Сан-Пауло", "to":"Барселона", "four":"Да", "eight":"Нет" },
-				{ "from":"Барселона", "to":"Сан-Пауло", "four":"Нет", "eight":"Да" },
-				{ "from":"Сан-Пауло", "to":"Барселона", "four":"Да", "eight":"Нет" },
-				{ "from":"Барселона", "to":"Сан-Пауло", "four":"Нет", "eight":"Да" }
-			];
-			var table = document.getElementById('table-content');
-			data.forEach(function(object) {
-				var tr = document.createElement('tr');
-				tr.setAttribute('onclick', 'modal()');
-				tr.setAttribute('class', 'table-hover-style');
-				tr.innerHTML ='<td>' + object.from + '</td>' +
-					'<td>' + object.to + '</td>' +
-					'<td>' + object.four + '</td>' +
-					'<td>' + object.eight + '</td>';;
-				table.appendChild(tr);
-			});
-		</script>		
+		<script src="assets/js/scripts.js"></script>		
 	</body>
 </html>
