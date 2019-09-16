@@ -1,4 +1,4 @@
-$("#navbarNav").on("click","a", function (event) {
+$('a[href^="#"]').click(function (event) {
 	event.preventDefault();
 	var id  = $(this).attr('href'),
 		top = $(id).offset().top;
@@ -6,9 +6,11 @@ $("#navbarNav").on("click","a", function (event) {
 });
 
 $(function(){
-	$("input[type=phone]").mask("+9(999) 999-99-99");
 	$.mask.definitions['~']='[123456789]';
 	$("input[type=amount]").mask("~999999",{placeholder:""});
+	$.mask.definitions['9'] = '';
+	$.mask.definitions['d'] = '[0-9]';
+	$("input[type=phone]").mask("+8(029) ddd-dd-dd");
 });
 
 $(window).scroll(function(){
