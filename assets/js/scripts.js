@@ -26,7 +26,7 @@ $(window).scroll(function(){
 	var sticky = $('.sticky'),
 		scroll = $(window).scrollTop();
 
-	if (scroll >= 50) {
+	if (scroll >= 20) {
 		sticky.addClass('fixed');
 		nav.addClass('navbar-sticky');
 	}

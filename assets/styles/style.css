@@ -31,7 +31,6 @@
 	padding: 0 20px!important;
 }
 .sticky {
-    position: fixed;
     width: 100%;
     z-index: 100;
     transition: padding 200ms;
