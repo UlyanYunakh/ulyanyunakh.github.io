@@ -6,9 +6,11 @@ $("#navbarNav").on("click","a", function (event) {
 });
 
 $(function(){
-	$("#inputPhoneAuto").mask("+9(999) 999-99-99");
-	$("#inputPhoneFed").mask("+9(999) 999-99-99");
-	$("#inputPhone").mask("+9(999) 999-99-99");
+	$("input[type=phone]").mask("+9(999) 999-99-99");
+});
+$(function(){
+	$.mask.definitions['~']='[123456789]';
+	$("input[type=amount]").mask("~999999",{placeholder:""});
 });
 
 $(window).scroll(function(){
