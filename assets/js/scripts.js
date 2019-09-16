@@ -23,9 +23,7 @@ $(window).scroll(function(){
 	else {
 		sticky.removeClass('fixed');
 		nav.removeClass('navbar-sticky');
-	} 
-
-	check()
+	}
 });
 
 var data = [
@@ -47,6 +45,3 @@ data.forEach(function(object) {
 		'<td>' + object.eight + '</td>';;
 	table.appendChild(tr);
 });
-
-
-

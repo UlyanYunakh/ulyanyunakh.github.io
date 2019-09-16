@@ -147,9 +147,6 @@
 		top: -100px;
 		width: 300px;
 	}
-	.auto {
-		width: 100%;
-	}
 	.auto-request {
 		width: 100%;
 	}
@@ -208,9 +205,6 @@
 	.auto-background img {
 		top: -90px;
 		width: 280px;
-	}
-	.auto {
-		width: 90%;
 	}
 	.auto-request {
 		font-size: 25px;
