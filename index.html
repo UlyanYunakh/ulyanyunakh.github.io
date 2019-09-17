@@ -197,18 +197,18 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<form id="massege-form">
+								<form id="massege-form" action="mail.php" method="POST">
 									<div class="form-group mb-3">
 										<label class="label-style" for="inputName">Введите своё имя*</label>
-										<input type="name" class="form-control form-control-style" id="inputName" placeholder="Например: Сергей">
+										<input type="name" class="form-control form-control-style" name="user_name" id="inputName" placeholder="Например: Сергей">
 									</div>
 									<div class="form-group mb-3">
 										<label class="label-style" for="inputPhoneFed">Введите контактный номер телефона*</label>
-										<input type="phone" class="form-control form-control-style" id="inputPhoneFed" placeholder="+8(029) 620-20-23">
+										<input type="phone" class="form-control form-control-style" name="user_phone" id="inputPhoneFed" placeholder="+8(029) 620-20-23">
 									</div>
 									<div class="form-group mb-3">
 										<label class="label-style" for="inputMassege">Ваше сообщение*</label>
-										<textarea class="form-control form-control-style" id="inputMassege" rows="5"
+										<textarea class="form-control form-control-style" name="user_massege" id="inputMassege" rows="5"
 										placeholder="Например: Подскажите, хочу оправится из Сан-Пауло в центр, сколько будет стоить и можно ли ехать на черном авто?"></textarea>
 									</div>
 									<div class="form-group mb-3">
@@ -324,18 +324,18 @@
 						</div>
 					</article>
 					<article class="col-md-5 order-1">
-						<form id="massege-form">
+						<form id="massege-form" action="mail.php" method="POST">
 							<div class="form-group mb-3">
 								<label class="label-style" for="inputName">Введите своё имя*</label>
-								<input type="name" class="form-control form-control-style" id="inputName" placeholder="Например: Сергей">
+								<input type="name" class="form-control form-control-style" name="user_name" id="inputName" placeholder="Например: Сергей">
 							</div>
 							<div class="form-group mb-3">
 								<label class="label-style" for="inputPhone">Введите контактный номер телефона*</label>
-								<input type="phone" class="form-control form-control-style" id="inputPhone" placeholder="+8(029) 620-20-23">
+								<input type="phone" class="form-control form-control-style" name="user_phone" id="inputPhone" placeholder="+8(029) 620-20-23">
 							</div>
 							<div class="form-group mb-3">
 								<label class="label-style" for="inputMassege">Ваше сообщение*</label>
-								<textarea class="form-control form-control-style" id="inputMassege" rows="5"
+								<textarea class="form-control form-control-style" name="user_massege" id="inputMassege" rows="5"
 								placeholder="Например: Подскажите, хочу оправится из Сан-Пауло в центр, сколько будет стоить и можно ли ехать на черном авто?"></textarea>
 							</div>
 							<div class="form-group mb-3">
