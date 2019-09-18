@@ -68,22 +68,26 @@
 									</button>
 								</div>
 								<div class="modal-body">
-									<form id="table-form">
+									<form id="form">
 										<div class="form align-items-end">
-											<div class="form-group px-1">
+											<div class="form-group">
 												<label class="label-style" for="inputFrom">Укажите место отправления*</label>
-												<input type="from" class="form-control form-control-style" id="inputFrom" placeholder="Например: Сан-Пауло">
+												<input type="from" class="form-control form-control-style" name="form-user_from" id="inputFrom" placeholder="Например: Сан-Пауло">
 											</div>
-											<div class="form-group px-1">
+											<div class="form-group">
 												<label class="label-style" for="inputTo">Укажите место прибытия*</label>
-												<input type="to" class="form-control form-control-style" id="inputTo" placeholder="Например: Сан-Пауло">
+												<input type="to" class="form-control form-control-style" name="form-user_to" id="inputTo" placeholder="Например: Сан-Пауло">
 											</div>
-											<div class="form-group px-1">
-												<label class="label-style" for="inputNumberMain">Укажите количество человек*</label>
-												<input type="amount" class="form-control form-control-style" id="inputNumberMain" placeholder="Например: Сан-Пауло">
+											<div class="form-group">
+												<label class="label-style" for="inputNumber">Укажите количество человек*</label>
+												<input type="amount" min="1" class="form-control form-control-style" name="form-user_number" id="inputNumber" placeholder="Например: Сан-Пауло">
 											</div>
-											<div class="form-group px-1">
-												<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-table-form">Узнать</button>
+											<div class="form-group">
+												<label class="label-style" for="inputPhone">Введите контактный номер телефона*</label>
+												<input type="phone" class="form-control form-control-style" name="form-user_phone" id="inputPhone" placeholder="+8(029) 620-20-23">
+											</div>
+											<div class="form-group">
+												<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-form">Узнать</button>
 											</div>
 										</div>
 									</form>
@@ -129,22 +133,22 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<form id="massege-form" action="mail.php" method="POST">
+								<form id="auto-massege-form">
 									<div class="form-group mb-3">
 										<label class="label-style" for="inputName">Введите своё имя*</label>
-										<input type="name" class="form-control form-control-style" name="user_name" id="inputName" placeholder="Например: Сергей">
+										<input type="name" class="form-control form-control-style" name="auto_user_name" id="inputName" placeholder="Например: Сергей">
 									</div>
 									<div class="form-group mb-3">
 										<label class="label-style" for="inputPhoneAuto">Введите контактный номер телефона*</label>
-										<input type="phone" class="form-control form-control-style" name="user_phone" id="inputPhoneAuto" placeholder="+8(029) 620-20-23">
+										<input type="phone" class="form-control form-control-style" name="auto_user_phone" id="inputPhoneAuto" placeholder="+8(029) 620-20-23">
 									</div>
 									<div class="form-group mb-3">
 										<label class="label-style" for="inputMassege">Ваше сообщение*</label>
-										<textarea class="form-control form-control-style" name="user_massege" id="inputMassege" rows="5"
+										<textarea class="form-control form-control-style" name="auto_user_massege" id="inputMassege" rows="5"
 										placeholder="Например: Подскажите, хочу оправится из Сан-Пауло в центр, сколько будет стоить и можно ли ехать на черном авто?"></textarea>
 									</div>
 									<div class="form-group mb-3">
-										<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-massege-form">Отправить сообщение</button>
+										<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-auto-massege-form">Отправить сообщение</button>
 									</div>
 								</form>
 							</div>
@@ -160,18 +164,37 @@
 					<div class="form-row align-items-end">
 						<div class="form-group col-md-3 px-1">
 							<label class="label-style" for="inputFrom">Укажите место отправления*</label>
-							<input type="from" class="form-control form-control-style" id="inputFrom" placeholder="Например: Сан-Пауло">
+							<input type="from" class="form-control form-control-style" name="user_from" required id="inputFrom" placeholder="Например: Сан-Пауло">
 						</div>
 						<div class="form-group col-md-4 px-1">
 							<label class="label-style" for="inputTo">Укажите место прибытия*</label>
-							<input type="to" class="form-control form-control-style" id="inputTo" placeholder="Например: Сан-Пауло">
+							<input type="to" class="form-control form-control-style" name="user_to" required id="inputTo" placeholder="Например: Сан-Пауло">
 						</div>
 						<div class="form-group col-md-3 px-1">
 							<label class="label-style" for="inputNumber">Укажите количество человек*</label>
-							<input type="amount" min="1" class="form-control form-control-style" id="inputNumber" placeholder="Например: Сан-Пауло">
+							<input type="amount" class="form-control form-control-style" name="user_number" required id="inputNumber" placeholder="Например: Сан-Пауло">
 						</div>
 						<div class="form-group col-md-2 px-1">
-							<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-table-form">Узнать</button>
+							<button class="btn btn-primary btn-style btn-block" data-toggle="modal" data-target="#Modal-tel">Узнать</button>
+						</div>
+						<div class="modal fade" id="Modal-tel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title modal-title-style" id="exampleModalLabel">Узнать стоимость</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="form-group mb-3">
+											<label class="label-style" for="inputPhone">Введите контактный номер телефона*</label>
+											<input type="phone" class="form-control form-control-style" name="user_phone" required id="inputPhone" placeholder="+8(029) 620-20-23">
+										</div>
+										<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-table-form">Узнать</button>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</form>
@@ -187,38 +210,6 @@
 				  <tbody id="table-content">
 				  </tbody>
 				</table>
-				<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title modal-title-style" id="exampleModalLabel">Форма обратной связи</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<form id="massege-form" action="mail.php" method="POST">
-									<div class="form-group mb-3">
-										<label class="label-style" for="inputName">Введите своё имя*</label>
-										<input type="name" class="form-control form-control-style" name="user_name" id="inputName" placeholder="Например: Сергей">
-									</div>
-									<div class="form-group mb-3">
-										<label class="label-style" for="inputPhoneFed">Введите контактный номер телефона*</label>
-										<input type="phone" class="form-control form-control-style" name="user_phone" id="inputPhoneFed" placeholder="+8(029) 620-20-23">
-									</div>
-									<div class="form-group mb-3">
-										<label class="label-style" for="inputMassege">Ваше сообщение*</label>
-										<textarea class="form-control form-control-style" name="user_massege" id="inputMassege" rows="5"
-										placeholder="Например: Подскажите, хочу оправится из Сан-Пауло в центр, сколько будет стоить и можно ли ехать на черном авто?"></textarea>
-									</div>
-									<div class="form-group mb-3">
-										<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-massege-form">Отправить сообщение</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</section>
 		<section id="why-us">
@@ -324,7 +315,7 @@
 						</div>
 					</article>
 					<article class="col-md-5 order-1">
-						<form id="massege-form" action="mail.php" method="POST">
+						<form id="massege-form">
 							<div class="form-group mb-3">
 								<label class="label-style" for="inputName">Введите своё имя*</label>
 								<input type="name" class="form-control form-control-style" name="user_name" id="inputName" placeholder="Например: Сергей">

@@ -239,10 +239,6 @@ h2 {
 	border: 1px solid #dee2e6;
 	margin-bottom: 80px!important;
 }
-.table-hover-style:hover {
-	background-color: rgba(254,218,0,.5)!important;
-	cursor: pointer;
-}
 .modal-title-style {
 	font-family: 'Circe Extra Bold';
 	font-size: 20px; 

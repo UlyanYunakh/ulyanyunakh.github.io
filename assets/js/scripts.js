@@ -7,7 +7,7 @@ $('a[href^="#"]').click(function (event) {
 
 $(function(){
 	$.mask.definitions['~']='[123456789]';
-	$("input[type=amount]").mask("~999999",{placeholder:""});
+	$("input[type=amount]").mask("~?9999",{placeholder:""});
 	$.mask.definitions['9'] = '';
 	$.mask.definitions['d'] = '[0-9]';
 	$("input[type=phone]").mask("+8(029) ddd-dd-dd");
@@ -27,24 +27,99 @@ $(window).scroll(function(){
 		nav.removeClass('navbar-sticky');
 	}
 });
-function loadJSON(path, success, error)
-{
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function()
-    {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                if (success)
-                    success(JSON.parse(xhr.responseText));
-            } else {
-                if (error)
-                    error(xhr);
-            }
-        }
-    };
-    xhr.open("GET", path, true);
-    xhr.send();
-}
+
+$("#submit-massege-form").click(function() { 
+ var name = $('input[name=user_name]').val();
+ var tel = $('input[name=user_phone]').val();
+ var massege = $('input[name=user_massege]').val();
+ var otpravka = true;
+ if(name==""){
+ otpravka = false;
+ }
+ if(tel ==""){
+ otpravka = false;
+ }
+ if(massege ==""){
+ otpravka = false;
+ }
+ dannie = {'polz_name':name, 'polz_tel':tel, 'polz_massege':massege};
+ if(otpravka)
+ {
+ $.post('senda.php', dannie, function(otvet){ rezultat = '<div>'+otvet.text+'</div>'; }, 'json');
+ }
+ });
+ 
+ $("#submit-auto-massege-form").click(function() { 
+ var name = $('input[name=auto_user_name]').val();
+ var tel = $('input[name=auto_user_phone]').val();
+ var massege = $('input[name=auto_user_massege]').val();
+ var otpravka = true;
+ if(name==""){
+ otpravka = false;
+ }
+ if(tel ==""){
+ otpravka = false;
+ }
+ if(massege ==""){
+ otpravka = false;
+ }
+ dannie = {'polz_name':name, 'polz_tel':tel, 'polz_massege':massege};
+ if(otpravka)
+ {
+ $.post('senda.php', dannie, function(otvet){ rezultat = '<div>'+otvet.text+'</div>'; }, 'json');
+ }
+ });
+ 
+ $("#submit-table-form").click(function() { 
+ var from = $('input[name=user_from]').val();
+ var to = $('input[name=user_to]').val();
+ var num = $('input[name=user_number]').val();
+ var phone = $('input[name=user_phone]').val();
+ var otpravka = true;
+ if(from==""){
+ otpravka = false;
+ }
+ if(to ==""){
+ otpravka = false;
+ }
+ if(num ==""){
+ otpravka = false;
+ }
+ if(phone ==""){
+ otpravka = false;
+ }
+ dannie = {'polz_from':from, 'polz_to':to, 'polz_num':num, 'polz_phone':phone};
+ if(otpravka)
+ {
+ $.post('senda-cost.php', dannie, function(otvet){ rezultat = '<div>'+otvet.text+'</div>'; }, 'json');
+ }
+ });
+ 
+  $("#submit-form").click(function() { 
+ var from = $('input[name=form-user_from]').val();
+ var to = $('input[name=form-user_to]').val();
+ var num = $('input[name=form-user_number]').val();
+ var phone = $('input[name=form-user_phone]').val();
+ var otpravka = true;
+ if(from==""){
+ otpravka = false;
+ }
+ if(to ==""){
+ otpravka = false;
+ }
+ if(num ==""){
+ otpravka = false;
+ }
+ if(phone ==""){
+ otpravka = false;
+ }
+ dannie = {'polz_from':from, 'polz_to':to, 'polz_num':num, 'polz_phone':phone};
+ if(otpravka)
+ {
+ $.post('senda-cost.php', dannie, function(otvet){ rezultat = '<div>'+otvet.text+'</div>'; }, 'json');
+ }
+ });
+ 
 var data = [{ "from":"Барселона", "to":"Ла Рока Виладж", "four":"80", "eight":"100" },
 			{ "from":"Барселона", "to":"Аэропорт Жироны", "four":"110", "eight":"130" },
 			{ "from":"Барселона", "to":"Калелья", "four":"80", "eight":"100" },
@@ -90,8 +165,6 @@ var table = document.getElementById('table-content');
 
 data.forEach(function(object) {
 	var tr = document.createElement('tr');
-	tr.setAttribute('data-toggle', 'modal');
-	tr.setAttribute('data-target', '#Modal');
 	tr.setAttribute('class', 'table-hover-style');
 	tr.innerHTML ='<td>' + object.from + '</td>' +
 		'<td>' + object.to + '</td>' +
