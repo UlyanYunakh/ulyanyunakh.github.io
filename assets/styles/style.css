@@ -85,6 +85,8 @@ h1 {
 	margin-right: 20px!important;
 	padding: .25rem 1.25rem .25rem 0;
 	border: 0;
+	border-top-left-radius: 0!important;
+	border-bottom-left-radius: 0!important;
 	border-right: 2px solid #feda00;
 }
 .list-border-none {
