@@ -1,13 +1,25 @@
 $('a[href^="#"]').click(function (event) {
 	event.preventDefault();
 	var id  = $(this).attr('href'),
-		top = $(id).offset().top;
+		top = $(id).offset().top - 10;
 	$('body,html').animate({scrollTop: top}, 500);
 });
 
+var max_chars = 1;
+
+$('input[type=number]').keydown( function(e){
+    if ($(this).val().length >= max_chars) { 
+        $(this).val($(this).val().substr(0, max_chars));
+    }
+});
+
+$('input[type=number]').keyup( function(e){
+    if ($(this).val().length >= max_chars) { 
+        $(this).val($(this).val().substr(0, max_chars));
+    }
+});
+
 $(function(){
-	$.mask.definitions['~']='[123456789]';
-	$("input[type=amount]").mask("~?9999",{placeholder:""});
 	$.mask.definitions['9'] = '';
 	$.mask.definitions['d'] = '[0-9]';
 	$("input[type=phone]").mask("+d(ddd) ddd-dd-dd");
@@ -16,6 +28,7 @@ $(function(){
 $(function goBack() {
   window.history.back();
 });
+
 $(window).scroll(function(){
 	var nav = $('.navbar');
 	var s = $('.link-sticky');
@@ -37,98 +50,84 @@ $(window).scroll(function(){
 	}
 });
 
-$("#submit-massege-form").click(function() { 
- var name = $('input[name=user_name]').val();
- var tel = $('input[name=user_phone]').val();
- var massege = $('input[name=user_massege]').val();
- var otpravka = true;
- if(name==""){
- otpravka = false;
- }
- if(tel ==""){
- otpravka = false;
- }
- if(massege ==""){
- otpravka = false;
- }
- dannie = {'polz_name':name, 'polz_tel':tel, 'polz_massege':massege};
- if(otpravka)
- {
- $.post('senda.php', dannie, function(otvet){ rezultat = '<div>'+otvet.text+'</div>'; }, 'json');
- }
- });
- 
- $("#submit-auto-massege-form").click(function() { 
- var name = $('input[name=auto_user_name]').val();
- var tel = $('input[name=auto_user_phone]').val();
- var massege = $('input[name=auto_user_massege]').val();
- var otpravka = true;
- if(name==""){
- otpravka = false;
- }
- if(tel ==""){
- otpravka = false;
- }
- if(massege ==""){
- otpravka = false;
- }
- dannie = {'polz_name':name, 'polz_tel':tel, 'polz_massege':massege};
- if(otpravka)
- {
- $.post('senda.php', dannie, function(otvet){ rezultat = '<div>'+otvet.text+'</div>'; }, 'json');
- }
- });
- 
- $("#submit-table-form").click(function() { 
- var from = $('input[name=user_from]').val();
- var to = $('input[name=user_to]').val();
- var num = $('input[name=user_number]').val();
- var phone = $('input[name=user_phone]').val();
- var otpravka = true;
- if(from==""){
- otpravka = false;
- }
- if(to ==""){
- otpravka = false;
- }
- if(num ==""){
- otpravka = false;
- }
- if(phone ==""){
- otpravka = false;
- }
- dannie = {'polz_from':from, 'polz_to':to, 'polz_num':num, 'polz_phone':phone};
- if(otpravka)
- {
- $.post('senda-cost.php', dannie, function(otvet){ rezultat = '<div>'+otvet.text+'</div>'; }, 'json');
- }
- });
- 
-  $("#submit-form").click(function() { 
- var from = $('input[name=form-user_from]').val();
- var to = $('input[name=form-user_to]').val();
- var num = $('input[name=form-user_number]').val();
- var phone = $('input[name=form-user_phone]').val();
- var otpravka = true;
- if(from==""){
- otpravka = false;
- }
- if(to ==""){
- otpravka = false;
- }
- if(num ==""){
- otpravka = false;
- }
- if(phone ==""){
- otpravka = false;
- }
- dannie = {'polz_from':from, 'polz_to':to, 'polz_num':num, 'polz_phone':phone};
- if(otpravka)
- {
- $.post('senda-cost.php', dannie, function(otvet){ rezultat = '<div>'+otvet.text+'</div>'; }, 'json');
- }
- });
- 
+var from = ["Коста-Брава","Коста-Дорада","Коста-Маресме"];
+var to = ["Ла Рока Виладж","Аэропорт Жироны","Калелья","Пинеда де Ма","Санта-Сусанна",
+		"Бланес","Малграт де Мар","Лорет де Мар","Тосса де Мар","Сант Фелиу де Гишольс",
+		"Сагаро","Плая де Аро","Паламос","Палафружель","Бегур","Ла Эскала","Розес/Эмпуриябрава",
+		"Кастельфельс","Ситжес","Виланова и Ла Желтру","Калафель","Бендрель","Кома Руга",
+		"Торредембарра","Таррагона","Реус","Салоу-Порт Авентура","Камбрилс","Миами Плая",
+		"Оспиталет де Инфарт","Ла Амполья","Валенсия","Бадалона","Эль Масноу","Премия де Мар",
+		"Виласар де Мар","Матаро","Аренис де Мар","Канет де Мар","Капелья","Пинеда де Мар"];
+function autocomplete(inp, arr) {
+  var currentFocus;
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      this.parentNode.appendChild(a);
+      for (i = 0; i < arr.length; i++) {
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          b = document.createElement("DIV");
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+              b.addEventListener("click", function(e) {
+              inp.value = this.getElementsByTagName("input")[0].value;
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(x);
+      } else if (e.keyCode == 38) {
+        currentFocus--;
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+      x[i].parentNode.removeChild(x[i]);
+    }
+  }
+}
+document.addEventListener("click", function (e) {
+    closeAllLists(e.target);
+});
+}
+autocomplete(document.getElementById("inputFrom"), from);
+autocomplete(document.getElementById("inputTo"), to);
+autocomplete(document.getElementById("inputFromModal"), from);
+autocomplete(document.getElementById("inputToModal"), to);
+
 var data = [{ "from":"Коста-Брава", "to":"Ла Рока Виладж", "four":"80", "eight":"100" },
 			{ "from":"Коста-Брава", "to":"Аэропорт Жироны", "four":"110", "eight":"130" },
 			{ "from":"Коста-Брава", "to":"Калелья", "four":"80", "eight":"100" },
@@ -171,7 +170,6 @@ var data = [{ "from":"Коста-Брава", "to":"Ла Рока Виладж",
 			{ "from":"Коста-Маресме", "to":"Капелья", "four":"90", "eight":"120" },
 			{ "from":"Коста-Маресме", "to":"Пинеда де Мар", "four":"90", "eight":"120" }];
 var table = document.getElementById('table-content');
-
 data.forEach(function(object) {
 	var tr = document.createElement('tr');
 	tr.setAttribute('class', 'table-hover-style');
@@ -181,3 +179,41 @@ data.forEach(function(object) {
 		'<td>' + object.eight + '</td>';;
 	table.appendChild(tr);
 });
+
+function someFunc(){
+	var first = document.getElementById("inputFrom").value;
+	var second = document.getElementById("inputTo").value;
+	var num = document.getElementById("inputNumber").value;
+	var y = 0, valid = 0;
+	data.forEach(function(object) {
+		y++;
+	});
+	for (var i = 0; i < y; i++) {
+		if (first==data[i].from){
+			if (second==data[i].to){ 
+				if (num <= 4) {
+					document.getElementById("valid-info-From").value = first;
+					document.getElementById("valid-info-To").value = second;
+					document.getElementById("valid-info-Number").value = num;
+					var temp = document.getElementById("valid-info-Cost");
+					temp.innerHTML = data[i].four;
+					$('#valid-info').modal();
+					valid = 1;
+					break;
+				}
+				if (num > 4) {
+					document.getElementById("valid-info-From").value = first;
+					document.getElementById("valid-info-To").value = second;
+					document.getElementById("valid-info-Number").value = num;
+					var temp = document.getElementById("valid-info-Cost");
+					temp.innerHTML = data[i].eight;
+					$('#valid-info').modal();
+					valid = 1;
+					break;
+				}
+			}
+		}
+    }
+	if (valid == 0) $('#invalid-info').modal();
+}
+document.getElementById("butn").onclick = someFunc;
