@@ -282,7 +282,6 @@ var maskOpts = {
 		} else {
 			$("#descr").html("Маска ввода");
 		}
-		$(this).attr("placeholder", $(this).inputmask("getemptymask"));
 	}
 };	
 $('#phone_mask').change(function() {
