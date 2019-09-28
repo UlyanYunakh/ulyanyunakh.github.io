@@ -289,8 +289,7 @@ $('#phone_mask').change(function() {
 	if ($('#phone_mask').is(':checked')) {
 		$('#inputPhone').inputmasks(maskOpts);
 	} else {
-		$('#inputPhone').inputmask("+[####################]", maskOpts.inputmask)
-		.attr("placeholder", $('#inputPhone').inputmask("getemptymask"));
+		$('#inputPhone').inputmask("+[####################]", maskOpts.inputmask);
 		$("#descr").html("Маска ввода");
 	}
 });
