@@ -213,4 +213,86 @@ function someFunc(){
     }
 	if (valid == 0) $('#invalid-info').modal();
 }
+function someFunc2(){
+	var first = document.getElementById("inputFromModal").value;
+	var second = document.getElementById("inputToModal").value;
+	var num = document.getElementById("inputNumberModal").value;
+	var y = 0, valid = 0;
+	data.forEach(function(object) {
+		y++;
+	});
+	for (var i = 0; i < y; i++) {
+		if (first==data[i].from){
+			if (second==data[i].to){ 
+				if (num <= 4) {
+					document.getElementById("valid-info-From").value = first;
+					document.getElementById("valid-info-To").value = second;
+					document.getElementById("valid-info-Number").value = num;
+					var temp = document.getElementById("valid-info-Cost");
+					temp.innerHTML = data[i].four;
+					$('#valid-info').modal();
+					valid = 1;
+					break;
+				}
+				if (num > 4) {
+					document.getElementById("valid-info-From").value = first;
+					document.getElementById("valid-info-To").value = second;
+					document.getElementById("valid-info-Number").value = num;
+					var temp = document.getElementById("valid-info-Cost");
+					temp.innerHTML = data[i].eight;
+					$('#valid-info').modal();
+					valid = 1;
+					break;
+				}
+			}
+		}
+    }
+	if (valid == 0) $('#invalid-info').modal();
+}
+function someFuncFirst(){
+	setTimeout(someFunc2, 400);
+}
 document.getElementById("butn").onclick = someFunc;
+document.getElementById("submit-form").onclick = someFuncFirst;
+
+var maskList = $.masksSort($.masksLoad("phone-codes.json"), ['#'], /[0-9]|#/, "mask");
+var maskOpts = {
+	inputmask: {
+		definitions: {
+			'#': {
+				validator: "[0-9]",
+				cardinality: 1
+			}
+		},
+		//clearIncomplete: true,
+		showMaskOnHover: false,
+		autoUnmask: true
+	},
+	match: /[0-9]/,
+	replace: '#',
+	list: maskList,
+	listKey: "mask",
+	onMaskChange: function(maskObj, completed) {
+		if (completed) {
+			var hint = maskObj.name_ru;
+			if (maskObj.desc_ru && maskObj.desc_ru != "") {
+				hint += " (" + maskObj.desc_ru + ")";
+			}
+			$("#descr").html(hint);
+		} else {
+			$("#descr").html("Маска ввода");
+		}
+		$(this).attr("placeholder", $(this).inputmask("getemptymask"));
+	}
+};	
+$('#phone_mask').change(function() {
+	if ($('#phone_mask').is(':checked')) {
+		$('#inputPhone').inputmasks(maskOpts);
+	} else {
+		$('#inputPhone').inputmask("+[####################]", maskOpts.inputmask)
+		.attr("placeholder", $('#inputPhone').inputmask("getemptymask"));
+		$("#descr").html("Маска ввода");
+	}
+});
+
+$('#phone_mask').change();
