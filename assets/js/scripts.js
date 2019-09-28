@@ -287,20 +287,10 @@ var maskOpts = {
 
 $('#phone_mask').change(function() {
 	if ($('#phone_mask').is(':checked')) {
-		$('#inputPhone').inputmasks(maskOpts);
+		$('input[type=phone]').inputmasks(maskOpts);
 	} else {
-		$('#inputPhone').inputmask("+[####################]", maskOpts.inputmask);
+		$('input[type=phone]').inputmask("+[####################]", maskOpts.inputmask);
 		$("#descr").html("Маска ввода");
 	}
 });
 $('#phone_mask').change();
-
-$('#valid-info-phone_mask').change(function() {
-	if ($('#valid-info-phone_mask').is(':checked')) {
-		$('#valid-info-Phone').inputmasks(maskOpts);
-	} else {
-		$('#valid-info-Phone').inputmask("+[####################]", maskOpts.inputmask);
-		$("#descr").html("Маска ввода");
-	}
-});
-$('#valid-info-phone_mask').change();
