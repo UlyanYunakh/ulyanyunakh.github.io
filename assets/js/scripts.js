@@ -10,10 +10,12 @@ $(function(){
 	$("input[type=amount]").mask("~?9999",{placeholder:""});
 	$.mask.definitions['9'] = '';
 	$.mask.definitions['d'] = '[0-9]';
-	$("input[type=phone]").mask("+8(029) ddd-dd-dd");
+	$("input[type=phone]").mask("+d(ddd) ddd-dd-dd");
 });
 
-
+$(function goBack() {
+  window.history.back();
+});
 $(window).scroll(function(){
 	var nav = $('.navbar');
 	var s = $('.link-sticky');

@@ -36,7 +36,7 @@
 			</nav>	
 		</header>
 		<section id="main">
-			<div class="container-fluid overflow-hidden">
+			<div class="container-fluid overflow-hidden main-background">
 				<div class="container position-relative mt-5">
 					<article class="main-text">
 						<h1 class="text-left">Комфортный трансфер</h1>
@@ -68,7 +68,7 @@
 									</button>
 								</div>
 								<div class="modal-body">
-									<form id="form">
+									<form action="send4.php" method="POST" id="form">
 										<div class="form align-items-end">
 											<div class="form-group">
 												<label class="label-style" for="inputFrom">Укажите место отправления*</label>
@@ -133,7 +133,7 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<form id="auto-massege-form">
+								<form action="send.php" method="POST" id="auto-massege-form">
 									<div class="form-group mb-3">
 										<label class="label-style" for="inputName">Введите своё имя*</label>
 										<input type="name" class="form-control form-control-style" name="auto_user_name" id="inputName" placeholder="Например: Сергей">
@@ -160,7 +160,7 @@
 		<section id="cost">
 			<div class="container">
 				<h1>Стоимость поездки</h1>
-				<form id="table-form">
+				<form action="send3.php" method="POST" id="table-form">
 					<div class="form-row align-items-end">
 						<div class="form-group col-md-3 px-1">
 							<label class="label-style" for="inputFrom">Укажите место отправления*</label>
@@ -317,7 +317,7 @@
 						</div>
 					</article>
 					<article class="col-md-5 order-1">
-						<form id="massege-form">
+						<form action="send2.php" method="POST" id="massege-form">
 							<div class="form-group mb-3">
 								<label class="label-style" for="inputName">Введите своё имя*</label>
 								<input type="name" class="form-control form-control-style" name="user_name" id="inputName" placeholder="Например: Сергей">

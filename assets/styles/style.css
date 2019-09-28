@@ -26,7 +26,7 @@
 	color: black!important;
 }
 .nav-link-color:hover {
-	color: rgba(254, 218, 0, 1)!important;
+	color: #e0c313!important;
 }
 .nav-link-padding {
 	padding: 0 20px!important;
@@ -85,6 +85,7 @@ h1 {
 	text-align: center;
 	font-family: 'Circe Extra Bold';
 	font-size: 60px;
+	z-index: 999;
 }
 .main-text h1:first-child {
 	color: #ecce19;
@@ -112,7 +113,9 @@ h1 {
 }
 
 /* -----------main img----------- */
-
+.main-background {
+	z-index: 1;
+}
 .main-img {
 	width: 630px;
 	height: 630px;
@@ -417,12 +420,18 @@ h2 {
 	margin: 0 10px;
 	color: black;
 }
+.feedback-p:hover {
+	color: #e0c313;
+}
 #phone {
 	font-family: 'Circe Bold'; 
 	font-size: 24px;
 	margin: 0;
 	color: black;
 	text-decoration: none;
+}
+#phone:hover {
+	color: #e0c313;
 }
 .feedback-label {
 	color: #c6c6c6; 
