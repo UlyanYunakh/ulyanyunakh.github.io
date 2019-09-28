@@ -25,9 +25,6 @@ $(function(){
 	$("input[type=phone]").mask("+d(ddd) ddd-dd-dd");
 });
 
-$(function goBack() {
-  window.history.back();
-});
 
 $(window).scroll(function(){
 	var nav = $('.navbar');
