@@ -19,13 +19,6 @@ $('input[type=number]').keyup( function(e){
     }
 });
 
-$(function(){
-	$.mask.definitions['9'] = '';
-	$.mask.definitions['d'] = '[0-9]';
-	$("input[type=phone]").mask("+d(ddd) ddd-dd-dd");
-});
-
-
 $(window).scroll(function(){
 	var nav = $('.navbar');
 	var s = $('.link-sticky');
@@ -234,7 +227,7 @@ function someFunc2(){
 					valid = 1;
 					break;
 				}
-				if (num > 4) {
+				if (num > 4 && num <= 8) {
 					document.getElementById("valid-info-From").value = first;
 					document.getElementById("valid-info-To").value = second;
 					document.getElementById("valid-info-Number").value = num;
