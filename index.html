@@ -247,6 +247,8 @@
 							<form>
 								<div class="form-group">
 									<input type="phone" class="form-control form-control-style" name="form-user_phone" id="valid-info-Phone" placeholder="+8(029) 620-20-23">
+									<input class="d-none" type="checkbox" id="valid-info-phone_mask" checked>
+								<label class="d-none" id="descr" for="valid-info-phone_mask">Маска ввода</label>
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-form">Отправить</button>
@@ -379,8 +381,8 @@
 							<div class="form-group mb-3">
 								<label class="label-style" for="inputPhone">Введите контактный номер телефона*</label>
 								<input type="phone" class="form-control form-control-style" name="user_phone" id="inputPhone" placeholder="+346 56 463 908" size="25">
-								<input type="checkbox" id="phone_mask" checked>
-								<label id="descr" for="phone_mask">Маска ввода</label>
+								<input class="d-none" type="checkbox" id="phone_mask" checked>
+								<label class="d-none" id="descr" for="phone_mask">Маска ввода</label>
 							</div>
 							<div class="form-group mb-3">
 								<label class="label-style" for="inputMassege">Ваше сообщение*</label>
@@ -395,9 +397,6 @@
 				</article>
 			</div>
 		</section>
-		<input type="text" id="customer_phone" value="7" size="25"><br>
-		<input type="checkbox" id="phone_mask" checked>
-		<label id="descr" for="phone_mask">Маска ввода</label>
 		<footer>
 			<div class="container">
 				<div class="row align-items-center">

@@ -284,6 +284,7 @@ var maskOpts = {
 		}
 	}
 };	
+
 $('#phone_mask').change(function() {
 	if ($('#phone_mask').is(':checked')) {
 		$('#inputPhone').inputmasks(maskOpts);
@@ -292,5 +293,14 @@ $('#phone_mask').change(function() {
 		$("#descr").html("Маска ввода");
 	}
 });
-
 $('#phone_mask').change();
+
+$('#valid-info-phone_mask').change(function() {
+	if ($('#valid-info-phone_mask').is(':checked')) {
+		$('#valid-info-Phone').inputmasks(maskOpts);
+	} else {
+		$('#valid-info-Phone').inputmask("+[####################]", maskOpts.inputmask);
+		$("#descr").html("Маска ввода");
+	}
+});
+$('#valid-info-phone_mask').change();
