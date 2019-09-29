@@ -248,7 +248,7 @@ function someFuncFirst(){
 document.getElementById("butn").onclick = someFunc;
 document.getElementById("submit-form").onclick = someFuncFirst;
 
-var maskList = $.masksSort($.masksLoad("phone-codes.json"), ['#'], /[0-9]|#/, "mask");
+var maskList = $.masksSort($.masksLoad("vendor/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
 var maskOpts = {
 	inputmask: {
 		definitions: {
