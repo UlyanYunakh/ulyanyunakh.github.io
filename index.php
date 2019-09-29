@@ -1,3 +1,11 @@
+<?php
+   ini_set('log_errors','Off');
+   $utm_medium = $_GET["utm_medium"];
+   $utm_source = $_GET["utm_source"];
+   $utm_campaign = $_GET["utm_campaign"];
+   $utm_term = $_GET["utm_term"];
+   $utm_content = $_GET["utm_content"];
+?>
 <!DOCTYPE html>
 <html>
 	<head>
