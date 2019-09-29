@@ -240,7 +240,12 @@ function someFunc2(){
 			}
 		}
     }
-	if (valid == 0) $('#invalid-info').modal();
+	if (valid == 0) {
+		document.getElementById("invalid-info-From").value = first;
+		document.getElementById("invalid-info-To").value = second;
+		document.getElementById("invalid-info-Number").value = num;
+		$('#invalid-info').modal();
+	}
 }
 function someFuncFirst(){
 	setTimeout(someFunc2, 400);

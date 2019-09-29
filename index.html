@@ -72,15 +72,15 @@
 										<div class="form align-items-end">
 											<div class="form-group autocomplete">
 												<label class="label-style" for="inputFromModal">Укажите место отправления*</label>
-												<input type="from" class="form-control form-control-style" name="form-user_from" id="inputFromModal" placeholder="Например: Сан-Пауло">
+												<input type="from" class="form-control form-control-style" id="inputFromModal" placeholder="Например: Сан-Пауло">
 											</div>
 											<div class="form-group autocomplete">
 												<label class="label-style" for="inputToModal">Укажите место прибытия*</label>
-												<input type="to" class="form-control form-control-style" name="form-user_to" id="inputToModal" placeholder="Например: Сан-Пауло">
+												<input type="to" class="form-control form-control-style" id="inputToModal" placeholder="Например: Сан-Пауло">
 											</div>
 											<div class="form-group">
 												<label class="label-style" for="inputNumberModal">Укажите количество человек*</label>
-												<input type="number" class="form-control form-control-style" name="form-user_number" id="inputNumberModal" placeholder="Например: Сан-Пауло" onkeypress="return event.charCode > 48 && event.charCode < 57" min="1" max="8">
+												<input type="number" class="form-control form-control-style" id="inputNumberModal" placeholder="Например: Сан-Пауло" onkeypress="return event.charCode > 48 && event.charCode < 57" min="1" max="8">
 											</div>
 											<div class="form-group">
 												<button type="submit" data-dismiss="modal" class="btn btn-primary btn-style btn-block" id="submit-form">Узнать</button>
@@ -129,7 +129,7 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<form action="send.php" method="POST" id="auto-massege-form">
+								<form id="auto-massege-form">
 									<div class="form-group mb-3">
 										<label class="label-style" for="inputName">Введите своё имя*</label>
 										<input type="name" class="form-control form-control-style" name="auto_user_name" id="inputName" placeholder="Например: Сергей">
@@ -146,6 +146,11 @@
 									<div class="form-group mb-3">
 										<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-auto-massege-form">Отправить сообщение</button>
 									</div>
+									<input  name="utm_medium" value="<?=$utm_medium;?>" type="hidden">
+									<input  name="utm_source" value="<?=$utm_source;?>" type="hidden">
+									<input  name="utm_campaign" value="<?=$utm_campaign;?>" type="hidden">
+									<input  name="utm_term" value="<?=$utm_term;?>" type="hidden">
+									<input  name="utm_content" value="<?=$utm_content;?>" type="hidden">
 								</form>
 							</div>
 						</div>
@@ -160,15 +165,15 @@
 					<div class="form-row align-items-end">
 						<div class="form-group col-md-3 px-1 autocomplete"">
 							<label class="label-style" for="inputFrom">Укажите место отправления*</label>
-							<input type="from" class="form-control form-control-style" name="user_from" id="inputFrom" placeholder="Например: Сан-Пауло">
+							<input type="from" class="form-control form-control-style" id="inputFrom" placeholder="Например: Сан-Пауло">
 						</div>
 						<div class="form-group col-md-4 px-1 autocomplete">
 							<label class="label-style" for="inputTo">Укажите место прибытия*</label>
-							<input type="to" class="form-control form-control-style" name="user_to" id="inputTo" placeholder="Например: Сан-Пауло">
+							<input type="to" class="form-control form-control-style" id="inputTo" placeholder="Например: Сан-Пауло">
 						</div>
 						<div class="form-group col-md-3 px-1">
 							<label class="label-style" for="inputNumber">Укажите количество человек*</label>
-							<input type="number" onkeypress="return event.charCode > 48 && event.charCode < 57" min="1" max="8" class="form-control form-control-style" name="user_number" id="inputNumber" placeholder="Например: 1">
+							<input type="number" class="form-control form-control-style" id="inputNumber" placeholder="Например: 1" onkeypress="return event.charCode > 48 && event.charCode < 57" min="1" max="8">
 						</div>
 						<div class="form-group col-md-2 px-1">
 							<button class="btn btn-primary btn-style btn-block" id="butn">Узнать</button>
@@ -219,6 +224,11 @@
 									<div class="form-group">
 										<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-form">Отправить</button>
 									</div>
+									<input  name="utm_medium" value="<?=$utm_medium;?>" type="hidden">
+									<input  name="utm_source" value="<?=$utm_source;?>" type="hidden">
+									<input  name="utm_campaign" value="<?=$utm_campaign;?>" type="hidden">
+									<input  name="utm_term" value="<?=$utm_term;?>" type="hidden">
+									<input  name="utm_content" value="<?=$utm_content;?>" type="hidden">
 								</div>
 							</form>
 							<h2 class="feedback-h2 m-0 mt-4">Или напишите нам в удобный мессенджер</h2>
@@ -245,14 +255,28 @@
 							</button>
 							<h2 class="feedback-h2 m-0 mb-3">Маршрут не найдет. Мы можем проконсультировать Вас, укажите свой номер:</h2>
 							<form>
+								<fieldset class="d-none">
+									<div class="form-group autocomplete">
+										<input type="from" class="form-control form-control-style" name="form-user_from" id="invalid-info-From" placeholder="Например: Сан-Пауло">
+									</div>
+									<div class="form-group autocomplete">
+										<input type="to" class="form-control form-control-style" name="form-user_to" id="invalid-info-To" placeholder="Например: Сан-Пауло">
+									</div>
+									<div class="form-group">
+										<input type="number" class="form-control form-control-style" name="form-user_number" id="invalid-info-Number" placeholder="Например: Сан-Пауло" onkeypress="return event.charCode > 48 && event.charCode < 57" min="1" max="8">
+									</div>
+								</fieldset>
 								<div class="form-group">
 									<input type="phone" class="form-control form-control-style" name="form-user_phone" id="valid-info-Phone" placeholder="+8(029) 620-20-23">
-									<input class="d-none" type="checkbox" id="valid-info-phone_mask" checked>
-								<label class="d-none" id="descr" for="valid-info-phone_mask">Маска ввода</label>
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-form">Отправить</button>
 								</div>
+								<input  name="utm_medium" value="<?=$utm_medium;?>" type="hidden">
+								<input  name="utm_source" value="<?=$utm_source;?>" type="hidden">
+								<input  name="utm_campaign" value="<?=$utm_campaign;?>" type="hidden">
+								<input  name="utm_term" value="<?=$utm_term;?>" type="hidden">
+								<input  name="utm_content" value="<?=$utm_content;?>" type="hidden">
 							</form>
 							<h2 class="feedback-h2 m-0 mt-4">Или напишите пишите нам в удобный мессенджер</h2>
 							<div class="container-fluid d-flex align-items-start flex-column mt-2">
@@ -373,7 +397,7 @@
 						</div>
 					</article>
 					<article class="col-md-5 order-1">
-						<form action="send2.php" method="POST" id="massege-form">
+						<form id="massege-form">
 							<div class="form-group mb-3">
 								<label class="label-style" for="inputName">Введите своё имя*</label>
 								<input type="name" class="form-control form-control-style" name="user_name" id="inputName" placeholder="Например: Сергей">
@@ -392,6 +416,11 @@
 							<div class="form-group mb-3">
 								<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-massege-form">Отправить сообщение</button>
 							</div>
+							<input  name="utm_medium" value="<?=$utm_medium;?>" type="hidden">
+							<input  name="utm_source" value="<?=$utm_source;?>" type="hidden">
+							<input  name="utm_campaign" value="<?=$utm_campaign;?>" type="hidden">
+							<input  name="utm_term" value="<?=$utm_term;?>" type="hidden">
+							<input  name="utm_content" value="<?=$utm_content;?>" type="hidden">
 						</form>
 					</article>
 				</article>
