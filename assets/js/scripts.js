@@ -253,42 +253,43 @@ function someFuncFirst(){
 document.getElementById("butn").onclick = someFunc;
 document.getElementById("submit-form").onclick = someFuncFirst;
 
-var maskList = $.masksSort($.masksLoad("vendor/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
-var maskOpts = {
-	inputmask: {
-		definitions: {
-			'#': {
-				validator: "[0-9]",
-				cardinality: 1
-			}
-		},
-		//clearIncomplete: true,
-		showMaskOnHover: false,
-		autoUnmask: true
-	},
-	match: /[0-9]/,
-	replace: '#',
-	list: maskList,
-	listKey: "mask",
-	onMaskChange: function(maskObj, completed) {
-		if (completed) {
-			var hint = maskObj.name_ru;
-			if (maskObj.desc_ru && maskObj.desc_ru != "") {
-				hint += " (" + maskObj.desc_ru + ")";
-			}
-			$("#descr").html(hint);
-		} else {
-			$("#descr").html("Маска ввода");
-		}
-	}
-};	
+var maskList = $.masksSort($.masksLoad("https://cdn.rawgit.com/andr-04/inputmask-multi/master/data/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
+  var maskOpts = {
+    inputmask: {
+      definitions: {
+        '#': {
+          validator: "[0-9]",
+          cardinality: 1
+        }
+      },
+      showMaskOnHover: false,
+      autoUnmask: true,
+      // clearIncomplete: true,
+    },
+    match: /[0-9]/,
+    replace: '#',
+    list: maskList,
+    listKey: "mask",
+    onMaskChange: function(maskObj, completed) {
+      if (completed) {
+        var hint = maskObj.name_ru;
+        if (maskObj.desc_ru && maskObj.desc_ru != "") {
+          hint += " (" + maskObj.desc_ru + ")";
+        }
 
-$('#phone_mask').change(function() {
-	if ($('#phone_mask').is(':checked')) {
-		$('input[type=phone]').inputmasks(maskOpts);
-	} else {
-		$('input[type=phone]').inputmask("+[####################]", maskOpts.inputmask);
-		$("#descr").html("Маска ввода");
-	}
+      }
+    }
+  };	
+
+$(document).ready(function(){
+  // $(":input").inputmask();
+  $("input[type=phone]").inputmasks(maskOpts);
 });
-$('#phone_mask').change();
+
+$('form').submit(function(event) {
+    var form = $(this);
+    event.preventDefault();
+    var data = $(this).serialize();
+    url = 'mail.php';
+    var posting = $.post(url,data);
+})

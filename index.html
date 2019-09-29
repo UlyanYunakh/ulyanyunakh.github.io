@@ -130,27 +130,28 @@
 							</div>
 							<div class="modal-body">
 								<form id="auto-massege-form">
+									<input name="request[TITLE]" value="Форма отправки сообщений" type="hidden">
 									<div class="form-group mb-3">
 										<label class="label-style" for="inputName">Введите своё имя*</label>
-										<input type="name" class="form-control form-control-style" name="auto_user_name" id="inputName" placeholder="Например: Сергей">
+										<input type="name" class="form-control form-control-style" name="request[NAME]" id="inputName" placeholder="Например: Сергей">
 									</div>
 									<div class="form-group mb-3">
 										<label class="label-style" for="inputPhoneAuto">Введите контактный номер телефона*</label>
-										<input type="phone" class="form-control form-control-style" name="auto_user_phone" id="inputPhoneAuto" placeholder="+8(029) 620-20-23">
+										<input type="phone" class="form-control form-control-style" name="request[PHONE]" id="inputPhoneAuto" placeholder="+8(029) 620-20-23">
 									</div>
 									<div class="form-group mb-3">
 										<label class="label-style" for="inputMassege">Ваше сообщение*</label>
-										<textarea class="form-control form-control-style" name="auto_user_massege" id="inputMassege" rows="5"
+										<textarea class="form-control form-control-style" name="request[MASSEGE]" id="inputMassege" rows="5"
 										placeholder="Например: Подскажите, хочу оправится из Сан-Пауло в центр, сколько будет стоить и можно ли ехать на черном авто?"></textarea>
 									</div>
 									<div class="form-group mb-3">
 										<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-auto-massege-form">Отправить сообщение</button>
 									</div>
-									<input  name="utm_medium" value="<?=$utm_medium;?>" type="hidden">
-									<input  name="utm_source" value="<?=$utm_source;?>" type="hidden">
-									<input  name="utm_campaign" value="<?=$utm_campaign;?>" type="hidden">
-									<input  name="utm_term" value="<?=$utm_term;?>" type="hidden">
-									<input  name="utm_content" value="<?=$utm_content;?>" type="hidden">
+									<input name="request[utm_medium]" value="<?=$utm_medium;?>" type="hidden">
+									<input name="request[utm_source]" value="<?=$utm_source;?>" type="hidden">
+									<input name="request[utm_campaign]" value="<?=$utm_campaign;?>" type="hidden">
+									<input name="request[utm_term]" value="<?=$utm_term;?>" type="hidden">
+									<input name="request[utm_content]" value="<?=$utm_content;?>" type="hidden">
 								</form>
 							</div>
 						</div>
@@ -207,28 +208,29 @@
 							<h2 class="feedback-h2 m-0 mb-3">Оставьте номер телефона, и мы скоро свяжемся с Вами:</h2>
 							<form>
 								<div class="form align-items-end">
+									<input name="request[TITLE]" value="Маршрут" type="hidden">
 									<fieldset class="d-none">
 										<div class="form-group autocomplete">
-											<input type="from" class="form-control form-control-style" name="form-user_from" id="valid-info-From" placeholder="Например: Сан-Пауло">
+											<input type="from" class="form-control form-control-style" name="request[FROM]" id="valid-info-From" placeholder="Например: Сан-Пауло">
 										</div>
 										<div class="form-group autocomplete">
-											<input type="to" class="form-control form-control-style" name="form-user_to" id="valid-info-To" placeholder="Например: Сан-Пауло">
+											<input type="to" class="form-control form-control-style" name="request[TO]" id="valid-info-To" placeholder="Например: Сан-Пауло">
 										</div>
 										<div class="form-group">
-											<input type="number" class="form-control form-control-style" name="form-user_number" id="valid-info-Number" placeholder="Например: Сан-Пауло" onkeypress="return event.charCode > 48 && event.charCode < 57" min="1" max="8">
+											<input type="number" class="form-control form-control-style" name="request[NUMBER]" id="valid-info-Number" placeholder="Например: Сан-Пауло" onkeypress="return event.charCode > 48 && event.charCode < 57" min="1" max="8">
 										</div>
 									</fieldset>
 									<div class="form-group">
-										<input type="phone" class="form-control form-control-style" name="form-user_phone" id="valid-info-Phone" placeholder="+8(029) 620-20-23">
+										<input type="phone" class="form-control form-control-style" name="request[PHONE]" id="valid-info-Phone" placeholder="+8(029) 620-20-23">
 									</div>
 									<div class="form-group">
 										<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-form">Отправить</button>
 									</div>
-									<input  name="utm_medium" value="<?=$utm_medium;?>" type="hidden">
-									<input  name="utm_source" value="<?=$utm_source;?>" type="hidden">
-									<input  name="utm_campaign" value="<?=$utm_campaign;?>" type="hidden">
-									<input  name="utm_term" value="<?=$utm_term;?>" type="hidden">
-									<input  name="utm_content" value="<?=$utm_content;?>" type="hidden">
+									<input name="request[utm_medium]" value="<?=$utm_medium;?>" type="hidden">
+									<input name="request[utm_source]" value="<?=$utm_source;?>" type="hidden">
+									<input name="request[utm_campaign]" value="<?=$utm_campaign;?>" type="hidden">
+									<input name="request[utm_term]" value="<?=$utm_term;?>" type="hidden">
+									<input name="request[utm_content]" value="<?=$utm_content;?>" type="hidden">
 								</div>
 							</form>
 							<h2 class="feedback-h2 m-0 mt-4">Или напишите нам в удобный мессенджер</h2>
@@ -255,28 +257,29 @@
 							</button>
 							<h2 class="feedback-h2 m-0 mb-3">Маршрут не найдет. Мы можем проконсультировать Вас, укажите свой номер:</h2>
 							<form>
+								<input name="request[TITLE]" value="Маршрут, которого нет в наличии" type="hidden">
 								<fieldset class="d-none">
 									<div class="form-group autocomplete">
-										<input type="from" class="form-control form-control-style" name="form-user_from" id="invalid-info-From" placeholder="Например: Сан-Пауло">
+										<input type="from" class="form-control form-control-style" name="request[FROM]" id="invalid-info-From" placeholder="Например: Сан-Пауло">
 									</div>
 									<div class="form-group autocomplete">
-										<input type="to" class="form-control form-control-style" name="form-user_to" id="invalid-info-To" placeholder="Например: Сан-Пауло">
+										<input type="to" class="form-control form-control-style" name="request[TO]" id="invalid-info-To" placeholder="Например: Сан-Пауло">
 									</div>
 									<div class="form-group">
-										<input type="number" class="form-control form-control-style" name="form-user_number" id="invalid-info-Number" placeholder="Например: Сан-Пауло" onkeypress="return event.charCode > 48 && event.charCode < 57" min="1" max="8">
+										<input type="number" class="form-control form-control-style" name="request[NUMBER]" id="invalid-info-Number" placeholder="Например: Сан-Пауло" onkeypress="return event.charCode > 48 && event.charCode < 57" min="1" max="8">
 									</div>
 								</fieldset>
 								<div class="form-group">
-									<input type="phone" class="form-control form-control-style" name="form-user_phone" id="valid-info-Phone" placeholder="+8(029) 620-20-23">
+									<input type="phone" class="form-control form-control-style" name="request[PHONE]" id="valid-info-Phone" placeholder="+8(029) 620-20-23">
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-form">Отправить</button>
 								</div>
-								<input  name="utm_medium" value="<?=$utm_medium;?>" type="hidden">
-								<input  name="utm_source" value="<?=$utm_source;?>" type="hidden">
-								<input  name="utm_campaign" value="<?=$utm_campaign;?>" type="hidden">
-								<input  name="utm_term" value="<?=$utm_term;?>" type="hidden">
-								<input  name="utm_content" value="<?=$utm_content;?>" type="hidden">
+								<input name="request[utm_medium]" value="<?=$utm_medium;?>" type="hidden">
+								<input name="request[utm_source]" value="<?=$utm_source;?>" type="hidden">
+								<input name="request[utm_campaign]" value="<?=$utm_campaign;?>" type="hidden">
+								<input name="request[utm_term]" value="<?=$utm_term;?>" type="hidden">
+								<input name="request[utm_content]" value="<?=$utm_content;?>" type="hidden">
 							</form>
 							<h2 class="feedback-h2 m-0 mt-4">Или напишите пишите нам в удобный мессенджер</h2>
 							<div class="container-fluid d-flex align-items-start flex-column mt-2">
@@ -398,29 +401,30 @@
 					</article>
 					<article class="col-md-5 order-1">
 						<form id="massege-form">
+							<input name="request[TITLE]" value="Форма отправки сообщений" type="hidden">
 							<div class="form-group mb-3">
 								<label class="label-style" for="inputName">Введите своё имя*</label>
-								<input type="name" class="form-control form-control-style" name="user_name" id="inputName" placeholder="Например: Сергей">
+								<input type="name" class="form-control form-control-style" name="request[NAME]" id="inputName" placeholder="Например: Сергей">
 							</div>
 							<div class="form-group mb-3">
 								<label class="label-style" for="inputPhone">Введите контактный номер телефона*</label>
-								<input type="phone" class="form-control form-control-style" name="user_phone" id="inputPhone" placeholder="+346 56 463 908" size="25">
+								<input type="phone" class="form-control form-control-style" name="request[PHONE]" id="inputPhone" placeholder="+346 56 463 908" size="25">
 								<input class="d-none" type="checkbox" id="phone_mask" checked>
 								<label class="d-none" id="descr" for="phone_mask">Маска ввода</label>
 							</div>
 							<div class="form-group mb-3">
 								<label class="label-style" for="inputMassege">Ваше сообщение*</label>
-								<textarea class="form-control form-control-style" name="user_massege" id="inputMassege" rows="5"
+								<textarea class="form-control form-control-style" name="request[MASSEGE]" id="inputMassege" rows="5"
 								placeholder="Например: Подскажите, хочу оправится из Сан-Пауло в центр, сколько будет стоить и можно ли ехать на черном авто?"></textarea>
 							</div>
 							<div class="form-group mb-3">
 								<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-massege-form">Отправить сообщение</button>
 							</div>
-							<input  name="utm_medium" value="<?=$utm_medium;?>" type="hidden">
-							<input  name="utm_source" value="<?=$utm_source;?>" type="hidden">
-							<input  name="utm_campaign" value="<?=$utm_campaign;?>" type="hidden">
-							<input  name="utm_term" value="<?=$utm_term;?>" type="hidden">
-							<input  name="utm_content" value="<?=$utm_content;?>" type="hidden">
+							<input name="request[utm_medium]" value="<?=$utm_medium;?>" type="hidden">
+							<input name="request[utm_source]" value="<?=$utm_source;?>" type="hidden">
+							<input name="request[utm_campaign]" value="<?=$utm_campaign;?>" type="hidden">
+							<input name="request[utm_term]" value="<?=$utm_term;?>" type="hidden">
+							<input name="request[utm_content]" value="<?=$utm_content;?>" type="hidden">
 						</form>
 					</article>
 				</article>
