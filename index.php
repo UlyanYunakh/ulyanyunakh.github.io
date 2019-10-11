@@ -91,7 +91,7 @@
 												<input type="number" class="form-control form-control-style" id="inputNumberModal" placeholder="Например: Сан-Пауло" onkeypress="return event.charCode > 48 && event.charCode < 57" min="1" max="8">
 											</div>
 											<div class="form-group">
-												<button type="submit" data-dismiss="modal" class="btn btn-primary btn-style btn-block" id="submit-form">Узнать</button>
+												<button type="submit" data-dismiss="modal" class="btn btn-primary btn-style btn-block" id="form-submit-form">Узнать</button>
 											</div>
 										</div>
 									</form>
@@ -140,16 +140,16 @@
 								<form id="auto-massege-form">
 									<input name="request[TITLE]" value="Форма отправки сообщений" type="hidden">
 									<div class="form-group mb-3">
-										<label class="label-style" for="inputName">Введите своё имя*</label>
-										<input type="name" class="form-control form-control-style" name="request[NAME]" id="inputName" placeholder="Например: Сергей">
+										<label class="label-style" for="auto-massege-form-inputName">Введите своё имя*</label>
+										<input type="name" class="form-control form-control-style" name="request[NAME]" id="auto-massege-form-inputName" placeholder="Например: Сергей">
 									</div>
 									<div class="form-group mb-3">
-										<label class="label-style" for="inputPhoneAuto">Введите контактный номер телефона*</label>
-										<input type="phone" class="form-control form-control-style" name="request[PHONE]" id="inputPhoneAuto" placeholder="+8(029) 620-20-23">
+										<label class="label-style" for="auto-massege-form-inputPhoneAuto">Введите контактный номер телефона*</label>
+										<input type="phone" class="form-control form-control-style" name="request[PHONE]" id="auto-massege-form-inputPhoneAuto" placeholder="+8(029) 620-20-23">
 									</div>
 									<div class="form-group mb-3">
-										<label class="label-style" for="inputMassege">Ваше сообщение*</label>
-										<textarea class="form-control form-control-style" name="request[MASSEGE]" id="inputMassege" rows="5"
+										<label class="label-style" for="auto-massege-form-inputMassege">Ваше сообщение*</label>
+										<textarea class="form-control form-control-style" name="request[MASSEGE]" id="auto-massege-form-inputMassege" rows="5"
 										placeholder="Например: Подскажите, хочу оправится из Сан-Пауло в центр, сколько будет стоить и можно ли ехать на черном авто?"></textarea>
 									</div>
 									<div class="form-group mb-3">
@@ -281,7 +281,7 @@
 									<input type="phone" class="form-control form-control-style" name="request[PHONE]" id="valid-info-Phone" placeholder="+8(029) 620-20-23">
 								</div>
 								<div class="form-group">
-									<button type="submit" class="btn btn-primary btn-style btn-block" id="submit-form">Отправить</button>
+									<button type="submit" class="btn btn-primary btn-style btn-block" id="invalid-info-submit-form">Отправить</button>
 								</div>
 								<input name="request[utm_medium]" value="<?=$utm_medium;?>" type="hidden">
 								<input name="request[utm_source]" value="<?=$utm_source;?>" type="hidden">
