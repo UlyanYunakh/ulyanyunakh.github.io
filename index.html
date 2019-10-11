@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, width=device-width">
+		<title>Аварии на АЭС</title>
+		<link href="bootstrap.min.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body class="overflow-hidden">
+		<div class="box"></div>
+		<div class="box-w"></div>
+		<section id="start">
+			<div class="container">
+				<div class="start-content">
+					<h1>Тестики, мои тестики...</h1>
+					<p>Всё очень просто: есть вопрос, ты на него отвечаешь.</p>
+					<button class="btn btn-primary" id="start">Начать Тест!</button>
+				</div>
+			</div>
+		</section>
+		<section id="main" class="d-none">
+			<div class="container">
+				<input id="check" value="0" type="hidden">
+				<form id="questions1">
+					<div class="form-group">
+						<label for="inputAnswer1">Это международная организация для развития сотрудничества в сфере мирного использования атомной энергии. О какой организации идет речь?</label>
+					</div>
+					<div class="form-check form-group">
+						<input class="form-check-input" type="radio" name="radios" id="falseRadios1">
+						<label class="form-check-label" for="falseRadios1">Агентство по Ядерной Энергии</label>
+					</div>
+					<div class="form-check form-group">
+						<input class="form-check-input" type="radio" name="radios" id="trueRadios1">
+						<label class="form-check-label" for="trueRadios1">Международное агентство по атомной энергии</label>
+					</div>
+					<div class="form-check form-group">
+						<input class="form-check-input" type="radio" name="radios" id="falseRadios2">
+						<label class="form-check-label" for="falseRadios2">Всемирная ядерная ассоциация</label>
+					</div>
+					<button type="submit" class="btn btn-primary" id="button">Ответить</button>
+				</form>
+				<form id="questions2" class="d-none">
+					<div class="form-group">
+						<label for="inputAnswer1">По международной шкала ядерных событий INES ядерные и радиологические аварии и инциденты классифицируются:</label>
+					</div>
+					<div class="form-check form-group">
+						<input class="form-check-input" type="radio" name="radios" id="trueRadios2">
+						<label class="form-check-label" for="trueRadios2">7-ю уровнями</label>
+					</div>
+					<div class="form-check form-group">
+						<input class="form-check-input" type="radio" name="radios" id="falseRadios3">
+						<label class="form-check-label" for="falseRadios3">5-ю уровнями</label>
+					</div>
+					<div class="form-check form-group">
+						<input class="form-check-input" type="radio" name="radios" id="falseRadios4">
+						<label class="form-check-label" for="falseRadios4">10-ю уровнями</label>
+					</div>
+					<button type="submit" class="btn btn-primary" id="button">Ответить</button>
+				</form>
+				<form id="questions3" class="d-none">
+					<div class="form-group">
+						<label for="inputAnswer1">Начиная с какого уровня шкалы INES внештатные ситуации называются авариями:</label>
+					</div>
+					<div class="form-check form-group">
+						<input class="form-check-input" type="radio" name="radios" id="falseRadios5">
+						<label class="form-check-label" for="falseRadios5">с 5-го уровня</label>
+					</div>
+					<div class="form-check form-group">
+						<input class="form-check-input" type="radio" name="radios" id="trueRadios3">
+						<label class="form-check-label" for="trueRadios3">с 4-го уровня</label>
+					</div>
+					<div class="form-check form-group">
+						<input class="form-check-input" type="radio" name="radios" id="falseRadios6">
+						<label class="form-check-label" for="falseRadios6">с 3-го уровня</label>
+					</div>
+					<button type="submit" class="btn btn-primary" id="button">Ответить</button>
+				</form>
+				<form id="questions4" class="d-none">
+					<div class="form-group">
+						<label for="inputAnswer5">Самая первая авария на АЭС случилось в Великобритании на атомном комплексе Уиндскейл в:</label>
+						<input type="answer" required class="form-control" id="inputAnswer4" placeholder="Например: 2019">
+					</div>
+					<button type="submit" class="btn btn-primary">Ответить</button>
+				</form>
+				<form id="questions5" class="d-none">
+					<div class="form-group">
+						<label for="inputAnswer5">Как называются события 2-го и 3-го уровня по шкале INES</label>
+						<input type="answer" required class="form-control" id="inputAnswer5">
+					</div>
+					<button type="submit"  class="btn btn-primary">Ответить</button>
+				</form>
+				<div class="resoult1 d-none">
+					<h2 id="resoult1"></h2>
+					Отлично!
+				</div>
+				<div class="resoult2 d-none">
+					<h2 id="resoult2"></h2>
+					Ты можешь лучше!
+				</div>
+				<div class="resoult3 d-none">
+					<h2 id="resoult3"></h2>
+					Ты хорошо делал вид, что слушаешь...
+				</div>
+				<div class="resoult4 d-none">
+					<h2 id="resoult4"></h2>
+					<img src="joke.jpg" width="500px">
+				</div>
+			</div>
+		</section>
+		<div class="modal fade" id="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body d-flex flex-column align-items-center">
+						<img src="true.png">
+						<br>Ответ правильный
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body d-flex flex-column align-items-center">
+						<img src="false.png">
+						<br>Ответ не правильный
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="jquery-3.4.1.min.js"></script>
+		<script src="bootstrap.min.js"></script>
+		<script src="scripts.js"></script>
+	</body>
+</html>
