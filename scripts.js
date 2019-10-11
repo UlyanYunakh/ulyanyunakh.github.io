@@ -133,6 +133,6 @@ function showBox(){
 function showForm(){
 	var main = $('#main');
 	main.addClass('d-block');
-	var start = $('#start');
+	var start = $('#start-box');
 	start.addClass('d-none');
 }
