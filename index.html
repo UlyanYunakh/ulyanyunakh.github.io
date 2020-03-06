@@ -3,133 +3,188 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1, width=device-width">
-		<title>Аварии на АЭС</title>
-		<link href="bootstrap.min.css" rel="stylesheet">
-		<link href="style.css" rel="stylesheet">
+		<title>Therapy Diary</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/fonts/stylesheet.css">
+		<link rel="stylesheet" href="assets/style.css">
 	</head>
-	<body class="overflow-hidden">
-		<div class="box"></div>
-		<div class="box-w"></div>
-		<section id="start-box">
+	<body>
+
+		<header>
+            <div class="container pb-3">
+                <nav class="row">
+					<a class="col-lg-2 d-flex justify-content-between align-items-center logo_img" href=""> <!-- Я переместил класс logo_img, чтобы вставить бг -->
+						<img src="assets/img/logo.png">
+					</a>
+                    <div class="col-lg-7 d-flex align-items-center justify-content-end pr-lg-5">
+                        <a class="header_nav-link" href="">Главная</a>
+                        <a class="header_nav-link" href="">Дневники</a>
+                        <a class="header_nav-link" href="">Блог</a>
+                    </div>
+                    <div class="col-lg-3 d-flex align-items-center">
+                        <a class="btn_download btn btn-primary" href="">Скачать приложение</a>
+                    </div>
+                </nav>
+                <div class="header_utp mx-5">
+                	<div class="row mt-4 mx-5 justify-content-between">
+	                    <div class="col-lg-6 section_flex-container">
+	                    	<div class="section_text-container">
+	                    		<h1>Тренируйся быть счастливым</h1>
+	                        	<h2>Твой личный тайник желаний, страхов и эмоций. Собери все свои благодарности и радостные моменты в одном месте.</h2>
+	                        	<div class="header_utp-download-container d-flex justify-content-start align-items-center">
+	                        		<a href="" class="mr-4">
+	                        			<img src="assets/img/googlePlay.png">
+	                        		</a>
+	                        		<a href="">
+	                        			<img src="assets/img/appStore.png">
+	                        		</a>
+	                        	</div>
+	                    	</div>
+	                    </div>
+	                    <div class="col-lg-4 right-background">
+	                        <img class="" src="assets/img/header-phone.png">
+	                    </div>
+	                </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="main_info-right mx-5">
+        	<div class="container">
+        		<div class="row justify-content-between">
+        			<div class="col-lg-4 main_info-right-img-container main_thans-diary-bg">
+        				<img class="mr-5" src="assets/img/thanks-diary-phone.png">
+        			</div>
+        			<div class="col-lg-7 section_flex-container">
+        				<div class="section_text-container">
+	                    	<h1>Дневник 
+	                    	<br>Благодарности</h1>
+	                        <p>Твой личный тайник желаний, страхов и эмоций. Собери все свои благодарности и радостные моменты в одном месте.</p>
+	                        <div class="section_flex-btn-container">
+	                        	<a class="btn_utp btn btn-primary" href="">Начать записывать благодарности</a>
+	                        </div>
+	                    </div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+		
+		<section class="main_info-left mb-5 px-5">
 			<div class="container">
-				<div class="start-content">
-					<h1>Тестики, мои тестики...</h1>
-					<p>Всё очень просто: есть вопрос, ты на него отвечаешь.</p>
-					<button class="btn btn-primary" id="start">Начать Тест!</button>
+				<div class="row mt-4 mx-5 justify-content-between">
+					<div class="col-lg-6 section_flex-container">
+						<div class="section_text-container">
+							<h1>Дневник Желаний</h1>
+							<p>Люди, которые «желают» добиваются в 2 раза больше
+							людей, у которых нет четких мечт. Дневник Желаний
+							не только усиливает тягу к жизни, но и приближает
+							к исполнению сокровенных фантазий.</p>
+							<div class="section_flex-btn-container">
+								<a class="btn_utp btn btn-primary" href="">Завести Дневник Желаний</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 main_wish-diary-bg">
+						<img class="" src="assets/img/wish-diary-phone.png">
+					</div>
 				</div>
 			</div>
 		</section>
-		<section id="main" class="d-none">
+		
+		<section class="main_info-right mx-5">
+        	<div class="container">
+        		<div class="row justify-content-between">
+        			<div class="col-lg-4 main_info-right-img-container main_action-fear-diary-bg">
+        				<img class="mr-5" src="assets/img/action-fear-diary-phone.png">
+        			</div>
+        			<div class="col-lg-7 section_flex-container">
+        				<div class="section_text-container">
+	                    	<h1>Дневник 
+	                    	<br>Страхов действий</h1>
+	                        <p>То, чего ты боишься, часто мешает тебе сделать шаг
+							навстречу мечте. Страхи живут в голове лишь до тех пор,
+							пока они не записаны. Проанализируй страхи в приложении, выпиши все переживания и способы их преодоления.</p>
+	                        <div class="section_flex-btn-container">
+	                        	<a class="btn_utp btn btn-primary" href="">Проанализировать страхи</a>
+	                        </div>
+	                    </div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+		
+		<section class="main_info-left px-5">
 			<div class="container">
-				<input id="check" value="0" type="hidden">
-				<form id="questions1">
-					<div class="form-group">
-						<label for="inputAnswer1">Это международная организация для развития сотрудничества в сфере мирного использования атомной энергии. О какой организации идет речь?</label>
+				<div class="row mt-4 mx-5 justify-content-between">
+					<div class="col-lg-6 section_flex-container">
+						<div class="section_text-container">
+							<h1>Дневник Эмоций</h1>
+							<p>Проанализируй свой эмоции. Зафиксируй счастливые
+							моменты жизни и осознай негативные. Ведь каждая твоя
+							эмоция характеризует тебя как человека. Узнай, какой ты на
+							самом деле и как сделать себя лучше.</p>
+							<div class="section_flex-btn-container">
+								<a class="btn_utp btn btn-primary" href="">Зафиксировать эмоции</a>
+							</div>
+						</div>
 					</div>
-					<div class="form-check form-group">
-						<input class="form-check-input" type="radio" name="radios" id="falseRadios1">
-						<label class="form-check-label" for="falseRadios1">Агентство по Ядерной Энергии</label>
+					<div class="col-lg-4 main_diary-of-emotions-bg">
+						<img class="" src="assets/img/diary-of-emotions-phone.png">
 					</div>
-					<div class="form-check form-group">
-						<input class="form-check-input" type="radio" name="radios" id="trueRadios1">
-						<label class="form-check-label" for="trueRadios1">Международное агентство по атомной энергии</label>
-					</div>
-					<div class="form-check form-group">
-						<input class="form-check-input" type="radio" name="radios" id="falseRadios2">
-						<label class="form-check-label" for="falseRadios2">Всемирная ядерная ассоциация</label>
-					</div>
-					<button type="submit" class="btn btn-primary" id="button">Ответить</button>
-				</form>
-				<form id="questions2" class="d-none">
-					<div class="form-group">
-						<label for="inputAnswer1">По международной шкала ядерных событий INES ядерные и радиологические аварии и инциденты классифицируются:</label>
-					</div>
-					<div class="form-check form-group">
-						<input class="form-check-input" type="radio" name="radios" id="trueRadios2">
-						<label class="form-check-label" for="trueRadios2">7-ю уровнями</label>
-					</div>
-					<div class="form-check form-group">
-						<input class="form-check-input" type="radio" name="radios" id="falseRadios3">
-						<label class="form-check-label" for="falseRadios3">5-ю уровнями</label>
-					</div>
-					<div class="form-check form-group">
-						<input class="form-check-input" type="radio" name="radios" id="falseRadios4">
-						<label class="form-check-label" for="falseRadios4">10-ю уровнями</label>
-					</div>
-					<button type="submit" class="btn btn-primary" id="button">Ответить</button>
-				</form>
-				<form id="questions3" class="d-none">
-					<div class="form-group">
-						<label for="inputAnswer1">Начиная с какого уровня шкалы INES внештатные ситуации называются авариями:</label>
-					</div>
-					<div class="form-check form-group">
-						<input class="form-check-input" type="radio" name="radios" id="falseRadios5">
-						<label class="form-check-label" for="falseRadios5">с 5-го уровня</label>
-					</div>
-					<div class="form-check form-group">
-						<input class="form-check-input" type="radio" name="radios" id="trueRadios3">
-						<label class="form-check-label" for="trueRadios3">с 4-го уровня</label>
-					</div>
-					<div class="form-check form-group">
-						<input class="form-check-input" type="radio" name="radios" id="falseRadios6">
-						<label class="form-check-label" for="falseRadios6">с 3-го уровня</label>
-					</div>
-					<button type="submit" class="btn btn-primary" id="button">Ответить</button>
-				</form>
-				<form id="questions4" class="d-none">
-					<div class="form-group">
-						<label for="inputAnswer5">Самая первая авария на АЭС случилось в Великобритании на атомном комплексе Уиндскейл в:</label>
-						<input type="answer" required class="form-control" id="inputAnswer4" placeholder="Например: 2019">
-					</div>
-					<button type="submit" class="btn btn-primary">Ответить</button>
-				</form>
-				<form id="questions5" class="d-none">
-					<div class="form-group">
-						<label for="inputAnswer5">Как называются события 2-го и 3-го уровня по шкале INES</label>
-						<input type="answer" required class="form-control" id="inputAnswer5">
-					</div>
-					<button type="submit"  class="btn btn-primary">Ответить</button>
-				</form>
-				<div class="resoult1 d-none">
-					<h2 id="resoult1"></h2>
-					Отлично!
-				</div>
-				<div class="resoult2 d-none">
-					<h2 id="resoult2"></h2>
-					Ты можешь лучше!
-				</div>
-				<div class="resoult3 d-none">
-					<h2 id="resoult3"></h2>
-					Ты хорошо делал вид, что слушаешь...
-				</div>
-				<div class="resoult4 d-none">
-					<h2 id="resoult4"></h2>
-					Am i a joke to you?
 				</div>
 			</div>
 		</section>
-		<div class="modal fade" id="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-body d-flex flex-column align-items-center">
-						<img src="true.png">
-						<br>Ответ правильный
+		
+		<section>
+			<div class="container">
+				<div class="row justify-content-center mt-4 mb-5 footer__top-text">
+					<div class="col-sm-7 d-flex flex-column align-items-center">
+						<h2>Приложение Дневники Терапии - это выбор быть лучше 100 000 человек!</h2>
+						<p class="my-3"><i>А ты с нами?</i></p>
+						<div class="section_flex-btn-container mt-3">
+							<a class="btn_utp btn btn-primary" href="">Да! Скачать приложение</a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="modal fade" id="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-body d-flex flex-column align-items-center">
-						<img src="false.png">
-						<br>Ответ не правильный
+		</section>	
+		
+		<footer class="footer__bottom">
+			<div class="container">
+				<div class="row mt-5">
+					<div class="col-lg-3 d-flex flex-column footer__bottom-left-text">
+						<p class="mb-2"><b>Sintylapse</b></p>
+						<p class="mb-2">2020 &copy; Все права защищены</p>
+						<a class="mb-2"href="#">Политика конфиденциальности</a>
+						<a class="mb-2"href="#">Правила использования</a>
+					</div>
+					<div class="col-lg-3">
+						<a href="#">
+							<img class="my-2" src="assets/img/googlePlay.png" alt="">
+						</a>
+						<a href="#">
+							<img class="my-2" src="assets/img/appStore2.png" alt="">
+						</a>
+					</div>
+					<div class="col-lg-3 d-flex justify-content-between footer__bottom-links">
+						<div class="d-flex flex-column">
+							<a class="mb-2" href="#">Главная</a>
+							<a class="mb-2" href="#">Дневники</a>
+							<a class="mb-2" href="#">Блог</a>
+						</div>
+						<div class="d-flex flex-column">
+							<a class="mb-2" href="#">Instagram</a>
+							<a class="mb-2" href="#">Facebook</a>
+						</div>
+					</div>
+					<div class="col-lg-3">
 					</div>
 				</div>
 			</div>
-		</div>
-		<script src="jquery-3.4.1.min.js"></script>
-		<script src="bootstrap.min.js"></script>
-		<script src="scripts.js"></script>
+		</footer>
+		
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</body>
 </html>

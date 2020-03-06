@@ -1,0 +1,197 @@
+body{
+	background: white;
+}
+
+html {
+	font-family: "Gilroy"; 
+}
+
+/* general styles */
+.container {
+	max-width: 1400px;
+}
+
+.section_flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section_text-container h1 {
+	font-family: 'Cambria';
+  font-size: 3em;
+  font-weight: 700;
+  color: #313342;
+}
+
+.section_text-container h2 {
+	font-family: "Gilroy";
+	display: block;
+	margin: 30px 0;
+}
+
+.section_text-container p {
+	font-size: 1.4em;
+	font-family: "Gilroy";
+	font-weight: 600;
+	color: #313342;
+	line-height: 1.36;
+	display: block;
+	margin: 30px 0;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 30px;
+	font-size: 	1.2em;
+  border-radius: 10px;
+  border: none;
+  color: #313342;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  line-height: 1.33;
+}
+
+.btn_download {
+	background-color: #fff;
+	font-family: "Gilroy";
+}
+
+.btn_download:focus, .btn_download:hover, .btn_download:active {
+	border: 1px solid #fff;
+	background-color: transparent;
+	color: #fff;
+}
+
+.btn_utp {
+	color: #fff;
+	background-color: #313342;
+	padding: 22px 30px;
+	max-width: 530px;
+	font-size: 1.4em;
+	font-family: "Gilroy";
+}
+
+.main_info-left {
+	padding: 100px 0;
+}
+
+/* header styles */
+nav {
+	padding: 25px 0;
+}
+
+.header_nav-link {
+	padding: 0 20px;
+	font-size: 1.2em;
+	font-family: "Gilroy";
+  font-weight: 600;
+  line-height: 1.33;
+  text-align: center;
+  color: #313342; 
+}
+
+header {
+	padding-bottom: 100px;
+	overflow: hidden;
+}
+
+.logo_img:before {
+	content: url(img/background/for-logo.png);
+	position: absolute;
+	z-index: -100;
+	top: -90px;
+	left: -180px;
+}
+
+.right-background:before {
+	content: url(img/background/right.png);
+	position: absolute;
+	z-index: -100;
+	top: -230px;
+	left: 125px;
+}
+
+.header_utp-download-container:before {
+	content: url(img/background/left.png);
+	position: absolute;
+	z-index: -200;
+	top: -450px;
+	right: -900px;
+}
+
+/* main_info-right styles */
+.main_info-left {
+	overflow: hidden;
+}
+
+/* main_***-bg styles */
+.main_thans-diary-bg:before {
+	content: url(img/background/thanks-diary-bg.png);
+	position: absolute;
+	z-index: -100;
+	left: -335px;
+	top: -30px;
+}
+
+.main_wish-diary-bg:before {
+	content: url(img/background/wish-diary-bg.png);
+	position: absolute;
+	z-index: -100;
+	left: -70px;
+	top: -70px;
+}
+
+.main_action-fear-diary-bg:before {
+	content: url(img/background/action-fear-diary-bg.png);
+	position: absolute;
+	z-index: -100;
+	left: -370px;
+	top: -50px;
+}
+
+.main_diary-of-emotions-bg:before {
+	content: url(img/background/diary-of-emotions-bg.png);
+	position: absolute;
+	z-index: -100;
+	top: -90px;
+	left: -120px;
+}
+
+/* footer styles */
+.footer__top-text {
+	padding: 100px 0 100px;
+	text-align:center;
+}
+
+.footer__top-text h2 {
+	font-family: 'Cambria';
+	font-weight: 600;
+}
+
+.footer__top-text p {
+	font-size: 1.7em;
+	font-family: "Gilroy";
+}
+
+.footer__bottom{
+	font-family: "Gilroy";
+	padding: 60px 0;
+	background: #313342;
+	color: #bcbcbc;
+	font-size: 1em;
+}
+
+.footer__bottom-left-text b{
+	color: white;
+}
+
+.footer__bottom a{
+	color: #bcbcbc;
+}
+
+.footer__bottom-left-text a{
+	text-decoration: underline;
+}
