@@ -1,20 +1,33 @@
-body{
-	background: white;
-}
-
 html {
 	font-family: "Gilroy"; 
+	overflow-x: hidden;
+}
+
+body {
+	position: relative;
+	overflow-x: hidden;
 }
 
 /* general styles */
-.container {
-	max-width: 1400px;
+.animation_opacity {
+	opacity: 1!important;
+}
+
+.main_info {
+	padding: 75px 48px 75px;
+	opacity: 0;
+	transition: all 1.2s .5s ease-in-out;
 }
 
 .section_flex-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.section_text-container {
+	padding: 0 0 48px;
+	min-width: 280px;
 }
 
 .section_text-container h1 {
@@ -25,6 +38,7 @@ html {
 }
 
 .section_text-container h2 {
+	font-size: 1.5em;
 	font-family: "Gilroy";
 	display: block;
 	margin: 30px 0;
@@ -41,9 +55,6 @@ html {
 }
 
 .btn {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	padding: 10px 30px;
 	font-size: 	1.2em;
   border-radius: 10px;
@@ -74,11 +85,12 @@ html {
 	font-family: "Gilroy";
 }
 
-.main_info-left {
-	padding: 100px 0;
+/* header styles */
+
+header nav .btn_download {
+	font-size: 1rem;
 }
 
-/* header styles */
 nav {
 	padding: 25px 0;
 }
@@ -93,17 +105,24 @@ nav {
   color: #313342; 
 }
 
-header {
-	padding-bottom: 100px;
-	overflow: hidden;
+.header_utp {
+	padding: 25px 50px 75px;
+}
+.header_utp .section_text-container {
+	padding-top: 86px;
 }
 
 .logo_img:before {
 	content: url(img/background/for-logo.png);
 	position: absolute;
+	transition: all 0.5s 0.1s ease-in-out;
 	z-index: -100;
 	top: -90px;
 	left: -180px;
+}
+
+.logo_img:hover:before {
+	transform: scale(1.1);
 }
 
 .right-background:before {
@@ -111,23 +130,19 @@ header {
 	position: absolute;
 	z-index: -100;
 	top: -230px;
-	left: 125px;
+	left: 120px;
 }
 
-.header_utp-download-container:before {
+.left-background:before {
 	content: url(img/background/left.png);
 	position: absolute;
 	z-index: -200;
-	top: -450px;
-	right: -900px;
-}
-
-/* main_info-right styles */
-.main_info-left {
-	overflow: hidden;
+	top: -320px;
+	left: -530px;
 }
 
 /* main_***-bg styles */
+
 .main_thans-diary-bg:before {
 	content: url(img/background/thanks-diary-bg.png);
 	position: absolute;
@@ -160,23 +175,24 @@ header {
 	left: -120px;
 }
 
-/* footer styles */
-.footer__top-text {
-	padding: 100px 0 100px;
+.download-section {
+	padding: 125px 0 100px;
 	text-align:center;
 }
 
-.footer__top-text h2 {
+.download-section h2 {
 	font-family: 'Cambria';
 	font-weight: 600;
 }
 
-.footer__top-text p {
-	font-size: 1.7em;
+.download-section p {
+	font-size: 2em;
 	font-family: "Gilroy";
 }
 
-.footer__bottom{
+/* footer styles */
+
+footer{
 	font-family: "Gilroy";
 	padding: 60px 0;
 	background: #313342;
@@ -184,14 +200,14 @@ header {
 	font-size: 1em;
 }
 
-.footer__bottom-left-text b{
+.footer_left-text b{
 	color: white;
 }
 
-.footer__bottom a{
+footer a{
 	color: #bcbcbc;
 }
 
-.footer__bottom-left-text a{
+.footer_left-text a{
 	text-decoration: underline;
 }

@@ -7,27 +7,30 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/fonts/stylesheet.css">
 		<link rel="stylesheet" href="assets/style.css">
+		<link rel="stylesheet" href="assets/media.css">
 	</head>
 	<body>
 
 		<header>
-            <div class="container pb-3">
+            <div class="container">
                 <nav class="row">
-					<a class="col-lg-2 d-flex justify-content-between align-items-center logo_img" href="#"> <!-- Я переместил класс logo_img, чтобы вставить бг -->
-						<img src="assets/img/logo.png" alt="">
-					</a>
-                    <div class="col-lg-7 d-flex align-items-center justify-content-end pr-lg-5">
+					<div class="col-xl-2 col-lg-2 col-sm-2 d-flex justify-content-between align-items-center left-background">
+						<a class="logo_img" href="#">
+							<img src="assets/img/logo.png" alt="">
+						</a>
+					</div>
+                    <div class="col-xl-5 col-lg-5 col-sm-1 offset-xl-2 offset-lg-2 offset-sm-5 d-flex align-items-center justify-content-end">
                         <a class="header_nav-link" href="#">Главная</a>
-                        <a class="header_nav-link" href="#">Дневники</a>
+                        <a class="header_nav-link" href="#">Дневник</a>
                         <a class="header_nav-link" href="#">Блог</a>
                     </div>
-                    <div class="col-lg-3 d-flex align-items-center">
+                    <div class="col-xl-3 col-lg-3 col-sm-4 d-flex justify-content-end align-items-center">
                         <a class="btn_download btn btn-primary" href="#">Скачать приложение</a>
                     </div>
                 </nav>
-                <div class="header_utp mx-5">
-                	<div class="row mt-4 mx-5 justify-content-between">
-	                    <div class="col-lg-6 section_flex-container">
+                <div class="header_utp">
+                	<div class="row align-items-start">
+	                    <div class="col-xl-7 col-lg-7 col-sm-7 section_flex-container ">
 	                    	<div class="section_text-container">
 	                    		<h1>Тренируйся быть счастливым</h1>
 	                        	<h2>Твой личный тайник желаний, страхов и эмоций. Собери все свои благодарности и радостные моменты в одном месте.</h2>
@@ -41,25 +44,28 @@
 	                        	</div>
 	                    	</div>
 	                    </div>
-	                    <div class="col-lg-4 right-background">
-	                        <img class="" src="assets/img/header-phone.png" alt="">
+	                    <div class="col-xl-4 col-lg-4 col-sm-4 offset-xl-1 offset-lg-1 justify-content-end right-background">
+	                        <img src="assets/img/header-phone.png" alt="">
 	                    </div>
+						<div class=""></div>
 	                </div>
                 </div>
             </div>
         </header>
 
-        <section class="main_info-right mx-5">
+        <section class="main_info">
         	<div class="container">
-        		<div class="row justify-content-between">
-        			<div class="col-lg-4 main_info-right-img-container main_thans-diary-bg">
-        				<img class="mr-5" src="assets/img/thanks-diary-phone.png"  alt="">
+        		<div class="row">
+        			<div class="col-xl-5 col-lg-5 main_info-right-img-container main_thans-diary-bg">
+        				<img class="img-fluid phone-img" src="assets/img/thanks-diary-phone.png" alt="">
         			</div>
-        			<div class="col-lg-7 section_flex-container">
+        			<div class="col-xl-7 col-lg-7 col-sm-8 offset-xl-0 offset-lg-0 offset-sm-4 section_flex-container">
         				<div class="section_text-container">
 	                    	<h1>Дневник 
 	                    	<br>Благодарности</h1>
-	                        <p>Твой личный тайник желаний, страхов и эмоций. Собери все свои благодарности и радостные моменты в одном месте.</p>
+	                        <p>Попробуй начать благодарить. Подругу за разговор по душам, природу за солнечную погоду, себя за трудолюбие.
+							И вокруг преобразится мир, недовольства будут реже огорчать вас.
+							Доказано, что благодарности учат замечать проявления доброты и концентрироваться на позитиве.</p>
 	                        <div class="section_flex-btn-container">
 	                        	<a class="btn_utp btn btn-primary" href="#">Начать записывать благодарности</a>
 	                        </div>
@@ -69,10 +75,10 @@
         	</div>
         </section>
 		
-		<section class="main_info-left mb-5 px-5">
+		<section class="main_info">
 			<div class="container">
-				<div class="row mt-4 mx-5 justify-content-between">
-					<div class="col-lg-6 section_flex-container">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-sm-8 offset-xl-0 offset-lg-0 offset-sm-0 section_flex-container">
 						<div class="section_text-container">
 							<h1>Дневник Желаний</h1>
 							<p>Люди, которые «желают» добиваются в 2 раза больше
@@ -84,20 +90,20 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 main_wish-diary-bg">
-						<img class="" src="assets/img/wish-diary-phone.png" alt="">
+					<div class="col-xl-5 col-lg-5 offset-xl-1 offset-lg-1 main_wish-diary-bg">
+						<img class="img-fluid phone-img" src="assets/img/wish-diary-phone.png" alt="">
 					</div>
 				</div>
 			</div>
 		</section>
 		
-		<section class="main_info-right mx-5">
+		<section class="main_info">
         	<div class="container">
-        		<div class="row justify-content-between">
-        			<div class="col-lg-4 main_info-right-img-container main_action-fear-diary-bg">
-        				<img class="mr-5" src="assets/img/action-fear-diary-phone.png" alt="">
+        		<div class="row">
+        			<div class="col-xl-5 col-lg-5 main_info-right-img-container main_action-fear-diary-bg">
+        				<img class="img-fluid phone-img" src="assets/img/action-fear-diary-phone.png" alt="">
         			</div>
-        			<div class="col-lg-7 section_flex-container">
+        			<div class="col-xl-7 col-lg-7 col-sm-8 offset-xl-0 offset-lg-0 offset-sm-4 section_flex-container">
         				<div class="section_text-container">
 	                    	<h1>Дневник 
 	                    	<br>Страхов действий</h1>
@@ -113,10 +119,10 @@
         	</div>
         </section>
 		
-		<section class="main_info-left px-5">
+		<section class="main_info">
 			<div class="container">
-				<div class="row mt-4 mx-5 justify-content-between">
-					<div class="col-lg-6 section_flex-container">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-sm-8 section_flex-container">
 						<div class="section_text-container">
 							<h1>Дневник Эмоций</h1>
 							<p>Проанализируй свой эмоции. Зафиксируй счастливые
@@ -128,17 +134,17 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 main_diary-of-emotions-bg">
-						<img class="" src="assets/img/diary-of-emotions-phone.png" alt="">
+					<div class="col-xl-5 col-lg-5 offset-xl-1 offset-lg-1 offset-sm-1 main_diary-of-emotions-bg">
+						<img class="img-fluid phone-img" src="assets/img/diary-of-emotions-phone.png" alt="">
 					</div>
 				</div>
 			</div>
 		</section>
 		
-		<section>
+		<section class="download-section">
 			<div class="container">
-				<div class="row justify-content-center mt-4 mb-5 footer__top-text">
-					<div class="col-sm-7 d-flex flex-column align-items-center">
+				<div class="row justify-content-center">
+					<div class="col-xl-7 col-lg-7 d-flex flex-column align-items-center">
 						<h2>Приложение Дневники Терапии - это выбор быть лучше 100 000 человек!</h2>
 						<p class="my-3"><i>А ты с нами?</i></p>
 						<div class="section_flex-btn-container mt-3">
@@ -149,24 +155,24 @@
 			</div>
 		</section>	
 		
-		<footer class="footer__bottom">
+		<footer>
 			<div class="container">
-				<div class="row mt-5">
-					<div class="col-lg-3 d-flex flex-column footer__bottom-left-text">
+				<div class="row">
+					<div class="col-xl-3 col-lg-3 col-sm-3 d-flex flex-column footer_left-text">
 						<p class="mb-2"><b>Sintylapse</b></p>
 						<p class="mb-2">2020 &copy; Все права защищены</p>
 						<a class="mb-2"href="#">Политика конфиденциальности</a>
 						<a class="mb-2"href="#">Правила использования</a>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-xl-3 col-lg-3 col-sm-3">
 						<a href="#">
-							<img class="my-2" src="assets/img/googlePlay.png" alt="">
+							<img class="img-fluid my-2" src="assets/img/googlePlay.png" alt="">
 						</a>
 						<a href="#">
-							<img class="my-2" src="assets/img/appStore2.png" alt="">
+							<img class="img-fluid my-2" src="assets/img/appStore2.png" alt="">
 						</a>
 					</div>
-					<div class="col-lg-3 d-flex justify-content-between footer__bottom-links">
+					<div class="col-xl-3 col-lg-3 col-sm-3 d-flex justify-content-between">
 						<div class="d-flex flex-column">
 							<a class="mb-2" href="#">Главная</a>
 							<a class="mb-2" href="#">Дневники</a>
@@ -177,7 +183,7 @@
 							<a class="mb-2" href="#">Facebook</a>
 						</div>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-xl-3 col-lg-3 col-sm-3">
 					</div>
 				</div>
 			</div>
@@ -186,5 +192,6 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="assets/js/main.js"></script>
 	</body>
 </html>
