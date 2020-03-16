@@ -21,6 +21,10 @@ footer a::selection, footer p::selection, footer b::selection {
 	color: white;
 }
 
+.main_info img:nth-child(2) {
+	display: none;
+}
+
 .header_nav-link:hover {
 	background-color: white;
 	text-decoration: none;
@@ -55,10 +59,10 @@ footer a:hover {
 }
 
 .section_text-container h1 {
-	font-family: 'Cambria';
-  font-size: 3em;
-  font-weight: 700;
-  color: #313342;
+	font-size: 3em;
+	color: #313342;
+	font-family: Gilroy;
+	font-weight: 600;
 }
 
 .section_text-container h2 {
@@ -71,7 +75,6 @@ footer a:hover {
 .section_text-container p {
 	font-size: 1.4em;
 	font-family: "Gilroy";
-	font-weight: 600;
 	color: #313342;
 	line-height: 1.36;
 	display: block;
@@ -81,37 +84,52 @@ footer a:hover {
 .btn {
 	padding: 10px 30px;
 	font-size: 	1.2em;
-  border-radius: 10px;
-  border: none;
-  color: #313342;
-  font-weight: 600;
-  letter-spacing: 1.1px;
-  line-height: 1.33;
+	border-radius: 10px;
+	border: none;
+	color: #313342;
+	font-weight: 600;
+	letter-spacing: 1.1px;
+	line-height: 1.33;
 }
 
 .btn_download {
 	background-color: #fff;
 	font-family: "Gilroy";
+	font-weight: 600;
+	border: 1px solid #fff;
+	transition: all 0.7s 0.1s ease-in-out;
 }
 
 .btn_download:focus, .btn_download:hover, .btn_download:active {
-	border: 1px solid #fff;
-	background-color: transparent;
-	color: #fff;
+	border: 1px solid #fff!important;
+	background-color: transparent!important;
+}
+
+.btn:focus, .btn:hover, .btn:active {
+	box-shadow: none!important;	
 }
 
 .btn_utp {
 	color: #fff;
-	background: linear-gradient(to right, #313342 0%, #152a57 20%, #333d6e 30%, #5d1b15 100%);
-	background-size: 500%;
+	background: linear-gradient(to right, #313342 0%, #D38312 10%, #A83279 20%, #152a57 30%, #333d6e 40%, #5d1b15 50%, #972c24 60%, #b9362d 70%, #5d1b15 80%, #665065 90%, #856f7e 95%, #333242 100%);
+	background-size: 1500%;
 	padding: 22px 30px;
 	max-width: 530px;
 	font-size: 1.4em;
 	font-family: "Gilroy";
+	animation-name: gradient_out;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
-.main_diary-of-emotions {
-	background: linear-gradient(to right, #313342 0%, #665065 20%, #856f7e 30%, #333242 100%);
+.main_thans-diary {
+	background: linear-gradient(to right, #313342 0%, #D38312 20%, #aa664c 30%, #A83279 100%);
+	background-size: 500%;
+}
+
+.main_wish-diary {
+	background: linear-gradient(to right, #313342 0%, #152a57 20%, #333d6e 30%, #5d1b15 100%);
 	background-size: 500%;
 }
 
@@ -120,20 +138,19 @@ footer a:hover {
 	background-size: 500%;
 }
 
-.main_thans-diary {
-	background: linear-gradient(to right, #313342 0%, #D38312 50%, #A83279 100%);
+.main_diary-of-emotions {
+	background: linear-gradient(to right, #313342 0%, #665065 20%, #856f7e 30%, #333242 100%);
 	background-size: 500%;
 }
 
 .btn_utp:hover {
-  animation-name: gradient;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
- }
+	animation-name: gradient;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
     
 @keyframes gradient {
-	
 	0% {
 		background-position: 0% 20%;
 	}
@@ -143,7 +160,21 @@ footer a:hover {
 	}
 }
 
+@keyframes gradient_out {
+	0% {
+		background-position: 100%;
+	}
+	
+	to {
+		background-position: 0% 20%;
+	}
+}
+
 /* header styles */
+
+.header_utp-download-container img {
+    width: 170px;
+}
 
 header nav .btn_download {
 	font-size: 1rem;
@@ -170,6 +201,10 @@ nav {
 }
 .header_utp .section_text-container {
 	padding-top: 86px;
+}
+
+.logo_img {
+	width: 169px;
 }
 
 .logo_img:before {
@@ -254,6 +289,8 @@ nav {
 }
 
 .map_container {
+	position: relative;
+    left: 10px;
     padding-top: 30px;
 }
 
@@ -291,19 +328,52 @@ nav {
 	left: -120px;
 }
 
-.download-section {
-	padding: 125px 0 100px;
-	text-align:center;
+.stat-section {
+	padding: 120px 0 60px;
+	text-align: center;
+	font-family: Gilroy;
+	color: white;
 }
 
-.download-section h2 {
-	font-family: 'Cambria';
+.stat-bg:before {
+	content: url(img/background/stat-block.png);
+	position: absolute;
+	z-index: -100;
+    left: -205px;
+    top: -141px;
+}
+
+.stat-section h1 {
+	margin: 0 30px;
+	padding-bottom: 20px;
+	font-size: 48px;
 	font-weight: 600;
+	border-bottom: 1px solid white;
 }
 
-.download-section p {
-	font-size: 2em;
-	font-family: "Gilroy";
+.stat-bg h1 {
+	border-bottom: none;
+}
+
+.stat-section p {
+	margin: 0;
+	padding-bottom: 40px;
+	font-size: 22px;
+}
+
+.download-section {
+	text-align: center;	
+	font-family: Gilroy;
+	padding: 50px 0 100px;
+}
+
+.download-section h1 {
+	margin: 0;
+	padding-bottom: 35px;
+}
+
+.download-section img {
+	width: 300px;
 }
 
 /* footer styles */
@@ -334,4 +404,12 @@ footer a{
 	position: relative;
 	top: -35px;
 	padding: 0;
+}
+
+.footer_section-2 img {
+	width: 170px;
+}
+
+.footer_section-1 p, .footer_section-1 a {
+	text-align: left;
 }
