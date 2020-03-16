@@ -5,6 +5,23 @@ $('a[href^="#"]').click(function (event) {
 	$('body,html').animate({scrollTop: top}, 500);
 });
 
+$(window).scroll(function(e){
+    parallax();
+    var scrolled = $(window).scrollTop();
+	if ( scrolled <= 540){
+		$('.main_thans-diary-bg img:nth-child(2)').css('top', -150-(scrolled * 0.2) + 'px');
+	}
+	if ( scrolled > 555 && scrolled <= 1250){
+		$('.main_wish-diary-bg img:nth-child(2)').css('top', -100-(scrolled * 0.2) + 'px');
+	}
+	if ( scrolled > 1300 && scrolled <= 2070){
+		$('.main_action-fear-diary-bg img:nth-child(2)').css('top', 100-(scrolled * 0.2) + 'px');
+	}
+	if ( scrolled > 2070){
+		$('.main_diary-of-emotions-bg img:nth-child(2)').css('top', 200-(scrolled * 0.2) + 'px');
+	}
+});
+
 var isScrolling = false;
  
     window.addEventListener("scroll", throttleScroll, false);
@@ -22,7 +39,6 @@ var isScrolling = false;
     document.addEventListener("DOMContentLoaded", scrolling, false);
 
     let animateSections = document.querySelectorAll('.main_info');
- 	console.log(animateSections);
  
     function scrolling(e) {
  
@@ -67,10 +83,10 @@ $('.menu_btn').click(function () {
 	$('.map_wrapper').css({'z-index': '20'})
     $('.map_wrapper').css({'transition': 'all 1s ease-in-out'})
   	$('.menu_btn > span').css({'transform': 'rotate(90deg)'})
-	  $('.menu_btn > span').css({'opacity': '0'})
-	  $('.menu_btn > span').css({'transition': 'all 1s ease-in-out'})
-	  $('.map_close > span').css({'transform': 'rotate(135deg)'})
-	  $('.map_close > span').css({'transition': 'all 1s ease-in-out'})
+	$('.menu_btn > span').css({'opacity': '0'})
+	$('.menu_btn > span').css({'transition': 'all 1s ease-in-out'})
+	$('.map_close > span').css({'transform': 'rotate(135deg)'})
+	$('.map_close > span').css({'transition': 'all 1s ease-in-out'})
   }
 })
 
@@ -78,13 +94,13 @@ $('.map_close').click(function () {
   menuState = !menuState;
   if (!menuState) {
     $('.map_wrapper').css({'opacity': '0'})
-	  $('.map_wrapper').css({'z-index': '0'})
-	  $('.map_wrapper').css({'transition': 'all 1s ease-in-out'})
-	  $('.menu_btn > span').css({'transform': 'rotate(0deg)'})
-	  $('.menu_btn > span').css({'opacity': '1'})
-	  $('.menu_btn > span').css({'transition': 'all 1s ease-in-out'})
-	  $('.map_close > span').css({'transform': 'rotate(45deg)'})
-	  $('.map_close > span').css({'transition': 'all 1s ease-in-out'})
+	$('.map_wrapper').css({'z-index': '0'})
+	$('.map_wrapper').css({'transition': 'all 1s ease-in-out'})
+	$('.menu_btn > span').css({'transform': 'rotate(0deg)'})
+	$('.menu_btn > span').css({'opacity': '1'})
+	$('.menu_btn > span').css({'transition': 'all 1s ease-in-out'})
+	$('.map_close > span').css({'transform': 'rotate(45deg)'})
+	$('.map_close > span').css({'transition': 'all 1s ease-in-out'})
   }
 })
 
@@ -92,13 +108,13 @@ $('.map_item').click(function () {
   menuState = !menuState;
   if (!menuState) {
     $('.map_wrapper').css({'opacity': '0'})
-	  $('.map_wrapper').css({'z-index': '0'})
-	  $('.map_wrapper').css({'transition': 'all 1s ease-in-out'})
-	  $('.menu_btn > span').css({'transform': 'rotate(0deg)'})
-	  $('.menu_btn > span').css({'opacity': '1'})
-	  $('.menu_btn > span').css({'transition': 'all 1s ease-in-out'})
-	  $('.map_close > span').css({'transform': 'rotate(45deg)'})
-	  $('.map_close > span').css({'transition': 'all 1s ease-in-out'})
+	$('.map_wrapper').css({'z-index': '0'})
+	$('.map_wrapper').css({'transition': 'all 1s ease-in-out'})
+	$('.menu_btn > span').css({'transform': 'rotate(0deg)'})
+	$('.menu_btn > span').css({'opacity': '1'})
+	$('.menu_btn > span').css({'transition': 'all 1s ease-in-out'})
+	$('.map_close > span').css({'transform': 'rotate(45deg)'})
+	$('.map_close > span').css({'transition': 'all 1s ease-in-out'})
   }
 })
 
