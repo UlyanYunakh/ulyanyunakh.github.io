@@ -1,4 +1,4 @@
-﻿$('a[href^="#"]').click(function (event) {
+$('a[href^="#"]').click(function (event) {
 	event.preventDefault();
 	var id  = $(this).attr('href'),
 		top = $(id).offset().top - 10;
@@ -22,9 +22,7 @@ $(window).scroll(function(e){
 });
 
 var isScrolling = false;
- 
     window.addEventListener("scroll", throttleScroll, false);
- 
     function throttleScroll(e) {
       if (isScrolling == false) {
         window.requestAnimationFrame(function() {
@@ -34,44 +32,31 @@ var isScrolling = false;
       }
       isScrolling = true;
     }
- 
     document.addEventListener("DOMContentLoaded", scrolling, false);
-
     let animateSections = document.querySelectorAll('.main_info');
- 
     function scrolling(e) {
- 
       for (var i = 0; i < animateSections.length; i++) {
         var animateSection = animateSections[i];
- 
         if (isPartiallyVisible(animateSection)) {
           animateSection.classList.add("animation_opacity");
           console.log(animateSection);
         } else {
-
         }
       }
      }
- 
     function isPartiallyVisible(el) {
       var elementBoundary = el.getBoundingClientRect();
- 
       var top = elementBoundary.top;
       var bottom = elementBoundary.bottom;
       var height = elementBoundary.height;
- 
       return ((top + height >= 0) && (height + window.innerHeight >= bottom));
     }
- 
     function isFullyVisible(el) {
       var elementBoundary = el.getBoundingClientRect();
- 
       var top = elementBoundary.top;
-      var bottom = elementBoundary.bottom;
- 
+      var bottom = elementBoundary.bottom; 
       return ((top >= 0) && (bottom <= window.innerHeight));
     }
-
 let menuState = false;
 
 $('.menu_btn').click(function () {
