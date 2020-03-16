@@ -1,4 +1,4 @@
-$('a[href^="#"]').click(function (event) {
+﻿$('a[href^="#"]').click(function (event) {
 	event.preventDefault();
 	var id  = $(this).attr('href'),
 		top = $(id).offset().top - 10;
@@ -6,7 +6,6 @@ $('a[href^="#"]').click(function (event) {
 });
 
 $(window).scroll(function(e){
-    parallax();
     var scrolled = $(window).scrollTop();
 	if ( scrolled <= 540){
 		$('.main_thans-diary-bg img:nth-child(2)').css('top', -150-(scrolled * 0.2) + 'px');
