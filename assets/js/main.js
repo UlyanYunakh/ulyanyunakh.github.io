@@ -7,18 +7,22 @@ $('a[href^="#"]').click(function (event) {
 
 $(window).scroll(function(e){
     var scrolled = $(window).scrollTop();
-	if ( scrolled <= 540){
-		$('.main_thans-diary-bg img:nth-child(2)').css('top', -150-(scrolled * 0.2) + 'px');
-	}
-	if ( scrolled > 555 && scrolled <= 1250){
-		$('.main_wish-diary-bg img:nth-child(2)').css('top', -100-(scrolled * 0.2) + 'px');
-	}
-	if ( scrolled > 1300 && scrolled <= 2070){
-		$('.main_action-fear-diary-bg img:nth-child(2)').css('top', 100-(scrolled * 0.2) + 'px');
-	}
-	if ( scrolled > 2070){
-		$('.main_diary-of-emotions-bg img:nth-child(2)').css('top', 200-(scrolled * 0.2) + 'px');
-	}
+	if ( scrolled <= 540) $('.main_thans-diary-bg img:nth-child(2)').css('top', -150-(scrolled * 0.2) + 'px');
+	if ( scrolled > 555 && scrolled <= 1250) $('.main_wish-diary-bg img:nth-child(2)').css('top', -100-(scrolled * 0.2) + 'px');
+	if ( scrolled > 1300 && scrolled <= 2070) $('.main_action-fear-diary-bg img:nth-child(2)').css('top', 100-(scrolled * 0.2) + 'px');
+	if ( scrolled > 2070) $('.main_diary-of-emotions-bg img:nth-child(2)').css('top', 200-(scrolled * 0.2) + 'px');
+    let section1 = document.querySelector('.main_info .main_thans-diary-bg');
+	var child1 = document.querySelector('.main_thans-diary-bg img:nth-child(1)');
+	let section2 = document.querySelector('.main_info .main_wish-diary-bg');
+	var child2 = document.querySelector('.main_wish-diary-bg img:nth-child(1)');
+	let section3 = document.querySelector('.main_info .main_action-fear-diary-bg');
+	var child3 = document.querySelector('.main_action-fear-diary-bg img:nth-child(1)');
+	let section4 = document.querySelector('.main_info .main_diary-of-emotions-bg');
+	var child4 = document.querySelector('.main_diary-of-emotions-bg img:nth-child(1)');
+	if (isPartiallyVisible(section1)) $(child1).css('top', 180-(scrolled * 0.2) + 'px');
+	if (isPartiallyVisible(section2)) $(child2).css('top', 300-(scrolled * 0.2) + 'px');
+	if (isPartiallyVisible(section3)) $(child3).css('top', 450-(scrolled * 0.2) + 'px');
+	if (isPartiallyVisible(section4)) $(child4).css('top', 600-(scrolled * 0.2) + 'px');
 });
 
 var isScrolling = false;
@@ -38,9 +42,7 @@ var isScrolling = false;
       for (var i = 0; i < animateSections.length; i++) {
         var animateSection = animateSections[i];
         if (isPartiallyVisible(animateSection)) {
-          animateSection.classList.add("animation_opacity");
-          console.log(animateSection);
-        } else {
+			    animateSection.classList.add("animation_opacity");
         }
       }
      }
@@ -62,7 +64,6 @@ let menuState = false;
 $('.menu_btn').click(function () {
   menuState = !menuState;
   if (menuState) {
-    console.log('work');
     $('.map_wrapper').css({'opacity': '1'})
 	$('.map_wrapper').css({'z-index': '20'})
     $('.map_wrapper').css({'transition': 'all 1s ease-in-out'})
@@ -78,7 +79,7 @@ $('.map_close').click(function () {
   menuState = !menuState;
   if (!menuState) {
     $('.map_wrapper').css({'opacity': '0'})
-	$('.map_wrapper').css({'z-index': '0'})
+	$('.map_wrapper').css({'z-index': '-1'})
 	$('.map_wrapper').css({'transition': 'all 1s ease-in-out'})
 	$('.menu_btn > span').css({'transform': 'rotate(0deg)'})
 	$('.menu_btn > span').css({'opacity': '1'})
@@ -92,7 +93,7 @@ $('.map_item').click(function () {
   menuState = !menuState;
   if (!menuState) {
     $('.map_wrapper').css({'opacity': '0'})
-	$('.map_wrapper').css({'z-index': '0'})
+	$('.map_wrapper').css({'z-index': '-1'})
 	$('.map_wrapper').css({'transition': 'all 1s ease-in-out'})
 	$('.menu_btn > span').css({'transform': 'rotate(0deg)'})
 	$('.menu_btn > span').css({'opacity': '1'})
