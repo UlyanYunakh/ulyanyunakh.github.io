@@ -37,6 +37,18 @@ body{
     display: none;
 }
 
+.top_light-theme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_dark-theme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .top__title{
     width: 255px;
 }
@@ -58,7 +70,7 @@ body{
     cursor: pointer;
 }
 
-.left__wheel_light-theme{
+.left__wheel_light-theme, .left__wheel_dark-theme{
     position: relative;
     display: flex;
 	flex-direction: column;
@@ -96,10 +108,14 @@ body{
 
 /* right column styles */
 
-.column__right{
+.column__right, .right_light-theme, .right_dark-theme{
     display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.right_light-theme{
+
 }
 
 .right__title{
