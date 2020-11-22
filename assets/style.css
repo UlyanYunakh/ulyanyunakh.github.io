@@ -1,426 +1,113 @@
-html {
-	font-family: "Gilroy"; 
-	overflow-x: hidden;
+body{
+	/* overflow: hidden; */
+    background:  #B2A796;
+    color: #2f343e;
+    margin: 0;
 }
 
-body {
-	position: relative;
-	overflow-x: hidden;
+/* container styles */
+
+.container-box{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    display: flex;
+    justify-items: center;
+    margin: auto;
 }
 
-/* general styles */
-
-h1::selection, h2::selection, br::selection, p::selection, i::selection, a::selection {
-	background: #807d97;
-	color: white;
-	border-bottom-style: none;
-}
-
-footer a::selection, footer p::selection, footer b::selection {
-	background: white;
-	color: white;
-}
-
-.main_info img:nth-child(2) {
-	display: none;
-}
-
-.header_nav-link:hover {
-	background-color: white;
-	text-decoration: none;
-	color: #313342;
-	transition: all 0.7s 0.1s ease-in-out;
-}
-
-footer a:hover {
-	color: white;
-	text-decoration: none;
-}
-
-.animation_opacity {
-	opacity: 1!important;
-}
-
-.main_info {
-	padding: 75px 48px 75px;
-	opacity: 0;
-	transition: all 1.2s .5s ease-in-out;
-}
-
-.section_flex-container {
+.container-box__container{
+    margin: auto;
+    width: 90vw;
+	max-width: 1200px;
 	display: flex;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.container__column{
+    width: 500px;
+}
+
+/* top column styles */
+
+.column__top{
+    display: none;
+}
+
+.top__title{
+    width: 255px;
+}
+
+.top__theme-button{
+    width: 60px;
+}
+
+/* left column styles */
+
+.column__left{
+    display: flex;
+	flex-direction: column;
 	align-items: center;
 }
 
-.section_text-container {
-	padding: 0 0 48px;
-	min-width: 280px;
+.theme-button{
+    width: 80px;
+    cursor: pointer;
 }
 
-.section_text-container h1 {
-	font-size: 3em;
-	color: #313342;
-	font-family: Gilroy;
-	font-weight: 600;
+.left__wheel_light-theme{
+    position: relative;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.section_text-container h2 {
-	font-size: 1.5em;
-	font-family: "Gilroy";
-	display: block;
-	margin: 30px 0;
+.wheel__ring{
+    width: 500px;
 }
 
-.section_text-container p {
-	font-size: 1.4em;
-	font-family: "Gilroy";
-	color: #313342;
-	display: block;
-	margin: 30px 0;
+.wheel__sign{
+    position: absolute;
+    top: 150px;
+    width: 200px;
 }
 
-.btn {
-	padding: 10px 30px;
-	font-size: 	1.2em;
-	border-radius: 10px;
-	border: none;
-	color: #313342;
-	font-weight: 600;
-	letter-spacing: 1.1px;
+.wheel__title{
+    position: absolute;
+    top: 315px;
+    font-size: 25px;
 }
 
-.btn_download {
-	background-color: #fff;
-	font-family: "Gilroy";
-	font-weight: 600;
-	border: 1px solid #fff;
-	transition: all 0.7s 0.1s ease-in-out;
-	padding-top: 11px;
+.wheel__arrows{
+    position: relative;
+    top: -20px;
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
-.btn_download:focus, .btn_download:hover, .btn_download:active {
-	border: 1px solid #fff!important;
-	background-color: transparent!important;
+.arrow{
+    width: 60px;
+    cursor: pointer;
 }
 
-.btn:focus, .btn:hover, .btn:active {
-	box-shadow: none!important;	
+/* right column styles */
+
+.column__right{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.btn_utp {
-	color: #fff;
-	background: linear-gradient(to right, #313342 0%, #D38312 10%, #A83279 20%, #152a57 30%, #333d6e 40%, #5d1b15 50%, #972c24 60%, #b9362d 70%, #5d1b15 80%, #665065 90%, #856f7e 95%, #333242 100%);
-	background-size: 1500%;
-	padding: 22px 30px;
-	max-width: 530px;
-	font-size: 1.4em;
-	font-family: "Gilroy";
-	animation-name: gradient_out;
-	animation-duration: 2s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
+.right__title{
+    width: 600px;
 }
 
-.main_thans-diary {
-	background: linear-gradient(to right, #815001 0%, #D38312 20%, #aa664c 30%, #A83279 100%);
-	background-size: 500%;
-}
-
-.main_wish-diary {
-	background: linear-gradient(to right, #313342 0%, #152a57 20%, #333d6e 30%, #5d1b15 100%);
-	background-size: 500%;
-}
-
-.main_action-fear-diary {
-	background: linear-gradient(to right, #313342 0%, #972c24 20%, #b9362d 30%, #5d1b15 100%);
-	background-size: 500%;
-}
-
-.main_diary-of-emotions {
-	background: linear-gradient(to right, #313342 0%, #665065 20%, #856f7e 30%, #333242 100%);
-	background-size: 500%;
-}
-
-.btn_utp:hover {
-	animation-name: gradient;
-	animation-duration: 2s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-}
-    
-@keyframes gradient {
-	0% {
-		background-position: 0% 20%;
-	}
-	
-	to {
-		background-position: 100%;
-	}
-}
-
-@keyframes gradient_out {
-	0% {
-		background-position: 100%;
-	}
-	
-	to {
-		background-position: 0% 20%;
-	}
-}
-
-.main_info img:nth-child(1) {
-	position: relative;
-}
-
-/* header styles */
-
-.header_utp-download-container img {
-    width: 170px;
-}
-
-header nav .btn_download {
-	font-size: 1rem;
-}
-
-nav {
-	padding: 25px 0;
-}
-
-.header_nav-link {
-	padding: 7px 20px;
-	margin: 3px 4px;
-	font-size: 1.2em;
-	font-family: "Gilroy";
-	font-weight: 600;
-	text-align: center;
-	color: #313342; 
-	border-radius: 10px;
-}
-
-.header_utp {
-	padding: 25px 50px 75px;
-}
-.header_utp .section_text-container {
-	padding-top: 86px;
-}
-
-.logo_img {
-	width: 169px;
-}
-
-.logo_img:before {
-	content: url(img/background/for-logo.png);
-	position: absolute;
-	transition: all 0.5s 0.1s ease-in-out;
-	z-index: -4;
-	top: -90px;
-	left: -180px;
-}
-
-.logo_img:hover:before {
-	transform: scale(1.1);
-}
-
-.right-background:before {
-	content: url(img/background/right.png);
-	position: absolute;
-	z-index: -4;
-	top: -230px;
-	left: 120px;
-}
-
-.left-background:before {
-	content: url(img/background/left.png);
-	position: absolute;
-	z-index: -5;
-	top: -320px;
-	left: -530px;
-}
-
-/* map menu styles */
-
-.menu_btn, .menu_btn span {
-	display: none;
-}
-
-.map_wrapper {
-	display: none;
-	opacity: 0;
-}
-
-.map_wrapper .header_nav-link {
-	color: #a9a7b8!important;
-}
-
-.map_close {
-    width: 30px;
-    height: 26px;
-	position: absolute;
-	top: 10px;
-	right: -6px;
-	z-index: 1;
-	cursor: pointer;
-}
-
-.map_close > span, .map_close > span::before, .map_close > span::after {
-	display: block;
-	position: absolute;
-	top: 9px;
-	left: 0px;
-	width: 100%;
-	height: 2px;
-	z-index: 2;
-	background-color: white;
-}
-	
-.map_close > span {
-	transform: rotate(45deg);
-}
-
-.map_close > span::before {
-	content: '';
-	top: -8px;
-	top: 0;
-	transform: rotate(0);
-}
-
-.map_close > span::after {
-	content: '';
-	top: 8px;
-	top: 0;
-	transform: rotate(90deg);
-}
-
-.map_container {
-	position: relative;
-    left: 10px;
-    padding-top: 30px;
-	z-index: 0;
-}
-
-/* main_***-bg styles */
-
-.main_thans-diary-bg:before {
-	content: url(img/background/thanks-diary-bg.png);
-	position: absolute;
-	z-index: -100;
-	left: -335px;
-	top: -30px;
-}
-
-.main_wish-diary-bg:before {
-	content: url(img/background/wish-diary-bg.png);
-	position: absolute;
-	z-index: -100;
-	left: -70px;
-	top: -70px;
-}
-
-.main_action-fear-diary-bg:before {
-	content: url(img/background/action-fear-diary-bg.png);
-	position: absolute;
-	z-index: -100;
-	left: -370px;
-	top: -50px;
-}
-
-.main_diary-of-emotions-bg:before {
-	content: url(img/background/diary-of-emotions-bg.png);
-	position: absolute;
-	z-index: -100;
-	top: -90px;
-	left: -120px;
-}
-
-.stat-section {
-	padding: 120px 0 60px;
-	text-align: center;
-	font-family: Gilroy;
-	color: white;
-}
-
-.stat-bg:before {
-	content: url(img/background/stat-block.png);
-	position: absolute;
-	z-index: -100;
-    left: -205px;
-    top: -141px;
-}
-
-.stat-section h1 {
-	margin: auto;
-	padding-bottom: 10px;
-	font-size: 48px;
-	font-weight: 600;
-	border-bottom: 1px solid white;
-	max-width: 290px;
-}
-
-.stat-bg h1 {
-	border-bottom: none;
-	max-width: 100%;
-}
-
-.stat-bg p {
-	padding-bottom: 40px;
-}
-
-.stat-section p {
-	margin: 0;
-	padding: 5px 0 40px;
-	font-size: 22px;
-}
-
-.download-section {
-	text-align: center;	
-	font-family: Gilroy;
-	padding: 50px 0 100px;
-}
-
-.download-section h1 {
-	margin: 0;
-	padding-bottom: 35px;
-}
-
-.download-section img {
-	width: 300px;
-}
-
-/* footer styles */
-
-footer{
-	font-family: "Gilroy";
-	padding: 80px 0 10px;
-	background: #313342;
-	color: #bcbcbc;
-	font-size: 1em;
-}
-
-.footer_left-text b{
-	color: white;
-}
-
-footer a{
-	color: #bcbcbc;
-}
-
-.footer_left-text a{
-	text-decoration: underline;
-}
-
-.footer_section-4 {
-	max-width: 215px;
-	height: 215px;
-	position: relative;
-	top: -35px;
-	padding: 0;
-}
-
-.footer_section-2 img {
-	width: 170px;
-}
-
-.footer_section-1 p, .footer_section-1 a {
-	text-align: left;
+.right__text{
+    padding-top: 40px;
+    text-align: center;
+    font-size: 23px;
 }
