@@ -13,7 +13,7 @@
     }
 
     .wheel__title{
-        top: 275px;
+        top: 283px;
     }
     
     .arrow{
@@ -40,7 +40,7 @@
     }
 
     .wheel__title{
-        top: 245px;
+        top: 253px;
     }
     
     .arrow{
@@ -83,7 +83,7 @@
     }
 }
 
-@media (max-width: 424px){
+@media (max-width: 552px){
     .container__column{
         width: 100%;
     }
@@ -101,12 +101,12 @@
     }
     
     .wheel__sign{
-        top: 80px;
+        top: 74px;
         width: 120px;
     }
 
     .wheel__title{
-        top: 175px;
+        top: 179px;
         font-size: 20px;
     }
     

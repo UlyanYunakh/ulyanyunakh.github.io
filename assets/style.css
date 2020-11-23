@@ -2,6 +2,16 @@ body{
     margin: 0;
 }
 
+::-moz-selection{
+    color: #B2A796;
+    background: #2f343e;
+}
+  
+::selection {
+    color: #B2A796;
+    background: #2f343e;
+}
+
 /* container styles */
 
 .container-box{
@@ -35,6 +45,7 @@ body{
 
 .hidden-items{
     display: none;
+    width: 100%;
 }
 
 .item__title{
@@ -60,18 +71,20 @@ body{
 }
 
 .wheel__ring{
+    overflow: hidden;
+    z-index: -10;
     width: 500px;
 }
 
 .wheel__sign{
     position: absolute;
-    top: 150px;
+    top: 140px;
     width: 200px;
 }
 
 .wheel__title{
     position: absolute;
-    top: 315px;
+    top: 320px;
     font-size: 25px;
 }
 
