@@ -102,12 +102,12 @@
     
     .wheel__sign{
         top: 74px;
-        width: 120px;
+        width: 115px;
     }
 
     .wheel__title{
-        top: 179px;
-        font-size: 18px;
+        top: 176px;
+        font-size: 17px;
     }
     
     .wheel__arrows{
@@ -115,6 +115,6 @@
     }
 
     .arrow{
-        width: 40px;
+        width: 50px;
     }
 }
