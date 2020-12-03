@@ -123,7 +123,7 @@ $(window).on('load', function () {
 	$('body').css({'background':'#B2A796', 'color':'#2f343e'})
 	darkTheme = false
 	loadInfo()
-	readTextFile("file:///assets/js/Data.txt")
+	readTextFile("file://assets/js/Data.txt")
 })
 
 // theme change
